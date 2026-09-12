@@ -1,0 +1,47 @@
+html{scroll-padding-top:82px}
+.data-figure{margin:28px 0;padding:22px;border:1px solid var(--line);background:#f8fafc}
+.data-figure figcaption{margin-bottom:20px;color:#173f67}
+.data-figure figcaption strong{display:block;font-size:1.125rem}
+.data-figure figcaption>span{display:block;margin-top:6px;font-size:.875rem;color:#586a7b}
+.pl-ledger .pl-profit th,.pl-ledger .pl-profit td{background:#eaf2f7!important;color:#173f67;font-weight:800!important;border-top:2px solid #b9ccdb}
+.pl-ledger .pl-revenue th,.pl-ledger .pl-revenue td{font-weight:800!important}
+.pl-ledger .pl-group th{background:#f1f5f8!important;font-weight:700!important;color:#536474}
+.pl-ledger .pl-subtotal th,.pl-ledger .pl-subtotal td{font-weight:600!important}
+.chart-legend,.cost-labels{display:flex;flex-wrap:wrap;gap:12px 20px;font-size:.875rem;margin:14px 0}
+.chart-legend>span,.cost-labels>span{display:flex;gap:7px;align-items:center}
+.swatch{display:inline-block;width:13px;height:13px;flex-shrink:0}
+.prior{background:#91a8bb}.current{background:#24679b}
+.profit-pair{margin:20px 0}.profit-pair>strong{font-size:.9375rem}
+.chart-bar-row{display:grid;grid-template-columns:minmax(0,1fr) 80px;gap:12px;align-items:center;font-variant-numeric:tabular-nums;font-size:.875rem;margin-top:6px}
+.chart-bar-row>span:last-child{text-align:right}
+.chart-track{display:block;height:18px;background:#e7edf2}
+.chart-track i{display:block;height:100%}
+.cost-strip{display:flex;min-height:60px;color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
+.cost-strip>span{display:grid;place-items:center}
+.strip-cost{background:#627d93}.strip-admin{background:#b36e29}.strip-profit{background:#24679b}
+.cost-equation{display:flex;gap:18px;align-items:center;justify-content:center;margin-top:20px;text-align:center}
+.cost-equation strong{color:#173f67}.cost-equation>b{font-size:1.5rem;color:#24679b}
+.calculation-flow{max-width:540px;margin:auto}.calc-step{text-align:center}
+.flow-arrow{display:block;font-size:1.5rem;color:#24679b;line-height:1.2;margin:10px 0}
+.calc-rule{display:block;font-size:.875rem;color:#586a7b;margin:7px 0}
+.calc-result{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#eaf2f7;border-left:4px solid #24679b;padding:12px 18px;text-align:left;color:#173f67}
+.calc-result b{font-size:1.375rem;font-variant-numeric:tabular-nums}
+.quiz .table-scroll{background:#fff}.quiz .source{margin-bottom:18px}
+@media(max-width:640px){.data-figure{margin:22px 0;padding:15px}.cost-equation{flex-direction:column;gap:8px}.cost-equation>b{transform:rotate(90deg)}.chart-bar-row{grid-template-columns:minmax(0,1fr) 74px;gap:8px}.pl-ledger table{font-size:.875rem!important}}
+.table-scroll{overflow-x:auto;margin:20px 0;border:1px solid var(--line)}
+.table-scroll table{margin:0;min-width:470px;font-size:1rem!important;font-variant-numeric:tabular-nums}
+.table-scroll tbody th{background:transparent!important;font-weight:400;text-align:left}
+caption{text-align:left;font-weight:700;padding:14px}
+.source{font-size:.875rem!important;color:#586a7b;line-height:1.8}
+main a{color:#24679b;text-underline-offset:3px;overflow-wrap:anywhere}
+.bridge{display:grid;gap:8px;margin:24px 0;font-variant-numeric:tabular-nums}
+.bridge>div{display:flex;justify-content:space-between;gap:16px;padding:15px 18px;border:1px solid var(--line)}
+.bridge-total{background:#173f67;color:#fff}
+.bridge-plus{background:#edf4ef;color:#264d34}
+.bridge-minus{background:#fff3e7;color:#7a471d}
+.bridge strong{font-size:1.25rem}
+.lesson-diagram{margin:24px 0}
+.lesson-diagram img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.lesson-diagram figcaption{font-size:.875rem;color:#586a7b;margin-top:10px}
+main .small,summary,.layout>aside a{font-size:.875rem!important}
+@media(max-width:640px){main>.hero{padding:28px 20px!important}.bridge>div{padding:12px}.bridge strong{font-size:1.125rem}}
