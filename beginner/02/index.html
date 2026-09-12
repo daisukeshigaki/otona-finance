@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>おとなのファイナンス｜初級編 第2回 BSの見方</title>
+<style>
+:root{--navy:#0B2E6D;--blue:#1E63B5;--orange:#F28C28;--green:#0B6B4F;--ink:#172033;--muted:#667085;--line:#DCE5F2;--soft:#F6F9FD;--soft2:#EEF4FB;--white:#fff}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;color:var(--ink);background:#F3F6FA;line-height:1.85}
+.topbar{position:sticky;top:0;z-index:20;height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:rgba(11,46,109,.97);color:#fff;box-shadow:0 2px 10px rgba(11,46,109,.18)}
+.brand{font-weight:800;letter-spacing:.02em}.episode{font-size:14px;opacity:.92}
+.layout{display:grid;grid-template-columns:260px minmax(0,860px);gap:28px;max-width:1200px;margin:28px auto 60px;padding:0 22px}
+aside{position:sticky;top:82px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 30px rgba(38,64,105,.06)}
+aside .toc-title{font-weight:800;color:var(--navy);margin-bottom:10px} aside a{display:block;color:#31405d;text-decoration:none;padding:7px 8px;border-radius:8px;font-size:14px} aside a:hover{background:var(--soft2);color:var(--navy)}
+main{min-width:0}.hero{background:linear-gradient(135deg,#fff 0%,#F2F7FF 100%);border:1px solid var(--line);border-radius:22px;padding:34px 36px 30px;box-shadow:0 12px 36px rgba(38,64,105,.08)}
+.badge{display:inline-block;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800;color:var(--blue);background:#EAF2FF}
+h1{font-size:36px;line-height:1.25;margin:14px 0 10px;color:var(--navy)}.lead{font-size:17px;color:#40506f;margin:0}.goal{margin-top:22px;padding:16px 18px;background:#fff;border-left:5px solid var(--orange);border-radius:12px}
+section{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 30px;box-shadow:0 8px 26px rgba(38,64,105,.05)}
+h2{font-size:25px;line-height:1.35;margin:0 0 14px;color:var(--navy)} h3{font-size:19px;margin:22px 0 8px;color:#253a62} p{margin:10px 0}
+.simple{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center;margin:20px 0 10px}.simple .box{padding:20px 12px;text-align:center;border-radius:14px;font-weight:800;border:1px solid var(--line)}
+.sales{background:#EAF2FF;color:#174A8B}.cost{background:#FFF3E7;color:#9A5316}.profit{background:#E9F7EF;color:#0B6B4F}.op{font-weight:900;color:#8993A4;font-size:22px}
+.note{padding:14px 16px;border-radius:12px;background:#F8FAFC;border:1px dashed #C8D4E6;color:#45536d}
+.profit-stack{display:grid;gap:10px;margin:18px 0}.profit-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}.profit-label{font-weight:800;color:#fff;background:var(--navy);padding:10px 12px;border-radius:10px;text-align:center}.profit-desc{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+details{margin:16px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#FBFDFF} summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:800;color:var(--navy);background:#F4F8FD;user-select:none} summary::-webkit-details-marker{display:none} summary::before{content:"▶";margin-right:10px;font-size:12px;color:var(--blue)} details[open] summary::before{content:"▼"}.detail-body{padding:18px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px} th,td{border-bottom:1px solid var(--line);padding:10px 9px;text-align:right} th:first-child,td:first-child{text-align:left} th{background:#F1F5FA;color:#344563}.hl td{font-weight:800;color:var(--navy);background:#F8FBFF}
+.checklist{display:grid;gap:10px;margin-top:14px}.check{display:flex;gap:10px;align-items:flex-start;padding:13px 14px;border-radius:11px;background:#F8FAFC}.num{flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:800;font-size:13px}
+.quiz{background:#FFF9EF;border:1px solid #F3D7A4;padding:18px;border-radius:14px}.answer{background:#F0F8F3;border:1px solid #BFE0CA;padding:18px;border-radius:14px}.footer{margin-top:28px;padding:22px 26px;color:#fff;background:var(--navy);border-radius:16px}.small{font-size:13px;color:var(--muted)}
+.placeholder{display:grid;place-items:center;min-height:220px;border:2px dashed #BFD0E7;border-radius:14px;background:#F8FBFF;color:#60708E;text-align:center;padding:24px}
+@media(max-width:900px){.layout{grid-template-columns:1fr;padding:0 14px;margin-top:18px}aside{position:relative;top:auto}h1{font-size:30px}}
+@media(max-width:620px){.topbar{padding:0 14px}.episode{display:none}.hero,section{padding:22px 18px}.simple{grid-template-columns:1fr}.op{transform:rotate(90deg);text-align:center}.profit-row{grid-template-columns:1fr}table{font-size:12px}}
+</style>
+<link rel="icon" type="image/png" href="/assets/images/brand/logo-mark.png">
+<link rel="stylesheet" href="/assets/css/lesson.css">
+<link rel="stylesheet" href="/assets/css/brand.css">
+<link rel="stylesheet" href="/assets/css/pl.css">
+<meta name="description" content="資産・負債・純資産の一覧から、会社のお金の使い道と調達源を読む。">
+</head>
+<body><header class="topbar"><a class="brand" href="/"><img src="/assets/images/brand/logo-mark.png" alt=""><span>おとなのファイナンス</span></a><div class="episode">初級編｜第2回 BSの見方</div></header><div class="layout"><aside><div class="toc-title">この回の目次</div><a href="#s1">1. BSとは</a><a href="#s2">2. 小さな会社のBS</a><a href="#s3">3. 各項目の中身</a><a href="#s4">4. 三井不動産のBS一覧</a><a href="#s5">5. 指標と資産の質</a><a href="#s6">6. 練習問題</a><a href="#s7">7. まとめ</a><a href="/beginner/01/">第1回 PLの見方</a><a href="/beginner/02/">第2回 BSの見方</a><a href="/beginner/03/">第3回 CFの見方</a></aside><main><div class="hero"><span class="badge">初級編 · 第2回</span><h1>BSの見方</h1><p class="lead">資産・負債・純資産の一覧から、会社のお金の使い道と調達源を読む。</p><div class="goal"><strong>この回のゴール</strong><br>BSの左右を説明し、資産の質と返済の余裕を数字で確認できる。</div><p class="source">企業実例：三井不動産／練習問題3問／更新日：2026年9月13日</p></div><section id="s1"><h2>1. BSは「ある日の状態」</h2><p>BS（Balance Sheet／貸借対照表）は、決算日などの時点で、会社がどんな資産を持ち、それをどう調達したかを示す表です。PLが期間中の利益を表すのに対し、BSはその日の残高を表します。</p><p>左側は資金の使い道である資産。右側は、借入などの負債と、株主からの出資や蓄積した利益などの純資産です。現金だけでなく、商品・不動産・設備・売掛金も資産に入ります。</p><figure class="lesson-diagram"><img src="/assets/images/beginner/02/bs-structure.png" width="1536" height="1024" alt="BSの左は資産、右は負債と純資産。資産は負債と純資産の合計に等しい。" loading="lazy"><figcaption>BSの基本構造。図の区画の大きさは実際の構成比ではありません。</figcaption></figure></section><section id="s2"><h2>2. 小さな会社のBSを作る</h2><p>架空の会社で考えます。株主が60万円出資し、銀行から40万円借りると、現金は100万円です。そのうち70万円で機械を買っても、資産合計は100万円のまま。現金30万円と機械70万円に姿が変わります。</p><figure class="data-figure"><figcaption><strong>図解｜調達した100万円は、どこにある？</strong></figcaption><div class="bs-map"><div><strong>資産 100万円</strong><p>現金 30万円</p><p>機械 70万円</p></div><div><strong>調達源 100万円</strong><p>負債：借入金 40万円</p><p>純資産：出資 60万円</p></div></div><p class="source">取得時点の単純化した例。減価償却・税金はまだ考えていません。</p></figure><div class="note">資産100＝負債40＋純資産60。機械を買った70万円を、購入しただけで全額「損失」とするわけではありません。</div></section><section id="s3"><h2>3. 資産・負債・純資産の中身</h2><h3>流動資産：近い将来に回収・販売する資産</h3><p>現金、売掛金、商品や販売用不動産などです。売掛金は売上として計上されていても、まだ入金されていないお金。棚卸資産は、売って回収できて初めて現金になります。「流動資産が多い＝すぐ払える現金が多い」ではありません。</p><h3>固定資産：長く使うもの・長期の投資</h3><p>工場、賃貸用の建物、土地、ソフトウェア、投資有価証券など。建物の純額は、取得原価から減価償却累計額などを引いた帳簿上の残高です。市場で売れる価格とは一致しません。</p><h3>負債：借金だけではない</h3><p>借入金・社債のほか、買掛金、未払税金、顧客からの前受けに当たる契約負債なども含みます。すべての負債に利息がかかるわけではありません。返済期限や金利の確認では、借入金と社債を分けて見ます。</p><figure class="data-figure"><figcaption><strong>図解｜追加で20万円借りると、BSはどう動く？</strong></figcaption><div class="bs-map"><div><strong>借入前</strong><p>資産 100万円</p><p>負債 40万円</p><p>純資産 60万円</p></div><div><strong>借入後</strong><p>資産 120万円</p><p>負債 60万円</p><p>純資産 60万円</p></div></div><p class="source">第2節の架空会社に、借入金20万円が現金で入った直後。借入は売上でも利益でもなく、資産と負債が同額増える取引です。</p></figure><h3>純資産：現金の貯金箱ではない</h3><p>資本金、利益剰余金、自己株式、評価差額などから構成されます。利益剰余金が大きくても、その利益が設備や在庫に使われていれば、同額の現金が残っているわけではありません。</p><div class="note">流動・固定の区分は単純な1年基準だけでなく正常営業循環基準などにもよります。不動産会社の販売用不動産は、販売まで長くかかる場合もあります。</div></section><section id="s4"><h2>4. 企業実例を一覧で読む</h2><div class="note">三井不動産／連結・日本基準。比較日は2026年3月31日と2026年6月30日。最新四半期のBS実績です。公表日2026年8月7日、確認日2026年9月13日。</div><div class="table-scroll pl-ledger" role="region" aria-label="BS全体の一覧（百万円）" tabindex="0"><table><caption>BS全体の一覧（百万円）</caption><thead><tr><th scope="col">項目</th><th scope="col">2026年3月末</th><th scope="col">2026年6月末</th></tr></thead><tbody><tr class="pl-group"><th colspan="3">流動資産</th></tr>
+<tr class=""><th scope="row">現金及び預金</th><td>82,354</td><td>237,949</td></tr>
+<tr class=""><th scope="row">受取手形、売掛金及び契約資産</th><td>85,739</td><td>73,815</td></tr>
+<tr class=""><th scope="row">販売用不動産</th><td>1,378,722</td><td>1,417,628</td></tr>
+<tr class=""><th scope="row">仕掛販売用不動産</th><td>591,214</td><td>666,308</td></tr>
+<tr class=""><th scope="row">開発用土地</th><td>559,200</td><td>586,886</td></tr>
+<tr class=""><th scope="row">未成工事支出金</th><td>10,438</td><td>13,620</td></tr>
+<tr class=""><th scope="row">その他の棚卸資産</th><td>8,895</td><td>8,648</td></tr>
+<tr class=""><th scope="row">前渡金</th><td>73,950</td><td>75,655</td></tr>
+<tr class=""><th scope="row">短期貸付金</th><td>11,468</td><td>20,085</td></tr>
+<tr class=""><th scope="row">営業出資金</th><td>5,670</td><td>5,665</td></tr>
+<tr class=""><th scope="row">その他の流動資産</th><td>439,368</td><td>425,373</td></tr>
+<tr class=""><th scope="row">貸倒引当金（流動）</th><td>△1,927</td><td>△1,971</td></tr>
+<tr class="pl-profit"><th scope="row">流動資産合計</th><td>3,245,095</td><td>3,529,665</td></tr>
+<tr class="pl-group"><th colspan="3">固定資産</th></tr>
+<tr class=""><th scope="row">建物及び構築物（純額）</th><td>1,895,210</td><td>1,903,051</td></tr>
+<tr class=""><th scope="row">機械装置及び運搬具（純額）</th><td>81,112</td><td>81,430</td></tr>
+<tr class=""><th scope="row">土地</th><td>2,139,048</td><td>2,145,139</td></tr>
+<tr class=""><th scope="row">建設仮勘定</th><td>209,090</td><td>210,443</td></tr>
+<tr class=""><th scope="row">その他の有形固定資産（純額）</th><td>227,258</td><td>227,766</td></tr>
+<tr class="pl-profit"><th scope="row">有形固定資産合計</th><td>4,551,721</td><td>4,567,830</td></tr>
+<tr class=""><th scope="row">借地権</th><td>61,033</td><td>61,278</td></tr>
+<tr class=""><th scope="row">その他の無形固定資産</th><td>66,355</td><td>71,385</td></tr>
+<tr class="pl-profit"><th scope="row">無形固定資産合計</th><td>127,389</td><td>132,663</td></tr>
+<tr class=""><th scope="row">投資有価証券</th><td>1,480,844</td><td>1,389,685</td></tr>
+<tr class=""><th scope="row">長期貸付金</th><td>47,072</td><td>61,313</td></tr>
+<tr class=""><th scope="row">敷金及び保証金</th><td>178,767</td><td>180,917</td></tr>
+<tr class=""><th scope="row">退職給付に係る資産</th><td>105,015</td><td>104,818</td></tr>
+<tr class=""><th scope="row">繰延税金資産</th><td>34,416</td><td>35,539</td></tr>
+<tr class=""><th scope="row">再評価に係る繰延税金資産</th><td>132</td><td>132</td></tr>
+<tr class=""><th scope="row">その他の投資その他の資産</th><td>334,219</td><td>340,036</td></tr>
+<tr class=""><th scope="row">貸倒引当金（投資その他）</th><td>△1,200</td><td>△1,190</td></tr>
+<tr class="pl-profit"><th scope="row">投資その他の資産合計</th><td>2,179,269</td><td>2,111,253</td></tr>
+<tr class="pl-profit"><th scope="row">固定資産合計</th><td>6,858,379</td><td>6,811,748</td></tr>
+<tr class="pl-profit"><th scope="row">資産合計</th><td>10,103,474</td><td>10,341,413</td></tr>
+<tr class="pl-group"><th colspan="3">流動負債</th></tr>
+<tr class=""><th scope="row">支払手形及び買掛金</th><td>185,403</td><td>102,983</td></tr>
+<tr class=""><th scope="row">短期借入金</th><td>792,271</td><td>1,074,774</td></tr>
+<tr class=""><th scope="row">ノンリコース短期借入金</th><td>17,991</td><td>—</td></tr>
+<tr class=""><th scope="row">コマーシャル・ペーパー</th><td>132,794</td><td>200,000</td></tr>
+<tr class=""><th scope="row">ノンリコース1年内償還予定の社債</th><td>13,100</td><td>13,100</td></tr>
+<tr class=""><th scope="row">未払法人税等</th><td>80,023</td><td>43,008</td></tr>
+<tr class=""><th scope="row">契約負債</th><td>186,109</td><td>180,691</td></tr>
+<tr class=""><th scope="row">完成工事補償引当金</th><td>1,816</td><td>1,692</td></tr>
+<tr class=""><th scope="row">その他の流動負債</th><td>438,190</td><td>359,354</td></tr>
+<tr class="pl-profit"><th scope="row">流動負債合計</th><td>1,847,702</td><td>1,975,604</td></tr>
+<tr class="pl-group"><th colspan="3">固定負債</th></tr>
+<tr class=""><th scope="row">社債</th><td>996,935</td><td>1,091,300</td></tr>
+<tr class=""><th scope="row">ノンリコース社債</th><td>51,140</td><td>50,298</td></tr>
+<tr class=""><th scope="row">長期借入金</th><td>2,357,874</td><td>2,370,466</td></tr>
+<tr class=""><th scope="row">ノンリコース長期借入金</th><td>270,439</td><td>291,944</td></tr>
+<tr class=""><th scope="row">受入敷金保証金</th><td>513,526</td><td>522,559</td></tr>
+<tr class=""><th scope="row">繰延税金負債</th><td>263,501</td><td>247,326</td></tr>
+<tr class=""><th scope="row">再評価に係る繰延税金負債</th><td>81,082</td><td>81,082</td></tr>
+<tr class=""><th scope="row">退職給付に係る負債</th><td>36,721</td><td>37,075</td></tr>
+<tr class=""><th scope="row">役員退職慰労引当金</th><td>939</td><td>925</td></tr>
+<tr class=""><th scope="row">株式報酬引当金</th><td>1,699</td><td>2,075</td></tr>
+<tr class=""><th scope="row">その他の固定負債</th><td>297,068</td><td>323,090</td></tr>
+<tr class="pl-profit"><th scope="row">固定負債合計</th><td>4,870,928</td><td>5,018,146</td></tr>
+<tr class="pl-profit"><th scope="row">負債合計</th><td>6,718,630</td><td>6,993,751</td></tr>
+<tr class="pl-group"><th colspan="3">純資産</th></tr>
+<tr class=""><th scope="row">資本金</th><td>341,800</td><td>341,800</td></tr>
+<tr class=""><th scope="row">資本剰余金</th><td>311,560</td><td>249,407</td></tr>
+<tr class=""><th scope="row">利益剰余金</th><td>1,922,741</td><td>1,949,634</td></tr>
+<tr class=""><th scope="row">自己株式</th><td>△67,463</td><td>△45,311</td></tr>
+<tr class="pl-profit"><th scope="row">株主資本合計</th><td>2,508,639</td><td>2,495,532</td></tr>
+<tr class=""><th scope="row">その他有価証券評価差額金</th><td>335,470</td><td>297,411</td></tr>
+<tr class=""><th scope="row">繰延ヘッジ損益</th><td>8,744</td><td>8,572</td></tr>
+<tr class=""><th scope="row">土地再評価差額金</th><td>165,931</td><td>165,941</td></tr>
+<tr class=""><th scope="row">為替換算調整勘定</th><td>216,411</td><td>236,025</td></tr>
+<tr class=""><th scope="row">退職給付に係る調整累計額</th><td>42,311</td><td>40,705</td></tr>
+<tr class="pl-profit"><th scope="row">その他の包括利益累計額合計</th><td>768,868</td><td>748,656</td></tr>
+<tr class=""><th scope="row">新株予約権</th><td>585</td><td>585</td></tr>
+<tr class=""><th scope="row">非支配株主持分</th><td>106,750</td><td>102,888</td></tr>
+<tr class="pl-profit"><th scope="row">純資産合計</th><td>3,384,844</td><td>3,347,662</td></tr>
+<tr class="pl-profit"><th scope="row">負債純資産合計</th><td>10,103,474</td><td>10,341,413</td></tr></tbody></table></div><p class="source">出典：<a href="https://www.mitsuifudosan.co.jp/corporate/ir/presentation/pdf/tanshin260807.pdf" target="_blank" rel="noopener">三井不動産 2027年3月期第1四半期決算短信</a>、添付資料3〜4ページ（PDF5〜6ページ目）。有形固定資産は取得原価・減価償却累計額の別表示を純額に集約し、各区分の中身と合計を掲載。表示単位は百万円、百万円未満切捨て。</p></section><section id="s5"><h2>5. 数字を計算して、質まで考える</h2><figure class="data-figure"><figcaption><strong>図解｜資産と調達源の大枠（2026年6月末）</strong></figcaption><div class="bs-map"><div><strong>資産 10,341,413</strong><p>流動資産 3,529,665</p><p>固定資産 6,811,748</p></div><div><strong>負債・純資産 10,341,413</strong><p>負債 6,993,751</p><p>純資産 3,347,662</p></div></div><p class="source">単位：百万円。上の公式BSから作図。ブロックは構成比の図ではありません。</p></figure><h3>自己資本比率：純資産をそのまま使わない</h3><p>自己資本＝純資産−新株予約権−非支配株主持分。最新の表示値では3,347,662−585−102,888＝<strong>3,244,189百万円</strong>。短信の公表自己資本は3,244,188百万円で、切捨てによる表示差があります。</p><p>公表自己資本÷総資産×100＝3,244,188÷10,341,413×100≒<strong>31.37%</strong>（公表比率31.4%）。純資産には親会社株主以外の持分もあるため、純資産比率と自己資本比率は別です。</p><h3>流動比率だけで安全と決めない</h3><p>流動比率＝流動資産÷流動負債×100。3,529,665÷1,975,604×100≒<strong>178.66%</strong>。ただし販売用不動産・仕掛販売用不動産・開発用土地の合計は2,670,822百万円、総資産の約25.83%です。売却・回収の時期と価値を確認する必要があります。</p><h3>増えた資産を、どう調達したか</h3><p>資産合計は表示値で237,939百万円増加。負債は275,121百万円増え、純資産は37,182百万円減りました。増減を左右両方で追うと、資産が増えたという事実だけでは評価できないことが分かります。</p><h3>資産の質を見るチェックポイント</h3><p>売掛金は回収できるか。在庫は売れるか。設備は利益を生むか。のれんは買収時に期待した利益が出ているか。のれんが別行で見えない場合は無形資産の注記を確認します。「固定資産が大きい＝優良資産」とは限りません。</p><p class="source">自己資本の公表値・比率は同じ短信の表紙。個別BSの変動理由は株主資本等の注記やCFと照合し、この一覧だけでは原因を断定しません。</p></section><section id="s6"><h2>6. 練習問題：この場の資料で解く</h2><div class="quiz" id="q1"><strong>問題1｜BSの左右</strong><div class="table-scroll pl-ledger" role="region" aria-label="架空会社のBS（万円）" tabindex="0"><table><caption>架空会社のBS（万円）</caption><thead><tr><th scope="col">項目</th><th scope="col">残高</th></tr></thead><tbody><tr class=""><th scope="row">現金</th><td>30</td></tr>
+<tr class=""><th scope="row">売掛金</th><td>20</td></tr>
+<tr class=""><th scope="row">棚卸資産</th><td>40</td></tr>
+<tr class=""><th scope="row">機械</th><td>110</td></tr>
+<tr class="pl-profit"><th scope="row">負債合計</th><td>120</td></tr></tbody></table></div><p>① 資産合計と純資産は？<br>② 売掛金20万円を現金で回収した直後、資産合計はどう変わる？ 他の取引はないものとします。</p></div><details><summary>問題1の解答・途中計算</summary><div class="detail-body"><p>① 資産＝30＋20＋40＋110＝<strong>200万円</strong>。純資産＝200−120＝<strong>80万円</strong>。</p><p>② 現金は50万円、売掛金は0。合計は<strong>200万円のまま</strong>。資産の種類が変わっただけです。</p></div></details><div class="quiz" id="q2"><strong>問題2｜流動比率と資産の質</strong><div class="table-scroll pl-ledger" role="region" aria-label="架空会社の資料（億円）" tabindex="0"><table><caption>架空会社の資料（億円）</caption><thead><tr><th scope="col">項目</th><th scope="col">残高</th></tr></thead><tbody><tr class=""><th scope="row">現金</th><td>10</td></tr>
+<tr class=""><th scope="row">売掛金</th><td>20</td></tr>
+<tr class=""><th scope="row">棚卸資産</th><td>70</td></tr>
+<tr class=""><th scope="row">流動負債</th><td>50</td></tr></tbody></table></div><p>流動資産は上記3項目だけです。① 流動比率は？<br>② 「100億円の現金があるから返済できる」と言えますか？</p></div><details><summary>問題2の解答・途中計算</summary><div class="detail-body"><p>①（10＋20＋70）÷50×100＝<strong>200%</strong>。</p><p>② 言えません。現金は10億円です。売掛金の回収・在庫の販売時期と、負債の支払期限を確認する必要があります。</p></div></details><div class="quiz" id="q3"><strong>問題3｜実例の自己資本</strong><div class="table-scroll pl-ledger" role="region" aria-label="三井不動産・2026年6月末（百万円）" tabindex="0"><table><caption>三井不動産・2026年6月末（百万円）</caption><thead><tr><th scope="col">項目</th><th scope="col">公表値</th></tr></thead><tbody><tr class=""><th scope="row">総資産</th><td>10,341,413</td></tr>
+<tr class=""><th scope="row">純資産</th><td>3,347,662</td></tr>
+<tr class=""><th scope="row">新株予約権</th><td>585</td></tr>
+<tr class=""><th scope="row">非支配株主持分</th><td>102,888</td></tr>
+<tr class=""><th scope="row">公表自己資本</th><td>3,244,188</td></tr></tbody></table></div><p>自己資本＝純資産−新株予約権−非支配株主持分です。① 表の個別値から自己資本を計算してください。<br>② 公表自己資本を使って自己資本比率を求めてください。<br>百万円未満切捨ての表示差があるため、②では公表値を使います。</p></div><details><summary>問題3の解答・途中計算</summary><div class="detail-body"><p>① 3,347,662−585−102,888＝<strong>3,244,189百万円</strong>。公表値との差は1百万円。</p><p>② 3,244,188÷10,341,413×100≒<strong>31.37%</strong>、小数1桁では31.4%。純資産をそのまま分子にしません。</p><p class="source">資料：上記公式四半期短信の表紙・添付資料4ページ。</p></div></details></section><section id="s7"><h2>7. まとめ</h2><div class="footer"><strong>BSは「何を持つか」と「どう調達したか」の表</strong><p>資産＝負債＋純資産。現金・回収待ち・販売待ちの資産を区別し、負債の期限と資産の質を確認します。自己資本は純資産と同じとは限りません。</p></div><p>次回はCF。資産や負債の変化が、現金の増減にどうつながるかを読みます。</p><p><a href="/beginner/01/">← 第1回 PL</a>　<a href="/beginner/03/">第3回 CF →</a></p></section><p class="source">学習用記事です。特定銘柄の売買を推奨しません。資料確認日：2026年9月13日。以後の決算は自動反映されません。</p></main></div></body></html>

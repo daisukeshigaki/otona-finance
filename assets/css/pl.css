@@ -1,4 +1,9 @@
 html{scroll-padding-top:82px}
+.bs-map{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.bs-map>div{padding:18px;background:#eaf2f7;border-top:4px solid #24679b}
+.bs-map>div:last-child{background:#eef3f6;border-top-color:#627d93}
+.bs-map strong{color:#173f67}.bs-map p{padding:10px 0;border-bottom:1px solid #c7d6e2;margin:0;font-variant-numeric:tabular-nums}
+@media(max-width:640px){.bs-map{grid-template-columns:1fr}}
 .data-figure{margin:28px 0;padding:22px;border:1px solid var(--line);background:#f8fafc}
 .data-figure figcaption{margin-bottom:20px;color:#173f67}
 .data-figure figcaption strong{display:block;font-size:1.125rem}
