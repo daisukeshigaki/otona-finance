@@ -1,0 +1,7 @@
+/* Keep the button and course description in document flow, including at enlarged text sizes. */
+.course-card.course-cover{display:flex;flex-direction:column;padding:22px 28px 24px}
+.course-cover>img,.course-cover>.shade{inset:0}
+.course-cover .card-top{position:relative;inset:auto;gap:12px;flex-wrap:wrap}
+.course-cover .card-copy{position:relative;inset:auto;margin-top:32px}
+.course-cover .cover-foot{position:relative;inset:auto;display:block;margin-top:16px;font-size:12px;line-height:1.7}
+@media(max-width:440px){.course-card.course-cover{padding:20px}.course-cover .card-copy{inset:auto;margin-top:28px}.course-cover .cover-foot{inset:auto;font-size:12px}}
