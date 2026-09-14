@@ -1,130 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>おとなのファイナンス｜初級編 第1回 PLの見方</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="会社は誰のお金で動くのか。株式会社と、会社に資金を届ける資本市場の仕組みを学びます。">
+<title>第1回 会社とは・資本市場とは｜初級編｜おとなのファイナンス</title>
 <style>
-:root{--navy:#0B2E6D;--blue:#1E63B5;--orange:#F28C28;--green:#0B6B4F;--ink:#172033;--muted:#667085;--line:#DCE5F2;--soft:#F6F9FD;--soft2:#EEF4FB;--white:#fff}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;color:var(--ink);background:#F3F6FA;line-height:1.85}
-.topbar{position:sticky;top:0;z-index:20;height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:rgba(11,46,109,.97);color:#fff;box-shadow:0 2px 10px rgba(11,46,109,.18)}
-.brand{font-weight:800;letter-spacing:.02em}.episode{font-size:14px;opacity:.92}
-.layout{display:grid;grid-template-columns:260px minmax(0,860px);gap:28px;max-width:1200px;margin:28px auto 60px;padding:0 22px}
-aside{position:sticky;top:82px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 8px 30px rgba(38,64,105,.06)}
-aside .toc-title{font-weight:800;color:var(--navy);margin-bottom:10px} aside a{display:block;color:#31405d;text-decoration:none;padding:7px 8px;border-radius:8px;font-size:14px} aside a:hover{background:var(--soft2);color:var(--navy)}
-main{min-width:0}.hero{background:linear-gradient(135deg,#fff 0%,#F2F7FF 100%);border:1px solid var(--line);border-radius:22px;padding:34px 36px 30px;box-shadow:0 12px 36px rgba(38,64,105,.08)}
-.badge{display:inline-block;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800;color:var(--blue);background:#EAF2FF}
-h1{font-size:36px;line-height:1.25;margin:14px 0 10px;color:var(--navy)}.lead{font-size:17px;color:#40506f;margin:0}.goal{margin-top:22px;padding:16px 18px;background:#fff;border-left:5px solid var(--orange);border-radius:12px}
-section{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 30px;box-shadow:0 8px 26px rgba(38,64,105,.05)}
-h2{font-size:25px;line-height:1.35;margin:0 0 14px;color:var(--navy)} h3{font-size:19px;margin:22px 0 8px;color:#253a62} p{margin:10px 0}
-.simple{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center;margin:20px 0 10px}.simple .box{padding:20px 12px;text-align:center;border-radius:14px;font-weight:800;border:1px solid var(--line)}
-.sales{background:#EAF2FF;color:#174A8B}.cost{background:#FFF3E7;color:#9A5316}.profit{background:#E9F7EF;color:#0B6B4F}.op{font-weight:900;color:#8993A4;font-size:22px}
-.note{padding:14px 16px;border-radius:12px;background:#F8FAFC;border:1px dashed #C8D4E6;color:#45536d}
-.profit-stack{display:grid;gap:10px;margin:18px 0}.profit-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}.profit-label{font-weight:800;color:#fff;background:var(--navy);padding:10px 12px;border-radius:10px;text-align:center}.profit-desc{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
-details{margin:16px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#FBFDFF} summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:800;color:var(--navy);background:#F4F8FD;user-select:none} summary::-webkit-details-marker{display:none} summary::before{content:"▶";margin-right:10px;font-size:12px;color:var(--blue)} details[open] summary::before{content:"▼"}.detail-body{padding:18px}
-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px} th,td{border-bottom:1px solid var(--line);padding:10px 9px;text-align:right} th:first-child,td:first-child{text-align:left} th{background:#F1F5FA;color:#344563}.hl td{font-weight:800;color:var(--navy);background:#F8FBFF}
-.checklist{display:grid;gap:10px;margin-top:14px}.check{display:flex;gap:10px;align-items:flex-start;padding:13px 14px;border-radius:11px;background:#F8FAFC}.num{flex:0 0 28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:800;font-size:13px}
-.quiz{background:#FFF9EF;border:1px solid #F3D7A4;padding:18px;border-radius:14px}.answer{background:#F0F8F3;border:1px solid #BFE0CA;padding:18px;border-radius:14px}.footer{margin-top:28px;padding:22px 26px;color:#fff;background:var(--navy);border-radius:16px}.small{font-size:13px;color:var(--muted)}
-.placeholder{display:grid;place-items:center;min-height:220px;border:2px dashed #BFD0E7;border-radius:14px;background:#F8FBFF;color:#60708E;text-align:center;padding:24px}
-@media(max-width:900px){.layout{grid-template-columns:1fr;padding:0 14px;margin-top:18px}aside{position:relative;top:auto}h1{font-size:30px}}
-@media(max-width:620px){.topbar{padding:0 14px}.episode{display:none}.hero,section{padding:22px 18px}.simple{grid-template-columns:1fr}.op{transform:rotate(90deg);text-align:center}.profit-row{grid-template-columns:1fr}table{font-size:12px}}
+:root {
+  --navy:#0b2e6d;
+  --blue:#2563a9;
+  --blue2:#eaf2ff;
+  --orange:#f28c28;
+  --orange2:#fff4e8;
+  --green:#0b6b4f;
+  --green2:#eaf7f1;
+  --ink:#172033;
+  --muted:#68758c;
+  --line:#dbe4f0;
+  --soft:#f6f9fd;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic","Meiryo",sans-serif;
+  color:var(--ink);
+  background:#f3f6fa;
+  line-height:1.86;
+}
+a{color:inherit}
+.sitebar{
+  position:sticky;top:0;z-index:40;
+  display:flex;align-items:center;justify-content:space-between;
+  height:58px;padding:0 24px;
+  background:rgba(11,46,109,.98);color:#fff;
+  box-shadow:0 2px 12px rgba(11,46,109,.18)
+}
+.brand{font-weight:900;letter-spacing:.02em}
+.episode{font-size:14px;opacity:.94}
+.page{max-width:1240px;margin:0 auto;padding:24px 20px 70px}
+.breadcrumb{font-size:13px;color:#748198;margin-bottom:14px}
+.layout{display:grid;grid-template-columns:260px minmax(0,900px);gap:30px;align-items:start}
+.toc{
+  position:sticky;top:82px;background:#fff;border:1px solid var(--line);
+  border-radius:16px;padding:18px;box-shadow:0 8px 28px rgba(35,57,92,.06)
+}
+.toc strong{display:block;color:var(--navy);margin-bottom:9px}
+.toc a{display:block;text-decoration:none;padding:7px 8px;border-radius:8px;color:#3c4963;font-size:14px}
+.toc a:hover{background:var(--blue2);color:var(--navy)}
+main{min-width:0}
+.hero{
+  padding:36px 38px 32px;border:1px solid var(--line);border-radius:24px;
+  background:linear-gradient(135deg,#fff 0%,#f2f7ff 100%);
+  box-shadow:0 14px 40px rgba(38,64,105,.08)
+}
+.kicker{display:inline-block;padding:5px 11px;border-radius:999px;background:var(--blue2);color:var(--blue);font-weight:900;font-size:12px}
+h1{margin:13px 0 10px;color:var(--navy);font-size:40px;line-height:1.22}
+.lead{font-size:18px;color:#43526e;margin:0}
+.goal{margin-top:20px;background:#fff;border-left:5px solid var(--orange);padding:16px 18px;border-radius:12px}
+.video{margin-top:16px;padding:16px 18px;border:1px dashed #bdd0e8;border-radius:12px;background:#f8fbff;color:#55647e}
+.chapter{
+  margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:30px 32px;box-shadow:0 8px 28px rgba(35,57,92,.05)
+}
+.chapter-label{font-size:12px;font-weight:900;color:var(--orange);letter-spacing:.08em}
+h2{margin:3px 0 12px;color:var(--navy);font-size:28px;line-height:1.35}
+h3{margin:26px 0 9px;color:#263b62;font-size:20px}
+p{margin:10px 0}
+.key{padding:15px 17px;border-radius:12px;background:var(--soft);border:1px solid var(--line);margin:14px 0}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.card{padding:18px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}
+.card strong{color:var(--navy)}
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center;margin:18px 0}
+.node{padding:17px 12px;border:1px solid var(--line);border-radius:14px;text-align:center;font-weight:900}
+.n1{background:var(--blue2);color:#174b8f} .n2{background:var(--orange2);color:#9b551b} .n3{background:var(--green2);color:var(--green)}
+.arrow{font-size:22px;color:#8b96a8;font-weight:900}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+th,td{padding:11px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f1f5fa;color:#344563}
+.visual{margin:18px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fbfdff}
+.visual summary{cursor:pointer;list-style:none;padding:15px 18px;background:#f4f8fd;color:var(--navy);font-weight:900;user-select:none}
+.visual summary::-webkit-details-marker{display:none}
+.visual summary:before{content:"▶";margin-right:9px;font-size:12px;color:var(--blue)}
+.visual[open] summary:before{content:"▼"}
+.visual-body{padding:16px;background:#fff}
+.visual img{width:100%;display:block;border-radius:10px;border:1px solid #e2e8f0}
+.market-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.primary{border-top:4px solid var(--orange)} .secondary{border-top:4px solid var(--green)}
+.formula{padding:17px;border-radius:13px;background:#f7f9fc;border:1px solid var(--line);font-size:18px;font-weight:900;text-align:center;color:var(--navy);margin:14px 0}
+.steps{display:grid;gap:10px;margin:15px 0}
+.step{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:900;font-size:13px}
+.quiz{padding:18px;border-radius:14px;background:#fff9ef;border:1px solid #f0d5a4}
+.answer{padding:18px;border-radius:14px;background:#eff8f3;border:1px solid #bddfca}
+.summarybox{margin-top:22px;padding:22px 24px;border-radius:16px;background:var(--navy);color:#fff}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+.nav a{text-decoration:none;padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--navy);font-weight:800}
+.small{font-size:13px;color:var(--muted)}
+@media(max-width:920px){
+ .layout{grid-template-columns:1fr} .toc{position:relative;top:auto}
+}
+@media(max-width:640px){
+ .sitebar{padding:0 14px} .episode{display:none} .page{padding:14px 12px 48px}
+ .hero,.chapter{padding:22px 18px} h1{font-size:31px}
+ .cards,.market-grid{grid-template-columns:1fr} .flow{grid-template-columns:1fr}
+ .arrow{transform:rotate(90deg);text-align:center}
+}
 </style>
 <link rel="icon" type="image/png" href="/assets/images/brand/logo-mark.png">
 <link rel="stylesheet" href="/assets/css/lesson.css">
 <link rel="stylesheet" href="/assets/css/brand.css">
-<link rel="stylesheet" href="/assets/css/pl.css">
-<meta name="description" content="PLの5つの利益を、三井不動産の実際の決算と練習問題で学ぶ。営業利益と経常利益の差を内訳に分解します。">
 </head>
 <body>
-<header class="topbar"><a class="brand" href="/"><img src="/assets/images/brand/logo-mark.png" alt=""><span>おとなのファイナンス</span></a><div class="episode">初級編｜第1回 PLの見方</div></header>
-<div class="layout">
-<aside><div class="toc-title">この回の目次</div><a href="#s1">1. PLとは何か</a><a href="#s2">2. 超シンプルに理解する</a><a href="#s3">3. 5つの利益</a><a href="#s4">4. 各項目を詳しく読む</a><a href="#s5">5. PLを読む順番</a><a href="#s6">6. 三井不動産の実例</a><a href="#s7">7. 練習問題</a></aside>
-<main>
-<div class="hero"><span class="badge">初級編 · 第1回</span><h1>PLの見方</h1><p class="lead">損益計算書を「売上・費用・利益」の3つから理解し、最終的には実際の決算書を読めるようになる。</p><div class="goal"><strong>この回のゴール</strong><br>PLを見たときに、「何で儲けたのか」「どこで利益が増減したのか」「その利益は本当に続きそうか」を自分で説明できる。</div><p class="source">企業実例：三井不動産／練習問題3問／更新日：2026年9月13日</p></div>
-<section id="s1"><h2>1. PLとは何か</h2><p>PL（Profit and Loss Statement / 損益計算書）は、ある一定期間に会社がどれだけ売上を上げ、どれだけ費用を使い、最終的にいくら利益を残したのかを表す表です。</p><p>BSが「ある時点の会社の状態」を表すのに対して、PLは「1年間などの期間中に会社がどう稼いだか」を表します。</p><div class="note">いきなり細かい勘定科目を覚える必要はありません。まずは「売上 → 費用 → 利益」という流れをつかむのが先です。</div></section>
-<section id="s2"><h2>2. 超シンプルに理解する</h2><div class="simple"><div class="box sales">売上<br><span class="small">お客さんから得た金額</span></div><div class="op">−</div><div class="box cost">費用<br><span class="small">売るために使ったコスト</span></div><div class="op">＝</div><div class="box profit">利益<br><span class="small">会社に残った稼ぎ</span></div></div><p>架空の小さな商店を考えます。たとえば100円の商品を売って、その商品を仕入れるのに60円、人件費や家賃などに20円かかったなら、残る営業利益は20円です。この例では利息や税金をまだ考えていません。</p><figure class="data-figure"><figcaption><strong>図解｜売上100円は、どこへ行く？</strong><span>架空の商店。原価60円＋販管費20円＋営業利益20円。</span></figcaption><div class="cost-strip" aria-hidden="true"><span style="flex:60" class="strip-cost">60%</span><span style="flex:20" class="strip-admin">20%</span><span style="flex:20" class="strip-profit">20%</span></div><div class="cost-labels"><span><i class="swatch strip-cost"></i>売上原価 60円</span><span><i class="swatch strip-admin"></i>販管費 20円</span><span><i class="swatch strip-profit"></i>営業利益 20円</span></div><div class="cost-equation"><span>売上100 − 原価60<br><strong>粗利40円</strong></span><b>→</b><span>粗利40 − 販管費20<br><strong>営業利益20円</strong></span></div></figure></section>
-<section id="s3"><h2>3. PLには「利益」がいくつもある</h2><p>PLがややこしく見える最大の理由は、利益が1種類ではないことです。日本基準の一般的な企業の決算書では、主に次の利益を順番に見ていきます。</p><figure class="lesson-diagram"><img src="/assets/images/beginner/01/profit-stages.png" width="1536" height="1024" loading="lazy" alt="売上高から売上原価を引くと売上総利益、販管費を引くと営業利益。営業外損益、特別損益、法人税等を順に反映して純利益になる。"><figcaption>日本基準の一般的なPLを簡略化した図。連結では純利益から非支配株主分を分けます。</figcaption></figure><div class="profit-stack"><div class="profit-row"><div class="profit-label">売上総利益</div><div class="profit-desc">商品・サービスそのものからどれだけ粗く稼げたか。</div></div><div class="profit-row"><div class="profit-label">営業利益</div><div class="profit-desc">人件費・広告費・家賃なども含め、本業でどれだけ稼げたか。</div></div><div class="profit-row"><div class="profit-label">経常利益</div><div class="profit-desc">本業に加えて、利息など通常発生する営業外損益まで含めた利益。</div></div><div class="profit-row"><div class="profit-label">税引前利益</div><div class="profit-desc">特別損益なども反映し、税金を引く前の利益。</div></div><div class="profit-row"><div class="profit-label">当期純利益</div><div class="profit-desc">税金を引いた後の利益。連結では非支配株主分を分けて、親会社株主に帰属する純利益を確認。</div></div></div><details><summary>補足：なぜ利益をこんなに分けるのか</summary><div class="detail-body"><p>会社の利益が増えたとしても、それが「本業が強くなったから」なのか、「保有株を売ったから」なのかでは意味がまったく違います。</p><p>だからPLでは、利益が生まれた場所ごとに段階を分けて表示します。</p></div></details><div class="note">IFRSでは「経常利益」が通常表示されません。また、営業外損益＝毎年同じ額、特別損益＝必ず一度きり、という意味でもありません。項目名だけでなく中身を確認します。</div></section>
-<section id="s4"><h2>4. 各項目を詳しく読む</h2><h3>売上高</h3><p>会社が商品やサービスを販売して得た金額です。ただし、売上が増えているだけでは十分ではありません。数量が増えたのか、値上げしたのか、買収したのかなど、増え方の中身を見る必要があります。</p><h3>売上原価と売上総利益</h3><p>商品・サービスを提供するために直接かかったコストが売上原価です。売上高から売上原価を引いたものが売上総利益、いわゆる粗利です。</p><h3>販売費及び一般管理費</h3><p>人件費、広告宣伝費、物流費、家賃、研究開発費など、会社を運営して売上を作るための費用が含まれます。</p><h3>営業利益</h3><p>売上総利益から販管費を引いたものです。企業分析では「本業の稼ぐ力」を見る代表的な利益として非常によく使われます。</p><details><summary>架空例：利益率まで見てみる</summary><div class="detail-body"><table><tr><th>項目</th><th>金額</th><th>売上比</th></tr><tr><td>売上高</td><td>1,000</td><td>100%</td></tr><tr><td>売上原価</td><td>600</td><td>60%</td></tr><tr class="hl"><td>売上総利益</td><td>400</td><td>40%</td></tr><tr><td>販管費</td><td>250</td><td>25%</td></tr><tr class="hl"><td>営業利益</td><td>150</td><td>15%</td></tr></table><p>営業利益率は15%。翌年に売上が増えても営業利益率が10%へ落ちていたら、「成長しているが、以前より稼ぎにくくなっている」と読めます。</p></div></details><figure class="data-figure"><figcaption><strong>図解｜ひとつの会社で、PLを最後まで計算する</strong><span>架空例・単位：億円。非支配株主はないものとします。</span></figcaption><div class="calculation-flow"><div class="calc-step"><span class="calc-rule">出発点</span><div class="calc-result"><strong>売上高</strong><b>1,000</b></div></div>
-<div class="calc-step"><span class="flow-arrow" aria-hidden="true">↓</span><span class="calc-rule">− 売上原価600</span><div class="calc-result"><strong>売上総利益</strong><b>400</b></div></div>
-<div class="calc-step"><span class="flow-arrow" aria-hidden="true">↓</span><span class="calc-rule">− 販管費250</span><div class="calc-result"><strong>営業利益</strong><b>150</b></div></div>
-<div class="calc-step"><span class="flow-arrow" aria-hidden="true">↓</span><span class="calc-rule">＋ 営業外収益10 − 営業外費用30</span><div class="calc-result"><strong>経常利益</strong><b>130</b></div></div>
-<div class="calc-step"><span class="flow-arrow" aria-hidden="true">↓</span><span class="calc-rule">＋ 特別利益50 − 特別損失10</span><div class="calc-result"><strong>税引前利益</strong><b>170</b></div></div>
-<div class="calc-step"><span class="flow-arrow" aria-hidden="true">↓</span><span class="calc-rule">− 法人税等45</span><div class="calc-result"><strong>純利益</strong><b>125</b></div></div></div><p class="source">経常利益130に特別損益の純額40が加わり、税引前利益は170に増加。税金45を引くと純利益125です。</p></figure><h3>経常利益：利息も含めた利益</h3><p>営業利益＋営業外収益−営業外費用で求めます。受取利息・配当金・持分法投資損益なども含まれるため、営業利益との差額をすべて借入金の金利負担と考えないようにしましょう。</p><h3>税引前利益と純利益</h3><p>経常利益に特別損益を加減すると税引前利益、そこから法人税等を引くと純利益です。連結では子会社の利益の一部が非支配株主に帰属する場合があり、親会社株主に帰属する純利益とは区別します。</p></section>
-<section id="s5"><h2>5. PLを読むときは、この順番で見る</h2><div class="checklist"><div class="check"><div class="num">1</div><div><strong>売上は伸びているか</strong><br><span class="small">前年比・数年間の推移を見る。</span></div></div><div class="check"><div class="num">2</div><div><strong>利益は売上以上に伸びているか</strong><br><span class="small">利益率が改善しているか悪化しているかを見る。</span></div></div><div class="check"><div class="num">3</div><div><strong>どの段階の利益が動いたか</strong><br><span class="small">粗利なのか、販管費なのか、営業外なのかを切り分ける。</span></div></div><div class="check"><div class="num">4</div><div><strong>一時要因はないか</strong><br><span class="small">資産売却益、減損、特別損失などで最終利益だけ動いていないか確認する。</span></div></div><div class="check"><div class="num">5</div><div><strong>来期も続く利益なのか</strong><br><span class="small">企業価値を考えるときは「再現性」が重要。</span></div></div></div></section>
-<section id="s6">
-<h2>6. 企業実例：三井不動産のPL</h2>
-<p>不動産会社の決算で、売上・原価・販管費・営業外損益・特別損益・税金を順に追い、PL全体を読みます。全体をつかんだうえで、営業利益と経常利益の差も詳しく確認しましょう。</p>
-<div class="note"><strong>実績の対象</strong><br>三井不動産（8801）／連結・日本基準<br>2027年3月期 第1四半期：2026年4月1日〜6月30日<br>公表2026年8月7日／確認2026年9月13日<br>単位：百万円。通期予想ではなく3か月間の実績です。</div>
-<h3>まず、売上から純利益までを一覧で見る</h3>
-<p>三井不動産では「売上高」に当たる項目を「営業収益」、「売上総利益」に当たる項目を「営業総利益」と表示しています。利益の行を青く示しました。上から順に追うと、どの費用・損益がどの利益に反映されるかを確認できます。</p>
-<div class="table-scroll pl-ledger" role="region" aria-label="三井不動産のPL全体。前年同四半期と当四半期の比較" tabindex="0"><table><caption>連結損益計算書の全体像（百万円）</caption><thead><tr><th scope="col">項目</th><th scope="col">2025年4〜6月</th><th scope="col">2026年4〜6月</th></tr></thead><tbody>
-<tr class="pl-revenue"><th scope="row">営業収益（売上高に相当）</th><td>802,316</td><td>616,930</td></tr>
-<tr class="pl-cost"><th scope="row">営業原価</th><td>575,222</td><td>443,571</td></tr>
-<tr class="pl-profit"><th scope="row">営業総利益（売上総利益に相当）</th><td>227,094</td><td>173,358</td></tr>
-<tr class="pl-cost"><th scope="row">販売費及び一般管理費</th><td>66,981</td><td>69,850</td></tr>
-<tr class="pl-profit"><th scope="row">営業利益</th><td>160,112</td><td>103,507</td></tr>
-<tr class="pl-group"><th colspan="3" scope="rowgroup">営業外収益</th></tr>
-<tr class="pl-detail"><th scope="row">　受取利息</th><td>913</td><td>727</td></tr>
-<tr class="pl-detail"><th scope="row">　受取配当金</th><td>3,870</td><td>3,885</td></tr>
-<tr class="pl-detail"><th scope="row">　持分法による投資利益</th><td>1,103</td><td>983</td></tr>
-<tr class="pl-detail"><th scope="row">　その他</th><td>870</td><td>2,200</td></tr>
-<tr class="pl-subtotal"><th scope="row">営業外収益合計</th><td>6,756</td><td>7,796</td></tr>
-<tr class="pl-group"><th colspan="3" scope="rowgroup">営業外費用</th></tr>
-<tr class="pl-detail"><th scope="row">　支払利息</th><td>19,588</td><td>18,836</td></tr>
-<tr class="pl-detail"><th scope="row">　その他</th><td>3,275</td><td>2,974</td></tr>
-<tr class="pl-subtotal"><th scope="row">営業外費用合計</th><td>22,863</td><td>21,811</td></tr>
-<tr class="pl-profit"><th scope="row">経常利益</th><td>144,005</td><td>89,493</td></tr>
-<tr class="pl-group"><th colspan="3" scope="rowgroup">特別利益</th></tr>
-<tr class="pl-detail"><th scope="row">　固定資産売却益</th><td>26,493</td><td>—</td></tr>
-<tr class="pl-detail"><th scope="row">　投資有価証券売却益</th><td>7,815</td><td>24,232</td></tr>
-<tr class="pl-subtotal"><th scope="row">特別利益合計</th><td>34,309</td><td>24,232</td></tr>
-<tr class="pl-profit"><th scope="row">税金等調整前四半期純利益</th><td>178,315</td><td>113,725</td></tr>
-<tr class="pl-cost"><th scope="row">法人税等</th><td>53,797</td><td>37,369</td></tr>
-<tr class="pl-profit"><th scope="row">四半期純利益</th><td>124,517</td><td>76,355</td></tr>
-<tr class="pl-detail"><th scope="row">非支配株主に帰属する四半期純利益</th><td>285</td><td>537</td></tr>
-<tr class="pl-profit"><th scope="row">親会社株主に帰属する四半期純利益</th><td>124,232</td><td>75,818</td></tr>
-</tbody></table></div>
-<p class="source">出典：<a href="https://www.mitsuifudosan.co.jp/corporate/ir/presentation/pdf/tanshin260807.pdf" target="_blank" rel="noopener">三井不動産 公式決算短信</a>、添付資料5ページ（PDF7ページ目）。原資料のPL項目を並べ替えずに掲載。原資料に特別損失の行はなく、固定資産売却益の当期は「—」です。百万円未満切捨てのため、表示値の足し引きと公表合計に差があります。</p>
-<figure class="data-figure"><figcaption><strong>図解｜5つの利益を同じ物差しで比較</strong><span>単位：億円。棒はすべて0〜2,500億円の共通スケール。</span></figcaption>
-<div class="chart-legend"><span><i class="swatch prior"></i>前年同四半期</span><span><i class="swatch current"></i>当四半期</span></div>
-<div class="profit-pair"><strong>売上総利益に相当</strong><div class="chart-bar-row"><span class="chart-track"><i class="prior" style="width:90.8376%"></i></span><span>2270.94</span></div><div class="chart-bar-row"><span class="chart-track"><i class="current" style="width:69.34320000000001%"></i></span><span>1733.58</span></div></div>
-<div class="profit-pair"><strong>営業利益</strong><div class="chart-bar-row"><span class="chart-track"><i class="prior" style="width:64.0448%"></i></span><span>1601.12</span></div><div class="chart-bar-row"><span class="chart-track"><i class="current" style="width:41.4028%"></i></span><span>1035.07</span></div></div>
-<div class="profit-pair"><strong>経常利益</strong><div class="chart-bar-row"><span class="chart-track"><i class="prior" style="width:57.602%"></i></span><span>1440.05</span></div><div class="chart-bar-row"><span class="chart-track"><i class="current" style="width:35.797200000000004%"></i></span><span>894.93</span></div></div>
-<div class="profit-pair"><strong>税引前利益</strong><div class="chart-bar-row"><span class="chart-track"><i class="prior" style="width:71.326%"></i></span><span>1783.15</span></div><div class="chart-bar-row"><span class="chart-track"><i class="current" style="width:45.49%"></i></span><span>1137.25</span></div></div>
-<div class="profit-pair"><strong>親会社株主の純利益</strong><div class="chart-bar-row"><span class="chart-track"><i class="prior" style="width:49.6928%"></i></span><span>1242.32</span></div><div class="chart-bar-row"><span class="chart-track"><i class="current" style="width:30.327199999999998%"></i></span><span>758.18</span></div></div>
-<p class="source">上のPL一覧と同じ公式決算短信から作図。「税引前利益」は税金等調整前四半期純利益。最後は非支配株主分を除いた親会社株主の純利益です。</p></figure>
-<p>当期は経常利益894.93億円より税引前利益1,137.25億円の方が大きくなっています。特別利益が加わるためです。「下に行くほど必ず利益が小さくなる」わけではありません。</p>
-<h3>営業利益と経常利益の差は約140億円</h3>
-<p>（103,507−89,493）÷100＝<strong>140.14億円</strong>。一方、支払利息は<strong>188.36億円</strong>です。受取利息や配当金などが、支払利息による利益の減少を一部相殺しています。</p>
-<div class="bridge"><div class="bridge-total"><span>営業利益（億円）</span><strong>1,035.07</strong></div><div class="bridge-plus"><span>＋ 営業外収益合計</span><strong>77.96</strong></div><div class="bridge-minus"><span>− 営業外費用合計</span><strong>218.11</strong></div><div class="bridge-total"><span>経常利益</span><strong>894.93</strong></div></div>
-<details><summary>純金利負担と、金利以外の損益に分ける</summary><div class="detail-body"><p>支払利息−受取利息＝18,836−727＝<strong>18,109百万円（181.09億円）</strong>。PLの表示値から求めた純金利負担です。</p><p>金利以外の営業外損益＝3,885＋983＋2,200−2,974＝<strong>4,094百万円（40.94億円）のプラス</strong>。利息負担の一部を相殺しています。</p><p class="source">公表合計で103,507＋7,796−21,811を計算すると89,492となり、公表経常利益89,493と1百万円異なります。個別行の合計にも差があります。百万円未満切捨てによる表示差で、図は公表値をそのまま使用しています。</p></div></details>
-<h3>前年比の減益は「支払利息の増加」なのか？</h3>
-<p>支払利息は前年19,588から18,836百万円へ、<strong>752百万円減少</strong>しています。したがって今回の減益を「支払利息が増えたため」と説明することはできません。</p>
-<p>利息費用には金利水準だけでなく、借入残高・固定／変動金利・調達時期なども影響します。この表だけで、利息が減った原因まで断定しないことが重要です。</p>
-<h3>経常利益から純利益まで追う</h3>
-<p>経常利益で終わらず、その下も確認します。当四半期には投資有価証券売却益24,232百万円が特別利益として計上されています。純利益には、本業以外で得た利益も含まれることが分かります。</p>
-<div class="table-scroll" role="region" aria-label="経常利益から純利益への計算表" tabindex="0"><table><caption>当四半期の純利益まで（百万円）</caption><tbody><tr><th scope="row">経常利益</th><td>89,493</td></tr><tr><th scope="row">＋ 特別利益（投資有価証券売却益）</th><td>24,232</td></tr><tr class="hl"><th scope="row">税金等調整前四半期純利益</th><td>113,725</td></tr><tr><th scope="row">− 法人税等</th><td>37,369</td></tr><tr><th scope="row">四半期純利益</th><td>76,355</td></tr><tr><th scope="row">− 非支配株主に帰属する四半期純利益</th><td>537</td></tr><tr class="hl"><th scope="row">親会社株主に帰属する四半期純利益</th><td>75,818</td></tr></tbody></table></div>
-<p>親会社の株主の取り分を考えるときは、最後の75,818百万円を使います。四半期純利益76,355百万円と混同しないようにしましょう。</p>
-<p class="source">出典：同じ公式決算短信、添付資料5ページ。税引前利益−法人税等と公表純利益にも百万円未満切捨てによる1百万円の表示差があります。投資有価証券売却益が翌年も同額発生すると仮定してはいけません。</p>
-<h3>どの事業で利益が変わったか</h3>
-<p>同じ短信のセグメント情報では、分譲の営業利益は97,759から31,554百万円へ減少。一方、賃貸は46,005から54,704百万円へ増えています。「すべての事業が悪化した」と読むのも適切ではありません。</p><p class="source">出典：上記短信、添付資料7〜8ページ。比較対象はセグメントの営業利益で、同社独自の「事業利益」ではありません。分譲の変動理由は販売・引渡し状況などを追加確認して判断します。</p>
-<div class="note"><strong>実例から覚えること</strong><br>① 差額は内訳に分解する。<br>② 同じ期間で比較する。<br>③ 数字の変化と、その原因を混同しない。</div>
-</section>
-<section id="s7"><h2>7. 練習問題</h2><div class="quiz"><strong>問題1｜利益率（架空例）</strong><br>ある会社の売上高が1,000億円から1,100億円へ10%増加しました。一方、営業利益は100億円から90億円へ減少しました。<br><br>① 前期と当期の営業利益率を計算してください。<br>② 売上だけを見て「業績が良くなった」と判断してよいでしょうか。</div><details><summary>解答を見る</summary><div class="detail-body"><div class="answer"><strong>①</strong> 前期：100÷1,000＝10% ／ 当期：90÷1,100≒8.2%<br><br><strong>②</strong> 売上は増えていますが、営業利益率は10%から約8.2%へ低下しています。したがって、値下げ・原価上昇・販管費増加などにより収益性が悪化している可能性があり、売上だけで「業績改善」とは判断できません。</div></div></details><div class="quiz"><strong>問題2｜企業実例を読む</strong><p>必要な数字を以下にまとめました。すべて三井不動産の連結実績で、単位は百万円です。</p><div class="table-scroll"><table><caption>この問題で使う資料：営業外損益の内訳（百万円）</caption><thead><tr><th scope="col">項目</th><th scope="col">前年同四半期</th><th scope="col">当四半期</th></tr></thead><tbody><tr><th scope="row">営業利益</th><td>160,112</td><td>103,507</td></tr><tr><th scope="row">受取利息</th><td>913</td><td>727</td></tr><tr><th scope="row">受取配当金</th><td>3,870</td><td>3,885</td></tr><tr><th scope="row">持分法による投資利益</th><td>1,103</td><td>983</td></tr><tr><th scope="row">その他営業外収益</th><td>870</td><td>2,200</td></tr><tr><th scope="row">営業外収益合計</th><td>6,756</td><td>7,796</td></tr><tr><th scope="row">支払利息</th><td>19,588</td><td>18,836</td></tr><tr><th scope="row">その他営業外費用</th><td>3,275</td><td>2,974</td></tr><tr><th scope="row">営業外費用合計</th><td>22,863</td><td>21,811</td></tr><tr><th scope="row">経常利益</th><td>144,005</td><td>89,493</td></tr></tbody></table></div><p class="source">対象：2025年4〜6月／2026年4〜6月。上記公式決算短信、添付資料5ページ。<strong>1億円＝100百万円</strong>。</p><p class="source">表示値は百万円未満切捨てのため、個別項目を足し引きした値と公表合計に差があります。解答には表の公表値を使ってください。</p><p>① 当四半期の営業利益と経常利益の差は何億円？<br>② 差額をすべて支払利息とみなせますか？<br>③ 前年比の減益を「支払利息の増加」で説明できますか？</p></div><details><summary>問題2の解答・途中計算</summary><div class="detail-body"><p>①（103,507−89,493）÷100＝<strong>140.14億円</strong>。1億円＝100百万円なので100で割ります。</p><p>② みなせません。表の支払利息は18,836÷100＝<strong>188.36億円</strong>で、①の差額140.14億円とは一致しません。営業外収益7,796÷100＝<strong>77.96億円</strong>が利益を増やし、支払利息以外にもその他営業外費用2,974÷100＝<strong>29.74億円</strong>が利益を減らしているためです。</p><p>③ 説明できません。支払利息は19,588−18,836＝752百万円、つまり<strong>7.52億円減少</strong>しています。表の営業利益は160,112から103,507百万円へ減っています。ただし、この表だけではその事業上の原因までは判断できません。</p></div></details>
-<div class="quiz"><strong>問題3｜PLを売上から最後まで計算する（架空例）</strong>
-<p>次の会社のPLを完成させてください。単位は億円。非支配株主はなく、以下以外の損益はないものとします。</p>
-<div class="table-scroll"><table><caption>この問題で使う資料（億円）</caption><thead><tr><th scope="col">項目</th><th scope="col">金額</th></tr></thead><tbody>
-<tr><th scope="row">売上高</th><td>1,000</td></tr><tr><th scope="row">売上原価</th><td>600</td></tr><tr><th scope="row">販管費</th><td>250</td></tr><tr><th scope="row">営業外収益</th><td>10</td></tr><tr><th scope="row">営業外費用</th><td>30</td></tr><tr><th scope="row">特別利益</th><td>50</td></tr><tr><th scope="row">特別損失</th><td>10</td></tr><tr><th scope="row">法人税等</th><td>45</td></tr>
-</tbody></table></div>
-<p>① 売上総利益、営業利益、経常利益、税引前利益、純利益を求めてください。<br>② 売上総利益率と営業利益率は？<br>③ 税引前利益が経常利益を上回る理由は？ 翌年も続く利益と判断できますか？</p></div>
-<details><summary>問題3の解答・途中計算</summary><div class="detail-body">
-<div class="table-scroll"><table><caption>完成したPL（億円）</caption><tbody>
-<tr><th scope="row">売上総利益</th><td>1,000−600</td><td>400</td></tr><tr><th scope="row">営業利益</th><td>400−250</td><td>150</td></tr><tr><th scope="row">経常利益</th><td>150＋10−30</td><td>130</td></tr><tr><th scope="row">税引前利益</th><td>130＋50−10</td><td>170</td></tr><tr><th scope="row">純利益</th><td>170−45</td><td>125</td></tr>
-</tbody></table></div>
-<p>② 売上総利益率：400÷1,000×100＝<strong>40%</strong>。営業利益率：150÷1,000×100＝<strong>15%</strong>。</p>
-<p>③ 特別損益の純額50−10＝<strong>40億円</strong>が加わったためです。何による利益か、翌年も発生するかを確認しないと、続く利益とは判断できません。</p>
-</div></details><div class="footer"><strong>今回のまとめ</strong><br>PLは「売上 − 費用 ＝ 利益」の表。大事なのは利益の金額だけでなく、どの段階で利益が増減したのか、利益率がどう変化したのか、一時要因がないかを見ること。</div><p>次回は「BSの見方」。会社がどんな資産を持ち、どう資金を調達しているかを読みます。</p><p><a href="/basics/00/">← 共通の第0回に戻る</a></p><p class="source">会計・企業分析の学習用記事です。特定銘柄の売買を推奨するものではありません。企業データの確認日は2026年9月13日で、以後の決算を自動反映するものではありません。</p></section>
-</main></div>
-</body>
-</html>
+<header class="sitebar"><a class="brand" href="/"><img src="/assets/images/brand/logo-mark.png" alt=""><span>おとなのファイナンス</span></a><div class="episode">初級編｜第1回</div></header>
+<div class="page"><div class="breadcrumb"><a href="/">ホーム</a> ＞ <a href="/beginner/">初級編</a> ＞ 第1回</div><div class="layout">
+<aside class="toc"><strong>この回の目次</strong><a href="#company">1. 会社とは</a><a href="#market">2. 資本市場とは</a><a href="#exercise">練習問題とまとめ</a><a href="/beginner/">初級編の記事一覧</a></aside>
+<main><div class="hero"><span class="kicker">初級編 · 第1回 / 全29回</span><h1>会社とは・資本市場とは</h1><p class="lead">会社は誰のお金で動くのか。株式会社と、会社に資金を届ける資本市場の仕組みを学びます。</p><div class="goal"><strong>この回のゴール</strong><br>株式会社の役割、出資と借入の違い、発行市場と流通市場のお金の行き先を説明できる。</div><div class="video">動画埋め込み枠</div></div>
+<section class="chapter" id="company">
+        <div class="chapter-label">CHAPTER 01</div>
+        <h2>会社とは</h2>
+        <p>会社は、人・お金・設備・情報などの資源を集め、商品やサービスを社会に提供するための仕組みです。個人では難しい大きな仕事を、組織として継続的に行うために存在します。</p>
+        <p>会社は単なる「建物」や「社長の持ち物」ではありません。法人として契約の主体になり、顧客、従業員、取引先、銀行、株主など多くの関係者とつながりながら価値を生み出します。</p>
+
+    <details class="visual">
+      <summary>図解を見る｜そもそも会社とは何か</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/company-basics.png" alt="そもそも会社とは何か">
+      </div>
+    </details>
+
+
+        <h3>なぜ株式会社が必要なのか</h3>
+        <p>大きな事業には大きなお金が必要で、同時に失敗するリスクもあります。そこで、出資を「株式」という小さな単位に分け、多くの人から資金を集め、リスクを分散できるようにしたのが株式会社です。</p>
+        <div class="cards">
+          <div class="card"><strong>多くの投資家から資金を集める</strong><br>一人では負担できない大規模な事業が可能になる。</div>
+          <div class="card"><strong>有限責任</strong><br>株主は原則として出資額の範囲でリスクを負う。</div>
+        </div>
+
+    <details class="visual">
+      <summary>図解を見る｜なぜ株式会社が必要なのか</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/why-corporations.png" alt="なぜ株式会社が必要なのか">
+      </div>
+    </details>
+
+
+        <h3>株式会社の歴史</h3>
+        <p>株式会社の原型を理解するには、大航海時代がわかりやすい例です。遠洋交易は成功すれば大きな利益が期待できる一方、沈没、海賊、商売の失敗など巨大なリスクがありました。そこで複数の投資家が資金とリスクを分け合う仕組みが発達しました。</p>
+        <div class="key"><strong>ポイント：</strong>株式会社は「大きな挑戦に必要な資金」と「失敗したときのリスク」を社会で分担するための発明と考えると本質が見えます。</div>
+
+    <details class="visual">
+      <summary>図解を見る｜株式会社の歴史</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/corporation-history.png" alt="株式会社の歴史">
+      </div>
+    </details>
+
+
+        <h3>会社にお金が入るまで</h3>
+        <p>会社が事業を行うためのお金は、大きく3つに整理できます。株主から出資してもらうお金、銀行や社債投資家から借りるお金、そして事業活動から自分で稼ぐお金です。</p>
+        <div class="flow">
+          <div class="node n1">株主・債権者</div><div class="arrow">→</div>
+          <div class="node n2">会社</div><div class="arrow">→</div>
+          <div class="node n3">設備・人材・研究開発</div>
+        </div>
+        <p>ファイナンスは、この「お金をどう集め、何に使い、どれだけ価値を生み出すか」を考える学問でもあります。</p>
+
+    <details class="visual">
+      <summary>図解を見る｜会社にお金が入るまで</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/company-funding-flow.png" alt="会社にお金が入るまで">
+      </div>
+    </details>
+
+      </section><section class="chapter" id="market">
+        <div class="chapter-label">CHAPTER 02</div>
+        <h2>資本市場</h2>
+        <p>資本市場は、お金を必要とする企業と、お金を運用したい投資家を結びつける仕組みです。単に「株を売買する場所」ではなく、社会にある資金をどの企業・事業へ配分するかを決める装置でもあります。</p>
+
+    <details class="visual">
+      <summary>図解を見る｜資本市場とは何か</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/capital-market.png" alt="資本市場とは何か">
+      </div>
+    </details>
+
+
+        <h3>発行市場と流通市場</h3>
+        <div class="market-grid">
+          <div class="card primary"><strong>発行市場（Primary）</strong><br>企業が新しく株式や社債を発行し、投資家から資金を集める。企業にお金が入る。</div>
+          <div class="card secondary"><strong>流通市場（Secondary）</strong><br>すでに発行された株式などを株式保有者同士が売買する。通常、その売買代金は企業には直接入らない。</div>
+        </div>
+        <p>ただし、流通市場で形成される株価は、将来の増資やM&A、経営判断などに影響します。だから企業に直接お金が入らなくても、セカンダリ市場は企業経営と無関係ではありません。</p>
+
+    <details class="visual">
+      <summary>図解を見る｜発行市場と流通市場</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/primary-secondary-markets.png" alt="発行市場と流通市場">
+      </div>
+    </details>
+
+
+        <h3>資本市場のプレイヤー</h3>
+        <p>中心には会社があり、その周囲に顧客・取引先・従業員などがいます。さらに外側には株主、銀行、社債投資家、証券会社、運用会社など資金提供・仲介のプレイヤーが存在し、それを証券取引所、規制当局、監査法人などが支えます。</p>
+
+    <details class="visual">
+      <summary>図解を見る｜資本市場のプレイヤー</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/capital-market-players.png" alt="資本市場のプレイヤー">
+      </div>
+    </details>
+
+
+        <h3>お金の出し手によって権利が違う</h3>
+        <table>
+          <tr><th>資金提供者</th><th>主なリターン</th><th>元本返済</th><th>立場</th></tr>
+          <tr><td>銀行</td><td>利息</td><td>必要</td><td>債権者</td></tr>
+          <tr><td>社債投資家</td><td>利息</td><td>必要</td><td>債権者</td></tr>
+          <tr><td>株主</td><td>配当・値上がり益</td><td>原則不要</td><td>残余請求権者</td></tr>
+        </table>
+
+    <details class="visual">
+      <summary>図解を見る｜お金の出し手によって権利が違う</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/funding-rights.png" alt="お金の出し手によって権利が違う">
+      </div>
+    </details>
+
+
+        <h3>返済順位とリスク・リターン</h3>
+        <p>会社が苦しくなったとき、一般には借入や社債などの負債が株主より先に返済されます。株主は最後に残った価値を受け取る立場なので、最も下振れリスクが大きい。その分、企業が大きく成長したときには大きなリターンも期待します。</p>
+        <div class="key"><strong>重要：</strong>返済順位が低いほどリスクは高く、要求されるリターンも高くなる。この考え方が、後の「資本コスト」につながります。</div>
+
+    <details class="visual">
+      <summary>図解を見る｜返済順位とリスク・リターン</summary>
+      <div class="visual-body">
+        <img src="/assets/images/basics/00/repayment-risk-return.png" alt="返済順位とリスク・リターン">
+      </div>
+    </details>
+
+      </section>
+<section class="chapter" id="exercise"><div class="chapter-label">EXERCISE</div><h2>練習問題とまとめ</h2><div class="quiz"><h3>問題1</h3><p>企業が新株を発行し、投資家がその新株に100億円を払い込みました。これは発行市場・流通市場のどちらで、100億円は誰に入りますか。</p><details class="visual"><summary>解答を見る</summary><div class="visual-body"><div class="answer">発行市場です。新しく発行された株式の対価として、100億円は発行した企業に入ります。</div></div></details></div><div class="quiz"><h3>問題2</h3><p>創業者が自分の保有株を別の投資家に50億円で売りました。株式は新しく発行されていません。50億円は会社に入りますか。</p><details class="visual"><summary>解答を見る</summary><div class="visual-body"><div class="answer">会社には入りません。買い手から売り手の創業者に支払われます。既存の株式を売買する流通市場の取引です。</div></div></details></div><div class="quiz"><h3>問題3</h3><p>次の表から、会社が原則として元本を返す必要がある資金提供者をすべて選んでください。</p><table><tr><th>資金提供者</th><th>資金提供の形</th></tr><tr><td>銀行</td><td>借入</td></tr><tr><td>社債投資家</td><td>社債</td></tr><tr><td>株主</td><td>出資</td></tr></table><details class="visual"><summary>解答を見る</summary><div class="visual-body"><div class="answer">銀行と社債投資家です。借入・社債は返済が必要な負債です。株主の出資は原則として元本返済を約束しませんが、株主は配当や値上がり益を期待してリスクを負います。</div></div></details></div><div class="summarybox"><strong>第1回まとめ</strong><br>株式会社は事業に必要な資金とリスクを分担する仕組み。資本市場は企業と投資家を結びます。新株発行では会社に資金が入り、既存株の売買では売り手に代金が入る、という違いを押さえましょう。</div><div class="nav"><a href="/beginner/">← 初級編の記事一覧</a><a href="/beginner/02/">第2回：株価・企業価値へ →</a></div></section>
+</main></div></div></body></html>
