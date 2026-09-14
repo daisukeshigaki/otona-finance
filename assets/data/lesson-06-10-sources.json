@@ -1,0 +1,26 @@
+{
+  "checked": "2026-09-14",
+  "sources": {
+    "toyota": "https://global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_jp.pdf",
+    "price": "https://www.sec.gov/Archives/edgar/data/1094517/000119312526339003/d183810dex991.htm",
+    "nintendo": "https://www.nintendo.co.jp/ir/pdf/2026/260806.pdf",
+    "mufg": "https://www.mufg.jp/dam/ir/fs/2026/pdf/summary2606_ja.pdf",
+    "kddi": "https://www.kddi.com/extlib/files/corporate/ir/library/presentation/2027/pdf/kddi_260807_data_448JP6.pdf",
+    "fujita": "https://www.fujita-kanko.co.jp/sub/wp-content/uploads/2026/08/results_20262Q.pdf"
+  },
+  "calculations": {
+    "toyotaBPS": 3150.5955134316587,
+    "toyotaForwardPER": 10.961898813241723,
+    "mufgBPS": 2016.6686571755731,
+    "nintendoBPS": 2530.9408176592315,
+    "kddiLtmEbitda": 1903311,
+    "kddiReferenceEV": 14383213,
+    "kddiReferenceMultiple": 7.556943137511421
+  },
+  "imageGeneration": {
+    "mode": "built-in imagegen",
+    "promptFile": "/Users/daisuke/.codex/generated_images/finance-lesson-diagrams-20260914/prompts.json",
+    "imageDirectory": "/Users/daisuke/.codex/generated_images/finance-lesson-diagrams-20260914",
+    "note": "各記事の生成図は架空例。EV図の高さは模式表示。実数図・表はHTMLで表示。"
+  }
+}
