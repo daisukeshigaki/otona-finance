@@ -1,0 +1,39 @@
+{
+  "checked": "2026-09-15",
+  "sources": {
+    "toyota": "https://global.toyota/pages/global_toyota/ir/financial-results/2027_1q_summary_jp.pdf",
+    "kddi": "https://www.kddi.com/extlib/files/corporate/ir/library/presentation/2027/pdf/kddi_260807_data_448JP6.pdf",
+    "plan": "https://www.kddi.com/extlib/files/corporate/ir/library/presentation/2026/pdf/kddi_260512_plan_pvHOPw.pdf",
+    "nintendo": "https://www.nintendo.co.jp/ir/pdf/2026/260806.pdf"
+  },
+  "inputs": {
+    "toyota": {
+      "income": 1477044,
+      "equityStart": 39918854,
+      "equityEnd": 37308828,
+      "assetsStart": 105522331,
+      "assetsEnd": 102635116
+    },
+    "nintendo": {
+      "income": 147423,
+      "equityStart": 2954024,
+      "equityEnd": 2917741,
+      "assetsStart": 3805312,
+      "assetsEnd": 3815896
+    },
+    "kddi": {
+      "opQuarterExFinancial": 306257,
+      "equityStart": 5232609,
+      "equityEnd": 5272802,
+      "debtStart": 3269350,
+      "debtEnd": 3724176,
+      "cashStart": 209193,
+      "cashEnd": 242940
+    }
+  },
+  "notes": [
+    "年度・四半期を区別",
+    "WACCは学習用仮定",
+    "トヨタ株価は2026年8月6日終値"
+  ]
+}
