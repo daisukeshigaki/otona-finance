@@ -1,0 +1,84 @@
+[
+  {
+    "id": 16,
+    "title": "資本コストと現在価値",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: one future cashflow box branches into two present-value comparison boxes, backwards discount arrows, strongly distinguished 5% and 10%. Required exact text:「資本コストと現在価値」「1年後の予想キャッシュフロー」「110万円」「割引率 5%」「110 ÷ 1.05 = 104.76万円」「割引率 10%」「110 ÷ 1.10 = 100万円」「同じ予想CFでも、割引率が高いほど現在価値は低い」「予想CFは仮定であり、受取を保証しない」. Same assumed future CF not guaranteed.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-bae3ba9c-bead-416e-a166-bfd2a6f009f4.png",
+    "mode": "built-in",
+    "qa": "Visually inspected; correct calculations and Japanese labels",
+    "integratedPath": "assets/images/beginner/16/capital-cost.png"
+  },
+  {
+    "id": 17,
+    "title": "CAPM",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: three clearly connected formula components, with separate market-return versus premium comparison strip. Required text:「CAPM」「株主資本コスト = Rf + β × 市場リスクプレミアム」「2% + 1.2 × 5% = 8%」「無リスク金利 Rf」「2%」「β」「1.2」「市場期待収益率」「7%」「市場リスクプレミアム」「7% − 2% = 5%」「市場期待収益率7%とプレミアム5%は異なる」. Label model estimate, not guaranteed return.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-56badd89-6b4e-4e4d-a375-1798ca3912ad.png",
+    "mode": "built-in",
+    "qa": "Visually inspected; correct calculations and Japanese labels",
+    "integratedPath": "assets/images/beginner/17/capm.png"
+  },
+  {
+    "id": 18,
+    "title": "βは市場への感応度",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: symmetric diverging bar chart or clean matrix comparing +10% and −10% market changes, model-only components. Required text:「βは市場への感応度」「市場 +10%」「市場 −10%」「β = 0.5」「+5%」「−5%」「β = 1.5」「+15%」「−15%」「市場変動に対応する理論上の成分」「模型・実際の株価を保証しない」. Do not imply total actual stock return.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-ddf94c2e-c7c7-4224-b696-a6ded9f2ae2c.png",
+    "mode": "built-in",
+    "qa": "WARNING: bar axes inconsistent, numeric labels correct",
+    "integratedPath": null,
+    "replacement": "Code-native accessible HTML comparison matrices; flawed bitmap not shipped."
+  },
+  {
+    "id": 19,
+    "title": "負債コストと税効果",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: simple flow from borrowing to interest then split tax relief and remaining burden, proportional stacked bar. Required text:「負債コストと税効果」「借入 100億円」「金利 4%」「利息 4億円」「仮定税率 30%」「税軽減 1.2億円」「税引後負担 2.8億円」「4 × 30% = 1.2」「4 − 1.2 = 2.8」「利息の損金算入と十分な課税所得を仮定」. Clearly annual interest.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-78d65007-75c9-4667-915c-c3ff02a98af7.png",
+    "mode": "built-in",
+    "qa": "Visually inspected; correct calculations and Japanese labels",
+    "integratedPath": "assets/images/beginner/19/debt-cost.png"
+  },
+  {
+    "id": 20,
+    "title": "WACC",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: equity and debt two weighted contribution branches merging into big WACC result; market-value weights clearly shown. Required text:「WACC」「市場価値ベースの構成比」「株主資本 60%」「株主資本コスト 10%」「負債 40%」「税引前負債コスト 3%」「仮定税率 30%」「税引後負債コスト 2.1%」「3% × (1 − 30%) = 2.1%」「WACC = 60% × 10% + 40% × 2.1%」「6.84%」. No mistaken weights.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-079ce93c-4b1e-41f3-8b24-09453474c8d4.png",
+    "mode": "built-in",
+    "qa": "WARNING: fictional example footer omitted; add external caption",
+    "integratedPath": "assets/images/beginner/20/wacc.png"
+  },
+  {
+    "id": 21,
+    "title": "FCFFとFCFE",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: large waterfall calculation top row ending FCFF8, then second conversion row FCFE7, unit billion yen. Required text:「FCFFとFCFE」「単位：億円」「営業利益 EBIT 20」「仮定税率 30%」「NOPAT 14」「+ 減価償却費 5」「− 設備投資 8」「− 運転資本増加 3」「FCFF 8」「− 税引後利息 2」「+ 純借入 1」「FCFE 7」「FCFF：債権者と株主に帰属」「FCFE：株主に帰属」. Calculations correct:14+5−8−3=8;8−2+1=7.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-4f81649e-2468-4dab-a2ec-8d8edaa6f71e.png",
+    "mode": "built-in",
+    "qa": "Visually inspected; correct calculations and Japanese labels",
+    "integratedPath": "assets/images/beginner/21/fcf.png"
+  },
+  {
+    "id": 22,
+    "title": "NPVとIRR",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: two-point cashflow timeline now to end of year1, two tidy calculation panels. Required text:「NPVとIRR」「初期投資 100万円」「現在」「1年後の期末」「CF 110万円」「割引率 8%」「現在価値 = 110 ÷ 1.08 = 101.85万円」「NPV = 101.85 − 100 = 1.85万円」「IRR = 10%」「110 ÷ 1.10 − 100 = 0」「1年後期末のCFのみ・追加CFなし」. Initial investment shown outflow −100, terminal inflow +110.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-f9650f09-9846-4c98-af7a-1f72fe648fcd.png",
+    "mode": "built-in",
+    "qa": "Visually inspected; correct calculations and Japanese labels",
+    "integratedPath": "assets/images/beginner/22/npv-irr.png"
+  },
+  {
+    "id": 23,
+    "title": "配当指標",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: top assumptions strip and three clearly separated big metric cards with their different denominators. Required text:「配当指標」「株価 2,000円」「年間DPS 60円」「年間EPS 150円」「BPS 1,500円」「配当利回り」「60 ÷ 2,000 = 3%」「配当性向」「60 ÷ 150 = 40%」「DOE」「60 ÷ 1,500 = 4%」「同じ期間の数値を使用」「DOEはBPSを用いた簡略計算」. Accurate formulas, no other metrics.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-5c815bc1-25a7-4784-9846-dec11527e995.png",
+    "mode": "built-in",
+    "qa": "Visually inspected; correct calculations and Japanese labels",
+    "integratedPath": "assets/images/beginner/23/dividends.png"
+  },
+  {
+    "id": 24,
+    "title": "株主優待の総合利回り",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG.\nCanvas: landscape 1536x1024. White background. Navy and blue, restrained orange highlights. Flat vector-like quantitative educational diagram, large crisp Japanese sans-serif typography, generous whitespace. No logos, no page chrome, no photos, no watermark. Render required Japanese text exactly. All numbers explicitly fictional, show footer「架空の数値による学習例」. No extra invented numerical claims.\nComposition: initial investment and dividend/benefit value comparison, two valuation branches showing face vs own-use. Required text:「株主優待の総合利回り」「100株 × 2,000円 = 投資額20万円」「年間配当 6,000円」「優待券面額 3,000円」「自分の利用価値 1,000円」「配当利回り 3%」「券面額で合算」「(6,000 + 3,000) ÷ 200,000 = 4.5%」「利用価値で合算」「(6,000 + 1,000) ÷ 200,000 = 3.5%」「税金・手数料控除前／株価変動を含まない」. Do not treat face value as actual realized benefit.",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-cb3b6708-304c-4ac1-a2ba-83f4331f4bf9.png",
+    "mode": "built-in",
+    "qa": "Visually inspected; correct calculations and Japanese labels",
+    "integratedPath": "assets/images/beginner/24/benefits.png"
+  }
+]

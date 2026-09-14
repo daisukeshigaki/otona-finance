@@ -1,0 +1,22 @@
+{
+  "checked": "2026-09-15",
+  "sources": {
+    "espec": "https://www.espec.co.jp/ir/management/capital_share-price.html",
+    "ishii": "https://www2.jpx.co.jp/disc/63360/140120260608565582.pdf",
+    "ktc": "https://www2.jpx.co.jp/disc/59660/140120260514535147.pdf",
+    "bonds": "https://www.kddi.com/corporate/ir/stock-rating/esgbonds/2025/",
+    "plan": "https://www.kddi.com/extlib/files/corporate/ir/library/presentation/2026/pdf/kddi_260512_plan_pvHOPw.pdf",
+    "nin": "https://www.nintendo.co.jp/ir/pdf/2026/260508.pdf",
+    "ninq": "https://www.nintendo.co.jp/ir/pdf/2026/260806.pdf",
+    "div": "https://www.kddi.com/corporate/ir/stock-rating/dividend/",
+    "benefit": "https://www.kddi.com/corporate/ir/individual/stockholder/",
+    "olc": "https://www.olc.co.jp/ja/ir/contact.html"
+  },
+  "notes": [
+    "Company reported estimates are not guarantees.",
+    "CAPM and financial structure calculation examples are fictional unless marked company disclosure.",
+    "Nintendo full-year CF is the latest available full statement; latest quarter does not prepare CF.",
+    "KDDI 2026 benefit application closed; OLC special benefit is one-time 2026.",
+    "All 27 quiz questions repeat their required inputs beside the question."
+  ]
+}
