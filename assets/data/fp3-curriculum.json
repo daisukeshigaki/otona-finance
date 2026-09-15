@@ -1,0 +1,345 @@
+{
+  "title": "FP3級講座",
+  "status": "planned",
+  "totalLessons": 45,
+  "minutesPerVideo": 10,
+  "practicalFocus": "日本FP協会・資産設計提案業務",
+  "officialScope": "https://www.jafp.or.jp/exam/subjects_03/",
+  "updated": "2026-09-15",
+  "chapters": [
+    {
+      "chapter": 0,
+      "title": "導入",
+      "description": "試験と学習の進め方を確認し、6分野の全体像をつかむ。",
+      "count": 1,
+      "lessons": [
+        {
+          "code": "0-01",
+          "title": "FP3級の全体像と学習方法",
+          "description": "学科・実技、受検の流れ、動画と問題演習の使い方を整理する。",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "chapter": 1,
+      "title": "ライフプランニングと資金計画",
+      "description": "家計の計画から社会保険・年金・住宅資金まで、暮らしの土台を学ぶ。",
+      "count": 8,
+      "lessons": [
+        {
+          "code": "1-01",
+          "title": "FPの役割・関連法規とライフプラン",
+          "description": "FPができること・できないことと、人生のお金の計画を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "1-02",
+          "title": "家計のキャッシュフローと6つの係数",
+          "description": "家計表と個人のBSを読み、積立・運用・取崩しの計算を整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "1-03",
+          "title": "健康保険・国民健康保険・介護保険",
+          "description": "医療費の自己負担、高額療養費、介護の仕組みを学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "1-04",
+          "title": "雇用保険・労災保険",
+          "description": "失業や仕事中のけがなど、働く人を支える制度を整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "1-05",
+          "title": "公的年金① 老齢年金",
+          "description": "国民年金と厚生年金、受給の条件と繰上げ・繰下げを学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "1-06",
+          "title": "公的年金② 障害・遺族年金と私的年金",
+          "description": "もしもの年金と、企業年金・確定拠出年金の基本を整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "1-07",
+          "title": "教育・住宅・老後の資金計画",
+          "description": "人生の大きな支出と、住宅ローンの金利・返済方法を比較する。",
+          "status": "planned"
+        },
+        {
+          "code": "1-08",
+          "title": "ライフプランの総復習と計算演習",
+          "description": "家計、社会保険、年金、ローンを具体例で確認する。",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "リスク管理",
+      "description": "生命保険・損害保険を、必要な保障と税金から読み解く。",
+      "count": 6,
+      "lessons": [
+        {
+          "code": "2-01",
+          "title": "保険の仕組みと契約の基本",
+          "description": "保険料、告知、契約者・被保険者・受取人を区別する。",
+          "status": "planned"
+        },
+        {
+          "code": "2-02",
+          "title": "生命保険の種類と特徴",
+          "description": "定期・終身・養老保険を、保障期間と満期保険金で比較する。",
+          "status": "planned"
+        },
+        {
+          "code": "2-03",
+          "title": "医療・がん・介護保険と特約",
+          "description": "病気や介護への備えと、主契約・特約の関係を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "2-04",
+          "title": "損害保険と第三分野の保険",
+          "description": "火災・地震・自動車・傷害保険の補償範囲を整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "2-05",
+          "title": "保険と税金・必要保障額",
+          "description": "保険金の課税関係と、家族に必要な保障を考える。",
+          "status": "planned"
+        },
+        {
+          "code": "2-06",
+          "title": "リスク管理の総復習と事例演習",
+          "description": "契約の読み取り、保障の選択、税金の区分を確認する。",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "金融資産運用",
+      "description": "預金・債券・株式・投資信託を比較し、リスクと税制を学ぶ。",
+      "count": 7,
+      "lessons": [
+        {
+          "code": "3-01",
+          "title": "経済指標・金利・為替の基本",
+          "description": "景気、物価、金融政策と金融商品の価格の関係を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "3-02",
+          "title": "預金と貯蓄型金融商品",
+          "description": "普通・定期預金などの特徴と、預金保険制度を整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "3-03",
+          "title": "債券の価格と利回り",
+          "description": "金利と価格の逆の動き、利回りと信用リスクを学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "3-04",
+          "title": "株式と投資指標",
+          "description": "株式の売買、配当、PER・PBR・配当利回りを確認する。",
+          "status": "planned"
+        },
+        {
+          "code": "3-05",
+          "title": "投資信託・ETFと外貨建て商品",
+          "description": "仕組み、費用、分配金、為替リスクを比較する。",
+          "status": "planned"
+        },
+        {
+          "code": "3-06",
+          "title": "分散投資・金融商品の税金とNISA",
+          "description": "リスクの組合せ、課税、非課税制度の基本を整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "3-07",
+          "title": "金融資産運用の総復習と計算演習",
+          "description": "利回り、投資指標、外貨の損益を具体的な数字で解く。",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "タックスプランニング",
+      "description": "所得の分類から控除・税額・申告まで、税金の計算順序を学ぶ。",
+      "count": 7,
+      "lessons": [
+        {
+          "code": "4-01",
+          "title": "税金の全体像と所得税の仕組み",
+          "description": "国税・地方税、所得税の計算の流れを整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "4-02",
+          "title": "10種類の所得① 給与・事業・不動産など",
+          "description": "収入と所得を区別し、主な所得の計算方法を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "4-03",
+          "title": "10種類の所得② 譲渡・一時・雑所得など",
+          "description": "資産の売却や保険の満期金などの所得区分を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "4-04",
+          "title": "所得控除① 人・家族に関する控除",
+          "description": "基礎・配偶者・扶養などの控除と適用条件を整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "4-05",
+          "title": "所得控除② 保険料・医療費・寄附など",
+          "description": "社会保険料、生命保険料、医療費などの控除を比較する。",
+          "status": "planned"
+        },
+        {
+          "code": "4-06",
+          "title": "税額控除・申告と住民税・法人税の基本",
+          "description": "住宅ローン控除、確定申告・年末調整と他の税金を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "4-07",
+          "title": "タックスの総復習と所得税の計算演習",
+          "description": "収入→所得→課税所得→税額の順で計算する。",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "不動産",
+      "description": "物件の調査、取引、法令、税金をひとつの流れで理解する。",
+      "count": 6,
+      "lessons": [
+        {
+          "code": "5-01",
+          "title": "不動産の調査・登記・価格",
+          "description": "登記簿、公示価格、相続税評価などの役割を区別する。",
+          "status": "planned"
+        },
+        {
+          "code": "5-02",
+          "title": "不動産の売買・賃貸と借地借家法",
+          "description": "取引の手順、契約、仲介手数料、借り手の権利を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "5-03",
+          "title": "都市計画法・建築基準法",
+          "description": "用途地域、建ぺい率、容積率と建築の制限を確認する。",
+          "status": "planned"
+        },
+        {
+          "code": "5-04",
+          "title": "不動産の取得・保有にかかる税金",
+          "description": "不動産取得税、登録免許税、固定資産税などを整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "5-05",
+          "title": "不動産の譲渡・特例と有効活用",
+          "description": "売却益の税金と主な特例、活用方法の基本を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "5-06",
+          "title": "不動産の総復習と計算演習",
+          "description": "建築面積、延べ面積、取引・税金の事例を確認する。",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "相続・事業承継",
+      "description": "誰が引き継ぐか、いくら課税されるかを順序立てて学ぶ。",
+      "count": 6,
+      "lessons": [
+        {
+          "code": "6-01",
+          "title": "相続人・法定相続分と相続の手続き",
+          "description": "相続人の範囲、相続分、承認・放棄の基本を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "6-02",
+          "title": "遺言・遺留分と遺産分割",
+          "description": "遺言の種類と、家族の取り分・分割のルールを整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "6-03",
+          "title": "贈与税・暦年課税と相続時精算課税",
+          "description": "贈与の課税方式と主な非課税制度を比較する。",
+          "status": "planned"
+        },
+        {
+          "code": "6-04",
+          "title": "相続税の計算・控除と申告",
+          "description": "基礎控除から税額までの流れと申告期限を学ぶ。",
+          "status": "planned"
+        },
+        {
+          "code": "6-05",
+          "title": "相続財産の評価と事業承継の基本",
+          "description": "土地・金融資産などの評価と、事業を引き継ぐ視点を整理する。",
+          "status": "planned"
+        },
+        {
+          "code": "6-06",
+          "title": "相続の総復習と計算演習",
+          "description": "法定相続分、基礎控除、贈与・相続の数字を確認する。",
+          "status": "planned"
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "総合演習",
+      "description": "6分野を横断し、学科・実技の問題を解く力に仕上げる。",
+      "count": 4,
+      "lessons": [
+        {
+          "code": "7-01",
+          "title": "学科の横断演習① 家計・保険・金融",
+          "description": "3分野の重要論点を問題形式で確認する。",
+          "status": "planned"
+        },
+        {
+          "code": "7-02",
+          "title": "学科の横断演習② 税金・不動産・相続",
+          "description": "税金と資産のルールを混同せずに解く練習をする。",
+          "status": "planned"
+        },
+        {
+          "code": "7-03",
+          "title": "実技の事例演習と資料の読み取り",
+          "description": "家計・保険証券・金融商品などの資料から必要な情報を拾う。",
+          "status": "planned"
+        },
+        {
+          "code": "7-04",
+          "title": "本番前の総点検・時間配分と復習方法",
+          "description": "苦手論点を絞り、試験当日の準備と解き方を確認する。",
+          "status": "planned"
+        }
+      ]
+    }
+  ]
+}
