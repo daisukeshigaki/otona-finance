@@ -1,0 +1,17 @@
+{
+  "checked": "2026-09-15",
+  "sources": {
+    "jpx": "https://www.jpx.co.jp/equities/listed-co/format/summary/",
+    "q": "https://www.nintendo.co.jp/ir/pdf/2026/260806.pdf",
+    "slides": "https://www.nintendo.co.jp/ir/pdf/2026/260806_2.pdf",
+    "annual": "https://www.nintendo.co.jp/ir/pdf/2026/security_q2603.pdf",
+    "fsa": "https://www.fsa.go.jp/search/20130917.html",
+    "plan": "https://www.kddi.com/extlib/files/corporate/ir/library/presentation/2026/pdf/kddi_260512_plan_pvHOPw.pdf",
+    "fy": "https://www.nintendo.co.jp/ir/pdf/2026/260508.pdf"
+  },
+  "notes": [
+    "Company actuals and forecasts are labeled separately.",
+    "All DCF values except the cited Nintendo starting figures are fictional.",
+    "All fifteen quizzes include every input needed beside the question."
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": 25,
+    "mode": "built-in imagegen",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-d3ab7739-d713-4e4e-8f1a-14fca133aecc.png",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG\nCanvas: landscape 1536x1024\nScene/backdrop: pure white classroom handout background\nStyle/medium: crisp flat vector-like quantitative infographic, large highly legible Japanese sans-serif typography, generous whitespace\nColor palette: navy and blue, restrained orange emphasis\nConstraints: render all requested Japanese labels verbatim; do not invent claims; no logos, no page chrome, no watermark; no tiny text.\nPrimary request: 「決算短信の読む順番」を示す横向き4段階フロー。実績と予想を視覚的に明確に区別する。\nComposition: left-to-right four numbered cards with arrows. First card and cards3–4 use blue for actual/disclosed facts; second card uses restrained orange for forecast. Include a legend.\nText (verbatim): 「決算短信の読む順番」「1 業績概要」「売上高・営業利益・前年差」「実績」「2 通期予想」「会社予想・前提・修正」「予想」「3 BS・CF」「財政状態・キャッシュフロー」「実績」「4 注記」「会計方針・一時要因・重要事項」「実績と予想を分けて読む」",
+    "qa": "PASS: 4-step reading order is correct; actual versus forecast is clearly distinguished.",
+    "integratedPath": "assets/images/beginner/25/earnings-summary.png"
+  },
+  {
+    "id": 26,
+    "mode": "built-in imagegen",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-b1dba9a7-a822-4baf-88fb-485ca90de414.png",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG\nCanvas: landscape 1536x1024\nScene/backdrop: pure white classroom handout background\nStyle/medium: crisp flat vector-like quantitative infographic, large highly legible Japanese sans-serif typography, generous whitespace\nColor palette: navy and blue, restrained orange emphasis\nConstraints: render all requested Japanese labels verbatim; do not invent claims; no logos, no page chrome, no watermark; no tiny text.\nPrimary request: 「有価証券報告書の全体マップ」。法定の詳細な定期開示であることが伝わる、中央文書から7分野へ広がる構造図。\nComposition: central document titled 有価証券報告書 surrounded by seven balanced labeled sections connected with lines.\nText (verbatim): 「有価証券報告書」「法定の詳細な定期開示」「事業」「事業内容・セグメント」「リスク」「事業等のリスク」「設備」「主要な設備・投資」「従業員」「人数・平均年齢等」「大株主」「主要株主の状況」「注記」「会計方針・内訳」「監査」「監査報告書」「全体像から注記・監査まで確認」",
+    "qa": "PASS: all seven required disclosure areas and statutory detailed periodic disclosure label are present.",
+    "integratedPath": "assets/images/beginner/26/securities-report.png"
+  },
+  {
+    "id": 27,
+    "mode": "built-in imagegen",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-e36dfe9b-c67a-4760-b167-95b6ba750766.png",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG\nCanvas: landscape 1536x1024\nScene/backdrop: pure white classroom handout background\nStyle/medium: crisp flat vector-like quantitative infographic, large highly legible Japanese sans-serif typography, generous whitespace\nColor palette: navy and blue, restrained orange emphasis\nConstraints: render all requested Japanese labels verbatim; do not invent claims; no logos, no page chrome, no watermark; no tiny text.\nPrimary request: 「決算説明資料の証拠の階段」。会社メッセージ、KPI、調整後数値は、財務諸表と注記に照合することを示す。\nComposition: sturdy upward three-level evidence ladder/pyramid. Bottom dark navy foundation, middle blue, top orange. Side legend clearly distinguishes fact and company interpretation. Arrows point downward for reconciliation.\nText (verbatim): 「決算説明資料の証拠の階段」「会社メッセージ」「KPI・調整後数値」「財務諸表・注記」「照合する」「事実」「財務諸表・注記の数値」「会社の解釈」「説明・見通し・強調点」「調整後数値は定義と差額を確認」「メッセージを事実と混同しない」",
+    "qa": "PASS WITH OMISSION: evidence hierarchy and fact/company-interpretation distinction are correct; the exact phrase about reconciling adjusted figures to financial statements and notes is conveyed across adjacent labels but not rendered as one sentence.",
+    "integratedPath": "assets/images/beginner/27/presentation-evidence.png"
+  },
+  {
+    "id": 28,
+    "mode": "built-in imagegen",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-63979fef-b835-4cf7-b8e0-9bfc398117cc.png",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG\nCanvas: landscape 1536x1024\nScene/backdrop: pure white classroom handout background\nStyle/medium: crisp flat vector-like quantitative infographic, large highly legible Japanese sans-serif typography, generous whitespace\nColor palette: navy and blue, restrained orange emphasis\nConstraints: render all requested Japanese labels verbatim; do not invent claims; no logos, no page chrome, no watermark; no tiny text.\nPrimary request: 「中期計画を逆算する」。現在100から3年後133.1、CAGR10%を示す正確な複利成長ロードマップと、投資・資本配分・収益の関係、計画対実績チェックポイント。\nComposition: horizontal timeline four nodes now, year1, year2, year3 with 100,110,121,133.1; formula panel; three supporting cards for investment, capital allocation, returns; checkpoints under each year.\nText (verbatim): 「中期計画を逆算する」「現在 100」「1年後 110」「2年後 121」「3年後 133.1」「CAGR 10%」「100 × 1.10³ = 133.1」「目標から必要な成長率を逆算」「投資」「どこに投資するか」「資本配分」「成長投資・還元・財務余力」「収益」「投資が利益とCFにつながるか」「計画」「実績」「各年で計画と実績を照合」「架空の数値による学習例」",
+    "qa": "WARNING: required 100→110→121→133.1 and CAGR arithmetic are correct, but the lower plan-vs-actual example invents actual values 108, 118, 126.",
+    "integratedPath": null,
+    "replacement": "Accurate code-native HTML diagram; flawed bitmap not shipped."
+  },
+  {
+    "id": 29,
+    "mode": "built-in imagegen",
+    "path": "/Users/daisuke/.codex/generated_images/01a0a0e2-ba41-7c70-bdbd-16f606d98eeb/exec-a8efaca5-ecd3-49a7-a9c9-2f562876ff1e.png",
+    "prompt": "Use case: scientific-educational\nAsset type: Japanese finance textbook explanatory diagram PNG\nCanvas: landscape 1536x1024\nScene/backdrop: pure white classroom handout background\nStyle/medium: crisp flat vector-like quantitative infographic, large highly legible Japanese sans-serif typography, generous whitespace\nColor palette: navy and blue, restrained orange emphasis\nConstraints: render all requested Japanese labels verbatim; do not invent claims; no logos, no page chrome, no watermark; no tiny text.\nPrimary request: 「DCF評価のウォーターフォール」。架空数値を使い、FCFF予測から企業価値、株主価値、1株価値までの正確な計算を明瞭に示す。\nComposition: top row Year1–5 FCFF boxes; terminal value calculation; present value combination; vertical waterfall EV to equity and per-share value. Use unit labels carefully. Exact arithmetic must appear.\nText (verbatim): 「DCF評価のウォーターフォール」「単位：億円」「Year 1 FCFF 8」「Year 2 FCFF 9」「Year 3 FCFF 10」「Year 4 FCFF 11」「Year 5 FCFF 12」「WACC 8%」「永久成長率 g 2%」「翌期FCFF 12.24」「TV = 12.24 ÷ (0.08 − 0.02) = 204」「FCFF 1〜5年の現在価値 約39.3」「TVの現在価値 約138.9」「企業価値 EV 178.2」「ネット有利子負債 30」「株主価値 148.2」「発行済株式数 1,000万株」「1株価値 1,482円」「178.2 − 30 = 148.2」「148.2億円 ÷ 1,000万株 = 1,482円」「すべて架空の数値による学習例」「将来CF・WACC・永久成長率は仮定」",
+    "qa": "WARNING: all requested arithmetic is correct (PV≈39.3, PV TV≈138.9, EV178.2, equity148.2, ¥1,482/share), but the Year 1–5 forecast boxes are incorrectly labeled FCFE instead of FCFF.",
+    "integratedPath": null,
+    "replacement": "Accurate code-native HTML diagram; flawed bitmap not shipped."
+  }
+]
