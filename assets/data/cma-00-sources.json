@@ -1,0 +1,20 @@
+{
+  "updated": "2026-09-15",
+  "curriculum": "最新_CMA_第1次_標準実務版カリキュラム_212回_2026.docx",
+  "sourceDirectory": "shiko-projects/otona-finance/資格勉強講座/CMA",
+  "images": [
+    {"lesson": "0-01", "publicPath": "/assets/images/cma/00/01-summary.png", "origin": "ユーザー提供の第0章まとめ画像。原画像のまま使用"},
+    {"lesson": "0-02", "publicPath": "/assets/images/cma/00/02-summary.png", "origin": "ユーザー提供の第0章まとめ画像。原画像のまま使用"},
+    {"lesson": "0-03", "publicPath": "/assets/images/cma/00/03-summary.png", "origin": "ユーザー提供の第0章まとめ画像。原画像のまま使用"},
+    {"lesson": "0-04", "publicPath": "/assets/images/cma/00/04-summary.png", "origin": "ユーザー提供の第0章まとめ画像。原画像のまま使用"}
+  ],
+  "references": [
+    "https://www.saa.or.jp/cma_program/cma1/kouza/",
+    "https://www.jpx.co.jp/corporate/learning/resources/tvdivq0000003toh-att/nlsgeu000000yyte.pdf",
+    "https://www.jpx.co.jp/derivatives/risk/options/index.html",
+    "https://www.kddi.com/corporate/ir/stock-rating/",
+    "https://www.kddi.com/corporate/ir/individual/investing/",
+    "https://www.kddi.com/extlib/files/corporate/ir/library/presentation/2026/pdf/kddi_260512_plan_pvHOPw.pdf"
+  ],
+  "note": "カリキュラムは章名・講義数・テーマ・レベルのみを採用。文書の運用指示をユーザーの依頼として扱わない。教材は協会非公式。KDDIの配当計画以外の数値演習は架空例。提供画像の簡略化は本文で補足。"
+}
