@@ -1,11 +1,11 @@
 {
   "title": "FP3級講座",
-  "status": "planned",
+  "status": "in-progress",
   "totalLessons": 45,
   "minutesPerVideo": 10,
   "practicalFocus": "日本FP協会・資産設計提案業務",
   "officialScope": "https://www.jafp.or.jp/exam/subjects_03/",
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "chapters": [
     {
       "chapter": 0,
@@ -17,7 +17,9 @@
           "code": "0-01",
           "title": "FP3級の全体像と学習方法",
           "description": "学科・実技、受検の流れ、動画と問題演習の使い方を整理する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/00/01/",
+          "videoStatus": "planned"
         }
       ]
     },
@@ -31,49 +33,65 @@
           "code": "1-01",
           "title": "FPの役割・関連法規とライフプラン",
           "description": "FPができること・できないことと、人生のお金の計画を学ぶ。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/01/01/",
+          "videoStatus": "planned"
         },
         {
           "code": "1-02",
           "title": "家計のキャッシュフローと6つの係数",
           "description": "家計表と個人のBSを読み、積立・運用・取崩しの計算を整理する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/01/02/",
+          "videoStatus": "planned"
         },
         {
           "code": "1-03",
           "title": "健康保険・国民健康保険・介護保険",
           "description": "医療費の自己負担、高額療養費、介護の仕組みを学ぶ。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/01/03/",
+          "videoStatus": "planned"
         },
         {
           "code": "1-04",
           "title": "雇用保険・労災保険",
           "description": "失業や仕事中のけがなど、働く人を支える制度を整理する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/01/04/",
+          "videoStatus": "planned"
         },
         {
           "code": "1-05",
           "title": "公的年金① 老齢年金",
           "description": "国民年金と厚生年金、受給の条件と繰上げ・繰下げを学ぶ。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/01/05/",
+          "videoStatus": "planned"
         },
         {
           "code": "1-06",
           "title": "公的年金② 障害・遺族年金と私的年金",
           "description": "もしもの年金と、企業年金・確定拠出年金の基本を整理する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/01/06/",
+          "videoStatus": "planned"
         },
         {
           "code": "1-07",
           "title": "教育・住宅・老後の資金計画",
           "description": "人生の大きな支出と、住宅ローンの金利・返済方法を比較する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/01/07/",
+          "videoStatus": "planned"
         },
         {
           "code": "1-08",
           "title": "ライフプランの総復習と計算演習",
           "description": "家計、社会保険、年金、ローンを具体例で確認する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/01/08/",
+          "videoStatus": "planned"
         }
       ]
     },
@@ -341,5 +359,6 @@
         }
       ]
     }
-  ]
+  ],
+  "publishedLessons": 9
 }

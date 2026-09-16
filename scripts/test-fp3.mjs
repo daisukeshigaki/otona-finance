@@ -1,0 +1,59 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {lectures} from './fp3-lesson-content.mjs';
+
+const curriculum=JSON.parse(fs.readFileSync('assets/data/fp3-curriculum.json','utf8'));
+const registry=JSON.parse(fs.readFileSync('backend/lessons.json','utf8'));
+assert.equal(lectures.length,9);
+assert.equal(curriculum.chapters.reduce((n,ch)=>n+ch.count,0),45);
+let questions=0,figures=0;
+for(const d of lectures){
+ const ch=curriculum.chapters[d.chapter],l=ch.lessons[d.number-1];
+ assert.equal(l.status,'published');assert.equal(l.videoStatus,'planned');
+ const html=fs.readFileSync(l.url.slice(1)+'index.html','utf8');
+ assert.ok(html.includes(`<h1>${l.title}</h1>`));assert.equal(registry[l.url],l.title);
+ assert.ok(html.indexOf('class="fp-video"')<html.indexOf('class="fp-section"'));
+ assert.equal(d.questions.length,3);
+ assert.equal((html.match(/<article class="fp-question">/g)||[]).length,3);
+ assert.equal((html.match(/<details>/g)||[]).length,3);
+ assert.equal((html.match(/data-lesson-comments/g)||[]).length,1);
+ assert.ok(!/undefined|WordPress|wordpress|NaN/.test(html));
+ const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+ assert.equal(ids.length,new Set(ids).size,'Duplicate IDs');
+ for(const m of html.matchAll(/(?:href|src)="([^"]+)"/g)){
+  const url=m[1];
+  if(url.startsWith('#')){assert.ok(ids.includes(url.slice(1)),url);continue;}
+  if(!url.startsWith('/'))continue;
+  const path=url.split(/[?#]/)[0].slice(1);
+  assert.ok(fs.existsSync(path+(url.split(/[?#]/)[0].endsWith('/')?'index.html':'')),url);
+ }
+ for(const q of d.questions){assert.ok(q.data.length>20);assert.ok(q.ask.length>5);assert.ok(q.answer.length>20);}
+ questions+=d.questions.length;figures+=(html.match(/<figure>/g)||[]).length;
+}
+for(const ch of curriculum.chapters.slice(0,2)){
+ const html=fs.readFileSync(`fp3/${String(ch.chapter).padStart(2,'0')}/index.html`,'utf8');
+ for(const l of ch.lessons)assert.ok(html.includes(`href="${l.url}"`));
+ assert.ok(!html.includes('undefined'));
+}
+// Independently verify the arithmetic used in the teaching examples and answers.
+assert.equal(80100+(1000000-267000)*.01,87430);
+assert.equal(85800+(1000000-286000)*.01,92940);
+assert.equal(300000-87430,212570);
+assert.equal(360000/30*2/3*7,56000);
+assert.equal(10000*.6*7,42000);assert.equal(10000*.2*7,14000);
+assert.equal(847300*360/480,635475);assert.equal(847300*120/480,211825);
+assert.equal(300000*5.481/1000*240,394632);
+assert.equal(1000000*(1-.004*24),904000);
+assert.equal(800000*3/4,600000);
+assert.equal(2000000*.192158,384316);
+assert.equal((300-220)*25,2000);
+const r=.02,n=5;
+const annuityFuture=((1+r)**n-1)/r;
+const annuityPresent=(1-(1+r)**-n)/r;
+assert.ok(Math.abs(annuityFuture-5.204040)<.000001);
+assert.ok(Math.abs(1/annuityFuture-.192158)<.000001);
+assert.ok(Math.abs(annuityPresent-4.713460)<.000001);
+assert.ok(Math.abs(1/annuityPresent-.212158)<.000001);
+assert.equal(execFileSync(process.execPath,['scripts/generate-fp3.mjs'],{encoding:'utf8'}),'*** Begin Patch\n\n*** End Patch\n','Generated files must match authored source');
+console.log(`FP3級: 9講義、${questions}問、${figures}図表。リンク・動画枠・コメント・計算・再生成の整合性チェック完了。`);
