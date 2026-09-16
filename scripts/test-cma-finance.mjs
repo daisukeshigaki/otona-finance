@@ -29,10 +29,10 @@ for(const [number,count,lessons] of groups){
  }
 }
 assert.equal(questions,153);assert.equal(routes.length,51);
-const nav=[['/cma/01/28/','/cma/02/01/'],['/cma/02/23/','/cma/03/01/'],['/cma/03/01/','/cma/02/23/'],['/cma/03/28/','/cma/04/']];
+const nav=[['/cma/01/28/','/cma/02/01/'],['/cma/02/23/','/cma/03/01/'],['/cma/03/01/','/cma/02/23/'],['/cma/03/28/','/cma/04/01/']];
 for(const [route,target] of nav)assert.ok(fs.readFileSync('.'+route+'index.html','utf8').includes('href="'+target+'"'));
-assert.ok(fs.readFileSync('index.html','utf8').includes('第0〜3章・計84講義を公開中。'));
-assert.ok(fs.readFileSync('cma/index.html','utf8').includes('第1〜3章の79講義'));
+assert.ok(fs.readFileSync('index.html','utf8').includes('第0〜7章・計177講義を公開中。'));
+assert.ok(fs.readFileSync('cma/index.html','utf8').includes('第1〜7章の172講義'));
 assert.equal(execFileSync(process.execPath,['scripts/generate-cma.mjs'],{encoding:'utf8'}),'*** Begin Patch\n\n*** End Patch\n');
 // Independent numerical checks, tagged by lecture. No values read from rendered answer strings.
 const checks={

@@ -2,7 +2,8 @@ import fs from 'node:fs';
 import {accountingLectures} from './cma-accounting-content.mjs';
 import {corporateLectures} from './cma-corporate-content.mjs';
 import {equityLectures} from './cma-equity-content.mjs';
-const groups=[[1,accountingLectures],[2,corporateLectures],[3,equityLectures]];
+import {bondLectures,derivativeLectures,portfolioLectures,economicsLectures} from './cma-advanced-content.mjs';
+const groups=[[1,accountingLectures],[2,corporateLectures],[3,equityLectures],[4,bondLectures],[5,derivativeLectures],[6,portfolioLectures],[7,economicsLectures]];
 const lectures=groups.flatMap(([chapter,items])=>items.map(d=>({...d,chapter})));
 const changes=[];
 function patch(path,next){if(process.argv[2]&&path!==process.argv[2])return;const old=fs.existsSync(path)?fs.readFileSync(path,'utf8'):null;if(old?.trimEnd()===next.trimEnd())return;changes.push(old===null?`*** Add File: ${path}\n${next.trimEnd().split('\n').map(l=>'+'+l).join('\n')}`:`*** Update File: ${path}\n@@\n${old.trimEnd().split('\n').map(l=>'-'+l).join('\n')}\n${next.trimEnd().split('\n').map(l=>'+'+l).join('\n')}`);}
@@ -41,7 +42,7 @@ for(const [chapterNumber,items] of groups){
 }
 const total=5+lectures.length,description='第0章の導入＋4講義と、第1〜'+groups.at(-1)[0]+'章の'+lectures.length+'講義を公開しています。';
 let top=fs.readFileSync('cma/index.html','utf8').replace(/第0章の導入＋4講義(?:と、第[^。]*講義)?を公開しています。/g,description);
-for(const [number] of groups){const chapter=curriculum.chapters.find(c=>c.number===number);top=top.replace(chapter.count+'講義のカリキュラムを掲載。記事は順次公開します。','全'+chapter.count+'講義を公開中。図表・具体例・練習問題で学ぶ。');}
+for(const [number] of groups){const chapter=curriculum.chapters.find(c=>c.number===number),code=String(number).padStart(2,'0');top=top.replace(new RegExp('(<a href="/cma/'+code+'/">[\\s\\S]*?<p>)[\\s\\S]*?(</p>)'),'$1全'+chapter.count+'講義を公開中。図表・具体例・練習問題で学ぶ。$2');}
 patch('cma/index.html',top);
 curriculum.updated='2026-09-17';
 patch('assets/data/cma-curriculum.json',JSON.stringify(curriculum,null,2)+'\n');

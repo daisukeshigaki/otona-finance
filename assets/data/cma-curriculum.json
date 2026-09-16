@@ -774,129 +774,231 @@
         {
           "id": "4-01",
           "title": "債券の基本・割引債・固定利付債",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/01/",
+          "videoStatus": "planned",
+          "description": "債券は発行者にお金を貸し、契約に従って利息と元本を受け取る証券です。具体例と条件を変えた例で、債券の基本・割引債・固定利付債を学ぶ。"
         },
         {
           "id": "4-02",
           "title": "債券市場・発行市場・流通市場・レポ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/02/",
+          "videoStatus": "planned",
+          "description": "発行市場では発行者が資金を調達し、流通市場では既存保有者が債券を売買します。具体例と条件を変えた例で、債券市場・発行市場・流通市場・レポを学ぶ。"
         },
         {
           "id": "4-03",
           "title": "債券価格・クーポン・YTM・経過利息",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/03/",
+          "videoStatus": "planned",
+          "description": "YTMは購入価格と将来の約束CFを一致させる単一の利回りです。具体例と条件を変えた例で、債券価格・クーポン・YTM・経過利息を学ぶ。"
         },
         {
           "id": "4-04",
           "title": "スポットレートと債券価格",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/04/",
+          "videoStatus": "planned",
+          "description": "スポットレートは、特定の将来時点の一回のCFを現在へ割り引く利率です。具体例と条件を変えた例で、スポットレートと債券価格を学ぶ。"
         },
         {
           "id": "4-05",
           "title": "フォワードレート・パーレート",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/05/",
+          "videoStatus": "planned",
+          "description": "フォワードレートは、現在の期間構造が示す将来区間の利率です。具体例と条件を変えた例で、フォワードレート・パーレートを学ぶ。"
         },
         {
           "id": "4-06",
           "title": "ブートストラップ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/06/",
+          "videoStatus": "planned",
+          "description": "ブートストラップは短い満期の割引係数から順に長い満期の係数を求める方法です。具体例と条件を変えた例で、ブートストラップを学ぶ。"
         },
         {
           "id": "4-07",
           "title": "イールドカーブと期間構造理論",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/07/",
+          "videoStatus": "planned",
+          "description": "イールドカーブは満期ごとの利回りを並べたものです。具体例と条件を変えた例で、イールドカーブと期間構造理論を学ぶ。"
         },
         {
           "id": "4-08",
           "title": "スワップレート・カーブ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/08/",
+          "videoStatus": "planned",
+          "description": "金利スワップの固定レートは、固定脚と変動脚の現在価値を一致させるように決まります。具体例と条件を変えた例で、スワップレート・カーブを学ぶ。"
         },
         {
           "id": "4-09",
           "title": "Zスプレッド・ASW・OAS",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/04/09/",
+          "videoStatus": "planned",
+          "description": "Zスプレッドは基準の各スポット金利に同じ幅を加え、価格を再現する値です。具体例と条件を変えた例で、Zスプレッド・ASW・OASを学ぶ。"
         },
         {
           "id": "4-10",
           "title": "変動利付債・インフレ連動債",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/10/",
+          "videoStatus": "planned",
+          "description": "変動利付債は参照金利等に連動してクーポンが変わり、インフレ連動債は物価指数に応じて元本等が調整されます。具体例と条件を変えた例で、変動利付債・インフレ連動債を学ぶ。"
         },
         {
           "id": "4-11",
           "title": "マコーレー／修正デュレーション",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/11/",
+          "videoStatus": "planned",
+          "description": "マコーレーデュレーションはCF現在価値の重み付き平均回収時間です。具体例と条件を変えた例で、マコーレー／修正デュレーションを学ぶ。"
         },
         {
           "id": "4-12",
           "title": "実効デュレーション・キーレートデュレーション",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/04/12/",
+          "videoStatus": "planned",
+          "description": "実効デュレーションは金利を動かして再評価した価格から感応度を求めます。具体例と条件を変えた例で、実効デュレーション・キーレートデュレーションを学ぶ。"
         },
         {
           "id": "4-13",
           "title": "コンベクシティ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/13/",
+          "videoStatus": "planned",
+          "description": "コンベクシティは価格と利回りの曲線の曲がり具合です。具体例と条件を変えた例で、コンベクシティを学ぶ。"
         },
         {
           "id": "4-14",
           "title": "所有期間利回り・キャリー・ロールダウン",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/14/",
+          "videoStatus": "planned",
+          "description": "所有期間利回りは保有中の利息、価格差、再投資等を購入価格に対応させた収益です。具体例と条件を変えた例で、所有期間利回り・キャリー・ロールダウンを学ぶ。"
         },
         {
           "id": "4-15",
           "title": "金利モデル・二項モデルの直感",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/04/15/",
+          "videoStatus": "planned",
+          "description": "金利二項モデルは将来金利の上昇・低下という枝を置き、将来価値をリスク中立確率で平均して現在へ戻す方法です。具体例と条件を変えた例で、金利モデル・二項モデルの直感を学ぶ。"
         },
         {
           "id": "4-16",
           "title": "コーラブル債・プッタブル債",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/16/",
+          "videoStatus": "planned",
+          "description": "コーラブル債は発行者が早期償還を選べる債券、プッタブル債は保有者が返済を請求できる債券です。具体例と条件を変えた例で、コーラブル債・プッタブル債を学ぶ。"
         },
         {
           "id": "4-17",
           "title": "転換社債・キャップ／フロア付き債",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/17/",
+          "videoStatus": "planned",
+          "description": "転換社債は条件に従って社債を株式へ転換できる証券です。具体例と条件を変えた例で、転換社債・キャップ／フロア付き債を学ぶ。"
         },
         {
           "id": "4-18",
           "title": "信用リスク・信用格付・クレジットスプレッド",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/18/",
+          "videoStatus": "planned",
+          "description": "信用リスクは債務者が契約を履行しないリスクです。具体例と条件を変えた例で、信用リスク・信用格付・クレジットスプレッドを学ぶ。"
         },
         {
           "id": "4-19",
           "title": "構造型／誘導型信用リスクモデルの直感",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/04/19/",
+          "videoStatus": "planned",
+          "description": "構造型モデルは企業資産価値と負債の関係からデフォルトを考えます。具体例と条件を変えた例で、構造型／誘導型信用リスクモデルの直感を学ぶ。"
         },
         {
           "id": "4-20",
           "title": "証券化：SPV・トランチング",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/20/",
+          "videoStatus": "planned",
+          "description": "証券化は資産のCFをSPV等で束ね、優先順位の違うトランチへ配分する仕組みです。具体例と条件を変えた例で、証券化：SPV・トランチングを学ぶ。"
         },
         {
           "id": "4-21",
           "title": "RMBS・CMBS・MBS・期限前償還",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/04/21/",
+          "videoStatus": "planned",
+          "description": "RMBSは住宅ローン、CMBSは商業不動産ローン等を基礎とする証券化商品です。具体例と条件を変えた例で、RMBS・CMBS・MBS・期限前償還を学ぶ。"
         },
         {
           "id": "4-22",
           "title": "ABS・証券化商品のクレジット分析",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/22/",
+          "videoStatus": "planned",
+          "description": "ABSの分析では基礎資産の延滞、損失、回収、期限前返済に加え、サービサーや信用補完を調べます。具体例と条件を変えた例で、ABS・証券化商品のクレジット分析を学ぶ。"
         },
         {
           "id": "4-23",
           "title": "債券ポートフォリオ：インデックス・ラダー",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/23/",
+          "videoStatus": "planned",
+          "description": "債券インデックス運用は指数の構成・期間・信用に近づけます。具体例と条件を変えた例で、債券ポートフォリオ：インデックス・ラダーを学ぶ。"
         },
         {
           "id": "4-24",
           "title": "イールドカーブ戦略・クレジット戦略",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/04/24/",
+          "videoStatus": "planned",
+          "description": "カーブ戦略は金利の水準、傾き、曲率等の変化を利用し、クレジット戦略は信用スプレッド等の変化を扱います。具体例と条件を変えた例で、イールドカーブ戦略・クレジット戦略を学ぶ。"
         },
         {
           "id": "4-25",
           "title": "実践：金利1%変化と債券ポートフォリオ",
-          "level": "OPT"
+          "level": "OPT",
+          "status": "published",
+          "url": "/cma/04/25/",
+          "videoStatus": "planned",
+          "description": "実践では保有額と金利感応度からショック時の損失を計算し、ヘッジ量と残るリスクを説明します。具体例と条件を変えた例で、実践：金利1%変化と債券ポートフォリオを学ぶ。"
         }
-      ]
+      ],
+      "status": "published",
+      "publishedLessons": 25
     },
     {
       "number": 5,
@@ -906,89 +1008,159 @@
         {
           "id": "5-01",
           "title": "デリバティブの役割・上場／OTC",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/01/",
+          "videoStatus": "planned",
+          "description": "上場デリバティブは取引所の標準化された契約、OTCは当事者間で設計する契約です。具体例と条件を変えた例で、デリバティブの役割・上場／OTCを学ぶ。"
         },
         {
           "id": "5-02",
           "title": "フォワード・先物の損益と証拠金",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/02/",
+          "videoStatus": "planned",
+          "description": "フォワードと先物は将来の売買価格を決める契約です。具体例と条件を変えた例で、フォワード・先物の損益と証拠金を学ぶ。"
         },
         {
           "id": "5-03",
           "title": "先物価格と無裁定・キャリーコスト",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/03/",
+          "videoStatus": "planned",
+          "description": "先物価格は現物と調達・保管・収入を対応させる無裁定関係で考えます。具体例と条件を変えた例で、先物価格と無裁定・キャリーコストを学ぶ。"
         },
         {
           "id": "5-04",
           "title": "株価指数先物・債券先物・為替フォワード",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/04/",
+          "videoStatus": "planned",
+          "description": "株価指数先物は株式市場、債券先物は金利、為替フォワードは通貨の変化を移す契約です。具体例と条件を変えた例で、株価指数先物・債券先物・為替フォワードを学ぶ。"
         },
         {
           "id": "5-05",
           "title": "スワップ：金利・通貨スワップ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/05/",
+          "videoStatus": "planned",
+          "description": "金利スワップは固定金利と変動金利などのCFを交換します。具体例と条件を変えた例で、スワップ：金利・通貨スワップを学ぶ。"
         },
         {
           "id": "5-06",
           "title": "オプション：コール・プット・満期損益",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/06/",
+          "videoStatus": "planned",
+          "description": "コールは決まった価格で買う権利、プットは売る権利です。具体例と条件を変えた例で、オプション：コール・プット・満期損益を学ぶ。"
         },
         {
           "id": "5-07",
           "title": "プット・コール・パリティ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/07/",
+          "videoStatus": "planned",
+          "description": "プット・コール・パリティは同じ原資産・行使価格・満期の欧州型コールとプットを現物と割引債に対応させる関係です。具体例と条件を変えた例で、プット・コール・パリティを学ぶ。"
         },
         {
           "id": "5-08",
           "title": "オプション価格を決める要因",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/08/",
+          "videoStatus": "planned",
+          "description": "オプション価格は株価、行使価格、残存期間、ボラティリティ、金利、配当等に影響されます。具体例と条件を変えた例で、オプション価格を決める要因を学ぶ。"
         },
         {
           "id": "5-09",
           "title": "二項モデルによるオプション評価",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/05/09/",
+          "videoStatus": "planned",
+          "description": "二項モデルでは上昇・下落状態で同じ受取となる複製ポートフォリオを作って権利を評価します。具体例と条件を変えた例で、二項モデルによるオプション評価を学ぶ。"
         },
         {
           "id": "5-10",
           "title": "Black-Scholesの直感",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/05/10/",
+          "videoStatus": "planned",
+          "description": "Black-Scholesモデルの式を、同じ株価・行使価格の具体例で計算する。ボラティリティを変えた場合も比較する。"
         },
         {
           "id": "5-11",
           "title": "デルタ・ガンマ・ベガ・シータ・ロー",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/05/11/",
+          "videoStatus": "planned",
+          "description": "グリークスはオプション価値の入力に対する局所感応度です。具体例と条件を変えた例で、デルタ・ガンマ・ベガ・シータ・ローを学ぶ。"
         },
         {
           "id": "5-12",
           "title": "ボラティリティ・インプライドVol・Volスマイル",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/05/12/",
+          "videoStatus": "planned",
+          "description": "実現Volは観測された収益率から計算する変動性、インプライドVolは市場オプション価格から逆算するモデル入力です。具体例と条件を変えた例で、ボラティリティ・インプライドVol・Volスマイルを学ぶ。"
         },
         {
           "id": "5-13",
           "title": "代表的オプション戦略",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/13/",
+          "videoStatus": "planned",
+          "description": "オプション戦略は複数の権利や現物を組み合わせて損益の形を変えます。具体例と条件を変えた例で、代表的オプション戦略を学ぶ。"
         },
         {
           "id": "5-14",
           "title": "ヘッジ：株価・金利・為替・商品",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/14/",
+          "videoStatus": "planned",
+          "description": "ヘッジでは対象の株価、金利、為替、商品リスクを測って逆向きの契約を選びます。具体例と条件を変えた例で、ヘッジ：株価・金利・為替・商品を学ぶ。"
         },
         {
           "id": "5-15",
           "title": "実践：デリバティブでリスクを組み替える",
-          "level": "OPT"
+          "level": "OPT",
+          "status": "published",
+          "url": "/cma/05/15/",
+          "videoStatus": "planned",
+          "description": "実践では事業の支払リスクを先渡とオプションで比較し、固定と保険の違いを説明します。具体例と条件を変えた例で、実践：デリバティブでリスクを組み替えるを学ぶ。"
         },
         {
           "id": "5-16",
           "title": "金利デリバティブ：金利先物・FRA・Cap/Floor/Collar・Swaption",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/16/",
+          "videoStatus": "planned",
+          "description": "FRAは将来区間の金利を固定する契約、キャップは上限、フロアは下限を作る権利です。具体例と条件を変えた例で、金利デリバティブ：金利先物・FRA・Cap/Floor/Collar・Swaptionを学ぶ。"
         },
         {
           "id": "5-17",
           "title": "CDSと信用デリバティブ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/05/17/",
+          "videoStatus": "planned",
+          "description": "CDSは所定の信用事由に対する保護を売買する契約です。具体例と条件を変えた例で、CDSと信用デリバティブを学ぶ。"
         }
-      ]
+      ],
+      "status": "published",
+      "publishedLessons": 17
     },
     {
       "number": 6,
@@ -998,154 +1170,276 @@
         {
           "id": "6-01",
           "title": "期待リターン・分散・標準偏差",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/01/",
+          "videoStatus": "planned",
+          "description": "期待リターンは起こり得る収益率を確率で加重平均した値です。具体例と条件を変えた例で、期待リターン・分散・標準偏差を学ぶ。"
         },
         {
           "id": "6-02",
           "title": "共分散・相関と分散効果",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/02/",
+          "videoStatus": "planned",
+          "description": "共分散は二資産の平均からのずれが一緒に動く程度です。具体例と条件を変えた例で、共分散・相関と分散効果を学ぶ。"
         },
         {
           "id": "6-03",
           "title": "2資産・多資産ポートフォリオ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/03/",
+          "videoStatus": "planned",
+          "description": "ポートフォリオ収益は重み付き平均ですが、分散には資産同士の共分散が必要です。具体例と条件を変えた例で、2資産・多資産ポートフォリオを学ぶ。"
         },
         {
           "id": "6-04",
           "title": "効率的フロンティア",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/04/",
+          "videoStatus": "planned",
+          "description": "効率的フロンティアは同じリスクで最大の期待収益、または同じ期待収益で最小のリスクとなる組合せの集合です。具体例と条件を変えた例で、効率的フロンティアを学ぶ。"
         },
         {
           "id": "6-05",
           "title": "投資家効用・リスク回避度",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/05/",
+          "videoStatus": "planned",
+          "description": "リスク回避度は不確実性をどれほど嫌うかを表します。具体例と条件を変えた例で、投資家効用・リスク回避度を学ぶ。"
         },
         {
           "id": "6-06",
           "title": "無リスク資産・資本市場線",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/06/",
+          "videoStatus": "planned",
+          "description": "資本市場線CMLは無リスク資産と市場ポートフォリオを組み合わせた効率的な関係です。具体例と条件を変えた例で、無リスク資産・資本市場線を学ぶ。"
         },
         {
           "id": "6-07",
           "title": "CAPM・証券市場線",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/07/",
+          "videoStatus": "planned",
+          "description": "CAPMは市場と連動するリスクで必要期待収益を表すモデルです。具体例と条件を変えた例で、CAPM・証券市場線を学ぶ。"
         },
         {
           "id": "6-08",
           "title": "ベータとシステマティックリスク",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/08/",
+          "videoStatus": "planned",
+          "description": "ベータは市場収益との共分散を市場分散で割った感応度です。具体例と条件を変えた例で、ベータとシステマティックリスクを学ぶ。"
         },
         {
           "id": "6-09",
           "title": "単一指数／マルチファクターモデル",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/09/",
+          "videoStatus": "planned",
+          "description": "単一指数モデルは市場要因と残差、マルチファクターモデルは複数の共通要因で収益を分解します。具体例と条件を変えた例で、単一指数／マルチファクターモデルを学ぶ。"
         },
         {
           "id": "6-10",
           "title": "市場効率性",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/10/",
+          "videoStatus": "planned",
+          "description": "市場効率性は情報が価格へどの程度反映されるかという仮説です。具体例と条件を変えた例で、市場効率性を学ぶ。"
         },
         {
           "id": "6-11",
           "title": "パッシブ・アクティブ運用",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/11/",
+          "videoStatus": "planned",
+          "description": "パッシブ運用は指数等への追随、アクティブ運用は相対的超過収益等を目指す運用です。具体例と条件を変えた例で、パッシブ・アクティブ運用を学ぶ。"
         },
         {
           "id": "6-12",
           "title": "ファクター投資・スマートベータ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/12/",
+          "videoStatus": "planned",
+          "description": "ファクター投資は価値、規模、モメンタム等の属性へのエクスポージャーを設計します。具体例と条件を変えた例で、ファクター投資・スマートベータを学ぶ。"
         },
         {
           "id": "6-13",
           "title": "シャープ・トレイナー・ジェンセンα・情報比率",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/13/",
+          "videoStatus": "planned",
+          "description": "シャープは超過収益/総σ、トレイナーは超過収益/β、ジェンセンαはCAPM必要率との差、情報比率IRは対ベンチマーク超過収益/追随誤差です。具体例と条件を変えた例で、シャープ・トレイナー・ジェンセンα・情報比率を学ぶ。"
         },
         {
           "id": "6-14",
           "title": "アクティブ運用の基本法則",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/14/",
+          "videoStatus": "planned",
+          "description": "アクティブ運用の基本法則は、情報係数ICと独立な意思決定数BRからIR≈IC√BRを考える関係です。具体例と条件を変えた例で、アクティブ運用の基本法則を学ぶ。"
         },
         {
           "id": "6-15",
           "title": "スタイル分析・マネジャー評価",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/15/",
+          "videoStatus": "planned",
+          "description": "スタイル分析は運用の株式・債券や価値・成長等への偏りを確認します。具体例と条件を変えた例で、スタイル分析・マネジャー評価を学ぶ。"
         },
         {
           "id": "6-16",
           "title": "VaR・Expected Shortfall・ストレステスト",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/16/",
+          "videoStatus": "planned",
+          "description": "VaRは一定期間・信頼水準の損失分位点、Expected Shortfallはその尾部の平均損失を表す指標です。具体例と条件を変えた例で、VaR・Expected Shortfall・ストレステストを学ぶ。"
         },
         {
           "id": "6-17",
           "title": "ドローダウン・破産確率・ポジションサイズ",
-          "level": "OPT"
+          "level": "OPT",
+          "status": "published",
+          "url": "/cma/06/17/",
+          "videoStatus": "planned",
+          "description": "ドローダウンは資産の過去ピークからの減少率です。具体例と条件を変えた例で、ドローダウン・破産確率・ポジションサイズを学ぶ。"
         },
         {
           "id": "6-18",
           "title": "リスク予算・リバランス",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/18/",
+          "videoStatus": "planned",
+          "description": "リスク予算は各資産・戦略が全体リスクへ与える寄与を配分する考え方です。具体例と条件を変えた例で、リスク予算・リバランスを学ぶ。"
         },
         {
           "id": "6-19",
           "title": "行動ファイナンス：期待効用とプロスペクト理論",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/19/",
+          "videoStatus": "planned",
+          "description": "期待効用理論は資産状態の効用を確率で平均します。具体例と条件を変えた例で、行動ファイナンス：期待効用とプロスペクト理論を学ぶ。"
         },
         {
           "id": "6-20",
           "title": "実践：自分のポートフォリオを設計・評価",
-          "level": "OPT"
+          "level": "OPT",
+          "status": "published",
+          "url": "/cma/06/20/",
+          "videoStatus": "planned",
+          "description": "実践ポートフォリオは目的、支出時期、損失許容額から配分を設計します。具体例と条件を変えた例で、実践：自分のポートフォリオを設計・評価を学ぶ。"
         },
         {
           "id": "6-21",
           "title": "投資政策書IPS・ポリシー・アセットミックス",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/21/",
+          "videoStatus": "planned",
+          "description": "IPSは運用目的、リスク、収益目標、制約、担当、見直し方法を記した投資政策書です。具体例と条件を変えた例で、投資政策書IPS・ポリシー・アセットミックスを学ぶ。"
         },
         {
           "id": "6-22",
           "title": "企業年金・DB/DC・LDI・ALM",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/22/",
+          "videoStatus": "planned",
+          "description": "DBは給付設計に基づく企業年金、DCは拠出をもとに運用結果で将来資産が変わる仕組みです。具体例と条件を変えた例で、企業年金・DB/DC・LDI・ALMを学ぶ。"
         },
         {
           "id": "6-23",
           "title": "機関投資家の資産運用",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/23/",
+          "videoStatus": "planned",
+          "description": "機関投資家の運用は年金、保険、基金等で目的と制約が違います。具体例と条件を変えた例で、機関投資家の資産運用を学ぶ。"
         },
         {
           "id": "6-24",
           "title": "個人投資家・人的資本・ライフサイクル投資",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/24/",
+          "videoStatus": "planned",
+          "description": "人的資本は将来の労働所得を資産のように考える視点です。具体例と条件を変えた例で、個人投資家・人的資本・ライフサイクル投資を学ぶ。"
         },
         {
           "id": "6-25",
           "title": "国際証券投資・為替ヘッジ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/25/",
+          "videoStatus": "planned",
+          "description": "国際証券投資の国内通貨収益は資産収益と為替収益を掛け合わせます。具体例と条件を変えた例で、国際証券投資・為替ヘッジを学ぶ。"
         },
         {
           "id": "6-26",
           "title": "パフォーマンス測定・アトリビューション・GIPS",
-          "level": "CORE＋L1+"
+          "level": "CORE＋L1+",
+          "status": "published",
+          "url": "/cma/06/26/",
+          "videoStatus": "planned",
+          "description": "時間加重収益率TWRは外部入出金を区切って各期収益を連鎖し、金額加重収益率MWRはCFの時点と額を反映するIRRです。具体例と条件を変えた例で、パフォーマンス測定・アトリビューション・GIPSを学ぶ。"
         },
         {
           "id": "6-27",
           "title": "オルタナティブ投資総論・不動産・REIT",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/27/",
+          "videoStatus": "planned",
+          "description": "オルタナティブには不動産、PE、ヘッジファンド、商品等があり、構造とリスクは大きく違います。具体例と条件を変えた例で、オルタナティブ投資総論・不動産・REITを学ぶ。"
         },
         {
           "id": "6-28",
           "title": "Private Equity・Venture Capital・Buyout",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/28/",
+          "videoStatus": "planned",
+          "description": "PEは非上場企業への投資で、VCは成長初期、Buyoutは支配権取得や借入を使う投資等です。具体例と条件を変えた例で、Private Equity・Venture Capital・Buyoutを学ぶ。"
         },
         {
           "id": "6-29",
           "title": "Hedge Fundと主要戦略",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/29/",
+          "videoStatus": "planned",
+          "description": "ヘッジファンドは株式ロングショート、相対価値、イベント、マクロ等の多様な戦略を使います。具体例と条件を変えた例で、Hedge Fundと主要戦略を学ぶ。"
         },
         {
           "id": "6-30",
           "title": "Commodity・オルタナティブの組入れ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/06/30/",
+          "videoStatus": "planned",
+          "description": "商品投資は現物、先物、関連株式で性質が異なります。具体例と条件を変えた例で、Commodity・オルタナティブの組入れを学ぶ。"
         }
-      ]
+      ],
+      "status": "published",
+      "publishedLessons": 30
     },
     {
       "number": 7,
@@ -1155,109 +1449,195 @@
         {
           "id": "7-01",
           "title": "需要・供給・市場均衡・弾力性",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/01/",
+          "videoStatus": "planned",
+          "description": "需要曲線は他条件一定で価格と購入量、供給曲線は価格と販売量の関係を表します。具体例と条件を変えた例で、需要・供給・市場均衡・弾力性を学ぶ。"
         },
         {
           "id": "7-02",
           "title": "消費者行動・効用最大化",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/02/",
+          "videoStatus": "planned",
+          "description": "消費者は予算制約の中で好む組合せを選びます。具体例と条件を変えた例で、消費者行動・効用最大化を学ぶ。"
         },
         {
           "id": "7-03",
           "title": "企業行動・生産・費用・利潤最大化",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/03/",
+          "videoStatus": "planned",
+          "description": "企業は生産と費用の関係から利益を考えます。具体例と条件を変えた例で、企業行動・生産・費用・利潤最大化を学ぶ。"
         },
         {
           "id": "7-04",
           "title": "完全競争・独占・寡占・独占的競争",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/04/",
+          "videoStatus": "planned",
+          "description": "完全競争では企業は価格を所与とし、独占は市場需要を踏まえて数量を選びます。具体例と条件を変えた例で、完全競争・独占・寡占・独占的競争を学ぶ。"
         },
         {
           "id": "7-05",
           "title": "外部性・公共財・市場の失敗",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/05/",
+          "videoStatus": "planned",
+          "description": "外部性は取引当事者以外へ及ぶ便益や費用です。具体例と条件を変えた例で、外部性・公共財・市場の失敗を学ぶ。"
         },
         {
           "id": "7-06",
           "title": "GDP・国民所得勘定",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/06/",
+          "videoStatus": "planned",
+          "description": "GDPは一定期間に国内で生み出した付加価値です。具体例と条件を変えた例で、GDP・国民所得勘定を学ぶ。"
         },
         {
           "id": "7-07",
           "title": "景気循環・景気指標",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/07/",
+          "videoStatus": "planned",
+          "description": "景気循環は拡張と後退等の経済活動の変動です。具体例と条件を変えた例で、景気循環・景気指標を学ぶ。"
         },
         {
           "id": "7-08",
           "title": "インフレ・デフレ・物価指数",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/08/",
+          "videoStatus": "planned",
+          "description": "物価指数は価格を一定の方式で集約したものです。具体例と条件を変えた例で、インフレ・デフレ・物価指数を学ぶ。"
         },
         {
           "id": "7-09",
           "title": "失業・フィリップス曲線",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/09/",
+          "videoStatus": "planned",
+          "description": "失業率は労働力人口に占める失業者の比率です。具体例と条件を変えた例で、失業・フィリップス曲線を学ぶ。"
         },
         {
           "id": "7-10",
           "title": "貨幣・銀行・信用創造",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/10/",
+          "videoStatus": "planned",
+          "description": "銀行貸出は貸出資産と預金負債を生むことで信用創造に関わります。具体例と条件を変えた例で、貨幣・銀行・信用創造を学ぶ。"
         },
         {
           "id": "7-11",
           "title": "中央銀行・金融政策・政策金利",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/11/",
+          "videoStatus": "planned",
+          "description": "中央銀行の金融政策は短期金利や資産購入等を通じて金融条件、需要、期待へ伝わります。具体例と条件を変えた例で、中央銀行・金融政策・政策金利を学ぶ。"
         },
         {
           "id": "7-12",
           "title": "金融政策ルール・Taylor ruleの直感",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/07/12/",
+          "videoStatus": "planned",
+          "description": "Taylor ruleはインフレと需給ギャップに対応する政策金利の簡略ルールです。具体例と条件を変えた例で、金融政策ルール・Taylor ruleの直感を学ぶ。"
         },
         {
           "id": "7-13",
           "title": "財政政策・乗数・政府債務",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/13/",
+          "videoStatus": "planned",
+          "description": "財政政策は政府支出や税等を通じ需要へ作用します。具体例と条件を変えた例で、財政政策・乗数・政府債務を学ぶ。"
         },
         {
           "id": "7-14",
           "title": "IS-LM/AD-ASの直感と政策効果",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/14/",
+          "videoStatus": "planned",
+          "description": "IS-LMは財市場と貨幣市場、AD-ASは総需要と総供給の対応を簡略化します。具体例と条件を変えた例で、IS-LM/AD-ASの直感と政策効果を学ぶ。"
         },
         {
           "id": "7-15",
           "title": "経済成長・生産性・成長理論",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/15/",
+          "videoStatus": "planned",
+          "description": "経済成長は資本、労働、生産性等の変化から考えます。具体例と条件を変えた例で、経済成長・生産性・成長理論を学ぶ。"
         },
         {
           "id": "7-16",
           "title": "国際収支・貿易・為替制度",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/16/",
+          "videoStatus": "planned",
+          "description": "国際収支は居住者と非居住者の経済取引を体系的に記録します。具体例と条件を変えた例で、国際収支・貿易・為替制度を学ぶ。"
         },
         {
           "id": "7-17",
           "title": "為替レート・金利平価・購買力平価",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/17/",
+          "videoStatus": "planned",
+          "description": "カバー付き金利平価は為替予約を使った二通貨投資の対応、購買力平価は物価と為替の関係を考えます。具体例と条件を変えた例で、為替レート・金利平価・購買力平価を学ぶ。"
         },
         {
           "id": "7-18",
           "title": "通貨危機・国際金融",
-          "level": "CORE＋L1+"
+          "level": "CORE＋L1+",
+          "status": "published",
+          "url": "/cma/07/18/",
+          "videoStatus": "planned",
+          "description": "通貨危機では通貨下落、外貨負債、資金流出、準備不足などが連鎖することがあります。具体例と条件を変えた例で、通貨危機・国際金融を学ぶ。"
         },
         {
           "id": "7-19",
           "title": "商品価格・金利・為替・株価の連鎖",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/19/",
+          "videoStatus": "planned",
+          "description": "商品価格、金利、為替、株価は事業CFと必要収益率を通じてつながります。具体例と条件を変えた例で、商品価格・金利・為替・株価の連鎖を学ぶ。"
         },
         {
           "id": "7-20",
           "title": "実践：現在の市場環境を説明する",
-          "level": "OPT"
+          "level": "OPT",
+          "status": "published",
+          "url": "/cma/07/20/",
+          "videoStatus": "planned",
+          "description": "市場環境の説明は確認日、観測対象、事実、仮説、反証条件を分けます。具体例と条件を変えた例で、実践：現在の市場環境を説明するを学ぶ。"
         },
         {
           "id": "7-21",
           "title": "比較優位・貿易利益・関税・非関税障壁",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/07/21/",
+          "videoStatus": "planned",
+          "description": "比較優位は絶対生産性ではなく、他の財を諦める機会費用の小ささで決まります。具体例と条件を変えた例で、比較優位・貿易利益・関税・非関税障壁を学ぶ。"
         }
-      ]
+      ],
+      "status": "published",
+      "publishedLessons": 21
     },
     {
       "number": 8,
