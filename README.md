@@ -7,8 +7,8 @@
 2. GitHubの `otona-finance` リポジトリを選択
 3. Production branch: `main`
 4. Framework preset: `None`
-5. Build command: 空欄
-6. Build output directory: 空欄
+5. Build command: `node scripts/build-site.mjs`
+6. Build output directory: `dist`
 7. Deploy
 
 公開後に `xxxxx.pages.dev` のURLが発行されます。`main` ブランチへ更新をpushすると自動再デプロイされます。
@@ -54,7 +54,17 @@
 
 導入教材「0-0：CMAの全体像と学習方法」を `/cma/00/00/` に追加。第0章は4講義＋導入、本編の212講義は変更しない。公式3科目と独自11章を区別し、1本10分の場合の視聴時間35時間20分、受験資格、学習方法を記載。動画は制作計画であり全本公開済みではない。CMA本編制作は一旦休憩し、次はFP3級を優先する。
 
-## FP3級講座（2026年9月15日）
+## 問い合わせ・コメント・VoiceStack導線（2026年9月16日）
+
+全44講義に承認制コメント・運営者返信を追加。TOPに直近5件の承認済みコメント、右下の問い合わせボタン、VoiceStackのMacro/Microへの入口を追加。記事やドメインの移転は行わない。`/contact/` は質問・一般問い合わせ・研修依頼、`/training/` は研修相談の入口、`/privacy/` は投稿・個人情報の扱い。
+
+`/admin/` は運営者用。登録された通知先メールに送る6桁コードでログイン（10分有効・最大5回・使い切り）。セッションは8時間、HttpOnly/Secure/SameSite=Strict。コメントの承認・非公開化・返信と、問い合わせの対応状態を管理できる。直近200件を表示。返信先メールは管理者だけに返す。
+
+Cloudflare Pagesの `/api/*` Functionsは非公開Worker `otona-finance-community` へサービスバインディングで接続。WorkerのD1に投稿を永続保存し、Turnstileをサーバーで検証、同一Originチェック、連続投稿制限、ハニーポット、入力上限を適用。公開APIは承認済みコメントの公開列のみを返す。本文はHTMLとして描画せずtextContentを使用。通知メールの宛先・Turnstile秘密鍵・レート制限用saltはWorkerの秘密情報としてのみ保存する。通知メール失敗でも投稿データは保存し、個人情報をログへ出さない。
+
+送信用サブドメイン `notify.otona-finance.net` を設定（メインドメインの既存MXは変更しない）。新しい講義は `backend/lessons.json` に登録し、コメント欄とcommunity CSS/JSを追加後にWorkerを再公開する。カタログだけのページにはコメント欄を設けない。
+
+公開ビルドは `node scripts/build-site.mjs` で追跡・ステージ済みの公開ファイルのみをdistにコピーする。backend、functions、管理用ソースや未追跡素材は静的公開しない。Cloudflare Pagesは同じコマンド・dist出力へ変更。Worker公開は `wrangler deploy --config backend/wrangler.jsonc`、DBマイグレーションは同設定でd1 migrations apply。秘密情報は設定ファイルやGitへ書かない。検証は `node scripts/test-community.mjs`。未追跡の既存素材はそのまま維持。
 
 全ページのヘッダー内に「全編無料！当サイトの教材・動画は、すべて無料で学べます。」を小さく表示する。黄色い全幅帯は廃止。TOPの講座カードは黄色背景の「全編無料」（感嘆符なし）バッジを維持する。共通CSSは `assets/css/free-banner.css`。今後の記事・章ページにも同じヘッダー案内とCSSを追加する（無料の対象は当サイトの教材・動画で、受検料・公式教材ではない）。
 

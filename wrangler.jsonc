@@ -1,0 +1,7 @@
+{
+  "name": "otona-finance",
+  "account_id": "350d58ef6df7c225a4c51f05d90c5d6b",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-09-16",
+  "services": [{ "binding": "COMMUNITY", "service": "otona-finance-community" }]
+}

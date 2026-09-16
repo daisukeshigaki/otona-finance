@@ -1,0 +1,13 @@
+{
+  "name": "otona-finance-community",
+  "main": "worker.js",
+  "account_id": "350d58ef6df7c225a4c51f05d90c5d6b",
+  "compatibility_date": "2026-09-16",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": { "SITE_ORIGIN": "https://otona-finance.net", "MAIL_FROM": "noreply@notify.otona-finance.net" },
+  "d1_databases": [{ "binding": "DB", "database_name": "otona-finance-community", "database_id": "8301a52b-f82b-434c-b4d4-edcbbc0786ca", "migrations_dir": "migrations" }],
+  "send_email": [{ "name": "EMAIL" }],
+  "observability": { "enabled": true, "head_sampling_rate": 1 }
+}
