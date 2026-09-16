@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
-import {lectures} from './fp3-lesson-content.mjs';
+import {lectures as foundation} from './fp3-lesson-content.mjs';
+import {riskLectures} from './fp3-risk-content.mjs';
+const lectures=[...foundation,...riskLectures];
 
 const curriculum=JSON.parse(fs.readFileSync('assets/data/fp3-curriculum.json','utf8'));
 const registry=JSON.parse(fs.readFileSync('backend/lessons.json','utf8'));
-assert.equal(lectures.length,9);
+assert.equal(foundation.length,9);assert.equal(riskLectures.length,6);assert.equal(lectures.length,15);
 assert.equal(curriculum.chapters.reduce((n,ch)=>n+ch.count,0),45);
 let questions=0,figures=0;
 for(const d of lectures){
@@ -31,7 +33,7 @@ for(const d of lectures){
  for(const q of d.questions){assert.ok(q.data.length>20);assert.ok(q.ask.length>5);assert.ok(q.answer.length>20);}
  questions+=d.questions.length;figures+=(html.match(/<figure>/g)||[]).length;
 }
-for(const ch of curriculum.chapters.slice(0,2)){
+for(const ch of curriculum.chapters.slice(0,3)){
  const html=fs.readFileSync(`fp3/${String(ch.chapter).padStart(2,'0')}/index.html`,'utf8');
  for(const l of ch.lessons)assert.ok(html.includes(`href="${l.url}"`));
  assert.ok(!html.includes('undefined'));
@@ -56,4 +58,11 @@ assert.ok(Math.abs(1/annuityFuture-.192158)<.000001);
 assert.ok(Math.abs(annuityPresent-4.713460)<.000001);
 assert.ok(Math.abs(1/annuityPresent-.212158)<.000001);
 assert.equal(execFileSync(process.execPath,['scripts/generate-fp3.mjs'],{encoding:'utf8'}),'*** Begin Patch\n\n*** End Patch\n','Generated files must match authored source');
-console.log(`FP3級: 9講義、${questions}問、${figures}図表。リンク・動画枠・コメント・計算・再生成の整合性チェック完了。`);
+assert.equal(100000*.25+30000,55000);
+assert.equal((600-400-50)*.5,75);
+assert.equal(3800-3000,800);
+assert.equal(4000-1600-1000-600-300,500);
+assert.equal(5000*Math.min(70,60)+100000,400000);
+assert.equal(3000*.3,900);assert.equal(3000*.5,1500);
+assert.equal(90/120*100,75);
+console.log(`FP3級: ${lectures.length}講義、${questions}問、${figures}図表。リンク・動画枠・コメント・計算・再生成の整合性チェック完了。`);

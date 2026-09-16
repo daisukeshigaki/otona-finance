@@ -1,11 +1,13 @@
 import fs from 'node:fs';
-import { lectures } from './fp3-lesson-content.mjs';
+import { lectures as foundation } from './fp3-lesson-content.mjs';
+import { riskLectures } from './fp3-risk-content.mjs';
+const lectures=[...foundation,...riskLectures];
 
 lectures.sort((a,b)=>a.chapter-b.chapter||a.number-b.number);
 
 // Emit an apply_patch document; generation never writes the user's files itself.
 const changes=[];
-function patch(path,next){const old=fs.existsSync(path)?fs.readFileSync(path,'utf8'):null;if(old!==null&&old.trimEnd()===next.trimEnd())return;if(old===null){changes.push(`*** Add File: ${path}\n${next.trimEnd().split('\n').map(l=>'+'+l).join('\n')}`);}else{changes.push(`*** Update File: ${path}\n@@\n${old.trimEnd().split('\n').map(l=>'-'+l).join('\n')}\n${next.trimEnd().split('\n').map(l=>'+'+l).join('\n')}`);}}
+function patch(path,next){if(process.argv[2]&&path!==process.argv[2])return;const old=fs.existsSync(path)?fs.readFileSync(path,'utf8'):null;if(old!==null&&old.trimEnd()===next.trimEnd())return;if(old===null){changes.push(`*** Add File: ${path}\n${next.trimEnd().split('\n').map(l=>'+'+l).join('\n')}`);}else{changes.push(`*** Update File: ${path}\n@@\n${old.trimEnd().split('\n').map(l=>'-'+l).join('\n')}\n${next.trimEnd().split('\n').map(l=>'+'+l).join('\n')}`);}}
 const curriculum=JSON.parse(fs.readFileSync('assets/data/fp3-curriculum.json','utf8'));
 const base=fs.readFileSync('fp3/00/index.html','utf8');
 const header=base.match(/<header[\s\S]*?<\/header>/)[0];
@@ -21,7 +23,8 @@ for(let i=0;i<lectures.length;i++){
 for(let i=0;i<lectures.length;i++){
  const d=lectures[i],ch=curriculum.chapters[d.chapter],lesson=ch.lessons[d.number-1];
  const previous=lectures[i-1],next=lectures[i+1];
- const nav=`<nav class="fp-next" aria-label="講義ナビゲーション">${previous?`<a href="${previous.route}"><small>← 前の講義</small>${curriculum.chapters[previous.chapter].lessons[previous.number-1].title}</a>`:`<a href="/fp3/"><small>← 講座の全体像</small>FP3級の章一覧</a>`}${next?`<a href="${next.route}"><small>次の講義 →</small>${curriculum.chapters[next.chapter].lessons[next.number-1].title}</a>`:`<a href="/fp3/02/"><small>次の章のメニュー →</small>第2章 リスク管理（講義準備中）</a>`}</nav>`;
+ const upcoming=curriculum.chapters[d.chapter+1];
+ const nav=`<nav class="fp-next" aria-label="講義ナビゲーション">${previous?`<a href="${previous.route}"><small>← 前の講義</small>${curriculum.chapters[previous.chapter].lessons[previous.number-1].title}</a>`:`<a href="/fp3/"><small>← 講座の全体像</small>FP3級の章一覧</a>`}${next?`<a href="${next.route}"><small>次の講義 →</small>${curriculum.chapters[next.chapter].lessons[next.number-1].title}</a>`:upcoming?`<a href="/fp3/${String(upcoming.chapter).padStart(2,'0')}/"><small>次の章のメニュー →</small>第${upcoming.chapter}章 ${upcoming.title}（講義準備中）</a>`:`<a href="/fp3/">FP3級の章一覧へ</a>`}</nav>`;
  const sections=d.sections.map((s,n)=>`<section class="fp-section" id="s${n+1}"><h2>${n+1}. ${s.title}</h2>${s.html}</section>`).join('\n');
  const html=`<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(lesson.title)}｜FP3級 ${lesson.code}｜おとなのファイナンス</title><meta name="description" content="${esc(d.lead)}"><link rel="canonical" href="https://otona-finance.net${d.route}"><link rel="icon" href="/assets/images/brand/logo-mark.png"><link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/brand.css"><link rel="stylesheet" href="/assets/css/free-banner.css?v=20260916"><link rel="stylesheet" href="/assets/css/fp3-lesson.css?v=20260916"><link rel="stylesheet" href="/assets/css/community.css?v=20260916"><script defer src="/assets/js/community.js?v=20260916"></script></head><body>
@@ -39,7 +42,7 @@ ${nav}<p class="fp-disclaimer">本サイトは独自の学習教材であり、�
 `;
  patch(d.route.slice(1)+'index.html',html);
 }
-for(const ch of curriculum.chapters.filter(c=>c.chapter<=1)){
+for(const ch of curriculum.chapters.filter(c=>c.lessons.every(l=>l.status==='published'))){
  const path=`fp3/${String(ch.chapter).padStart(2,'0')}/index.html`;
  let html=fs.readFileSync(path,'utf8');
  html=html.replace(/<ol class="article-list">[\s\S]*?<\/ol>/,`<ol class="article-list">${ch.lessons.map((l,n)=>`<li><a href="${l.url}"><div class="article-copy"><span class="article-title">第${n+1}回：${l.title}</span><p>${l.description}<span class="lesson-code">教材番号 ${l.code}</span></p></div><span class="read-arrow" aria-hidden="true">→</span></a></li>`).join('')}</ol>`);
@@ -48,6 +51,7 @@ for(const ch of curriculum.chapters.filter(c=>c.chapter<=1)){
 curriculum.status='in-progress';curriculum.updated='2026-09-16';curriculum.publishedLessons=lectures.length;
 patch('assets/data/fp3-curriculum.json',JSON.stringify(curriculum,null,2)+'\n');
 patch('backend/lessons.json',JSON.stringify(registry,null,2)+'\n');
-let top=fs.readFileSync('fp3/index.html','utf8').replaceAll('まずは章別メニューから学習の全体像を確認できます。','第0章・第1章の計9講義の記事を公開中です。').replace('記事・動画は順次公開します。','第0章・第1章の計9講義の記事・図解・練習問題を公開しました。動画は未収録で、撮影後に追加します。');patch('fp3/index.html',top);
-patch('index.html',fs.readFileSync('index.html','utf8').replace('章別メニュー公開中・講義は準備中。','第0章・第1章 計9講義の記事を公開中。動画は準備中。'));
+const published=`第0〜${Math.max(...lectures.map(d=>d.chapter))}章の計${lectures.length}講義`;
+let top=fs.readFileSync('fp3/index.html','utf8').replaceAll('第0章・第1章の計9講義',published);patch('fp3/index.html',top);
+patch('index.html',fs.readFileSync('index.html','utf8').replace('第0章・第1章 計9講義',published));
 process.stdout.write('*** Begin Patch\n'+changes.join('\n')+'\n*** End Patch\n');

@@ -105,37 +105,49 @@
           "code": "2-01",
           "title": "保険の仕組みと契約の基本",
           "description": "保険料、告知、契約者・被保険者・受取人を区別する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/02/01/",
+          "videoStatus": "planned"
         },
         {
           "code": "2-02",
           "title": "生命保険の種類と特徴",
           "description": "定期・終身・養老保険を、保障期間と満期保険金で比較する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/02/02/",
+          "videoStatus": "planned"
         },
         {
           "code": "2-03",
           "title": "医療・がん・介護保険と特約",
           "description": "病気や介護への備えと、主契約・特約の関係を学ぶ。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/02/03/",
+          "videoStatus": "planned"
         },
         {
           "code": "2-04",
           "title": "損害保険と第三分野の保険",
           "description": "火災・地震・自動車・傷害保険の補償範囲を整理する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/02/04/",
+          "videoStatus": "planned"
         },
         {
           "code": "2-05",
           "title": "保険と税金・必要保障額",
           "description": "保険金の課税関係と、家族に必要な保障を考える。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/02/05/",
+          "videoStatus": "planned"
         },
         {
           "code": "2-06",
           "title": "リスク管理の総復習と事例演習",
           "description": "契約の読み取り、保障の選択、税金の区分を確認する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/02/06/",
+          "videoStatus": "planned"
         }
       ]
     },
@@ -360,5 +372,5 @@
       ]
     }
   ],
-  "publishedLessons": 9
+  "publishedLessons": 15
 }
