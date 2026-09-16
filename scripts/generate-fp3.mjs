@@ -2,7 +2,11 @@ import fs from 'node:fs';
 import { lectures as foundation } from './fp3-lesson-content.mjs';
 import { riskLectures } from './fp3-risk-content.mjs';
 import { investmentLectures } from './fp3-investment-content.mjs';
-const lectures=[...foundation,...riskLectures,...investmentLectures];
+import { taxLectures } from './fp3-tax-content.mjs';
+import { propertyLectures } from './fp3-property-content.mjs';
+import { inheritanceLectures } from './fp3-inheritance-content.mjs';
+import { reviewLectures } from './fp3-review-content.mjs';
+const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
 
 lectures.sort((a,b)=>a.chapter-b.chapter||a.number-b.number);
 
@@ -23,6 +27,7 @@ for(let i=0;i<lectures.length;i++){
 }
 for(let i=0;i<lectures.length;i++){
  const d=lectures[i],ch=curriculum.chapters[d.chapter],lesson=ch.lessons[d.number-1];
+ const confirmed=d.updated||'2026年9月16日';
  const previous=lectures[i-1],next=lectures[i+1];
  const upcoming=curriculum.chapters[d.chapter+1];
  const nav=`<nav class="fp-next" aria-label="講義ナビゲーション">${previous?`<a href="${previous.route}"><small>← 前の講義</small>${curriculum.chapters[previous.chapter].lessons[previous.number-1].title}</a>`:`<a href="/fp3/"><small>← 講座の全体像</small>FP3級の章一覧</a>`}${next?`<a href="${next.route}"><small>次の講義 →</small>${curriculum.chapters[next.chapter].lessons[next.number-1].title}</a>`:upcoming?`<a href="/fp3/${String(upcoming.chapter).padStart(2,'0')}/"><small>次の章のメニュー →</small>第${upcoming.chapter}章 ${upcoming.title}（講義準備中）</a>`:`<a href="/fp3/">FP3級の章一覧へ</a>`}</nav>`;
@@ -31,13 +36,13 @@ for(let i=0;i<lectures.length;i++){
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(lesson.title)}｜FP3級 ${lesson.code}｜おとなのファイナンス</title><meta name="description" content="${esc(d.lead)}"><link rel="canonical" href="https://otona-finance.net${d.route}"><link rel="icon" href="/assets/images/brand/logo-mark.png"><link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/brand.css"><link rel="stylesheet" href="/assets/css/free-banner.css?v=20260916"><link rel="stylesheet" href="/assets/css/fp3-lesson.css?v=20260916"><link rel="stylesheet" href="/assets/css/community.css?v=20260916"><script defer src="/assets/js/community.js?v=20260916"></script></head><body>
 ${header}
 <main class="fp-lesson"><nav class="fp-breadcrumb" aria-label="パンくず"><a href="/">ホーム</a> / <a href="/fp3/">FP3級</a> / <a href="/fp3/${String(d.chapter).padStart(2,'0')}/">第${d.chapter}章 ${ch.title}</a> / ${lesson.code}</nav>
-<div class="fp-hero"><p class="label">FP3級 · 第${d.chapter}章 / 第${d.number}回 <span class="fp-free">全編無料</span></p><h1>${lesson.title}</h1><p class="lead">${d.lead}</p><p class="fp-meta">教材番号 ${lesson.code} · 更新・制度確認：2026年9月16日 · 動画：約10分を予定（未収録）</p><div class="fp-note"><strong>この講義のゴール</strong><p>${d.goal}</p></div></div>
+<div class="fp-hero"><p class="label">FP3級 · 第${d.chapter}章 / 第${d.number}回 <span class="fp-free">全編無料</span></p><h1>${lesson.title}</h1><p class="lead">${d.lead}</p><p class="fp-meta">教材番号 ${lesson.code} · 更新・制度確認：${confirmed} · 動画：約10分を予定（未収録）</p><div class="fp-note"><strong>この講義のゴール</strong><p>${d.goal}</p></div></div>
 <section class="fp-video" aria-label="講義動画"><h2>動画埋め込み枠</h2><p>動画は撮影・公開後にここへ追加します。先に下の記事と練習問題で学べます。</p></section>
 <nav class="fp-toc" aria-label="この講義の目次"><strong>この講義で学ぶこと</strong><ol>${d.sections.map((s,n)=>`<li><a href="#s${n+1}">${s.title}</a></li>`).join('')}<li><a href="#practice">練習問題</a></li><li><a href="#recap">まとめ</a></li></ol></nav>
 ${sections}
 <section class="fp-section" id="practice"><h2>練習問題 — この場の資料だけで解く</h2><p>問題に必要な条件・数値は、各問の中にすべて記載しています。計算問題は電卓を使って構いません。いずれも本サイトのオリジナル問題です。</p>${d.questions.map((q,n)=>`<article class="fp-question"><h3>問${n+1}：${q.title}</h3>${q.data}<p>${q.ask}</p><details><summary>答えと考え方を見る</summary><div class="fp-answer">${q.answer}</div></details></article>`).join('')}</section>
 <section class="fp-section" id="recap"><h2>この講義のまとめ</h2><ul>${d.recap.map(s=>`<li>${s}</li>`).join('')}</ul><p class="fp-note"><strong>撮影・復習の目安</strong> ${d.recording||'前半で制度の地図、後半で具体例と計算を説明します。最後は練習問題を、答えを閉じた状態で解き直してください。'}</p></section>
-<section class="fp-section fp-sources" id="sources"><h2>出典・制度の確認先</h2><p>確認日：2026年9月16日。2026年10月の日本FP協会CBT試験の法令基準日は2026年4月1日です。実生活の現行制度と試験の基準時点が異なる箇所は、本文で分けて示しています。</p><ul>${d.sources.map(([name,url])=>`<li><a href="${url}" target="_blank" rel="noopener">${name}</a></li>`).join('')}<li><a href="https://www.jafp.or.jp/exam/schedule/" target="_blank" rel="noopener">日本FP協会：試験日程・法令基準日</a></li></ul></section>
+<section class="fp-section fp-sources" id="sources"><h2>出典・制度の確認先</h2><p>確認日：${confirmed}。2026年10月の日本FP協会CBT試験の法令基準日は2026年4月1日です。実生活の現行制度と試験の基準時点が異なる箇所は、本文で分けて示しています。</p><ul>${d.sources.map(([name,url])=>`<li><a href="${url}" target="_blank" rel="noopener">${name}</a></li>`).join('')}<li><a href="https://www.jafp.or.jp/exam/schedule/" target="_blank" rel="noopener">日本FP協会：試験日程・法令基準日</a></li></ul></section>
 ${comment}
 ${nav}<p class="fp-disclaimer">本サイトは独自の学習教材であり、日本FP協会・金融財政事情研究会の公式教材ではありません。世帯・人物・計算用の金額は、特記のない限り架空の例です。給付には個別の要件・申請があり、個別の税務・法律・投資助言を行うものではありません。適用制度は加入先・公的機関の最新案内で確認してください。</p></main><footer><strong>おとなのファイナンス</strong><span>暮らしのお金を、基礎から。</span><small><a href="/contact/">お問い合わせ</a> · <a href="/privacy/">投稿・個人情報の扱い</a></small></footer></body></html>
 `;
@@ -49,11 +54,13 @@ for(const ch of curriculum.chapters.filter(c=>c.lessons.every(l=>l.status==='pub
  html=html.replace(/<ol class="article-list">[\s\S]*?<\/ol>/,`<ol class="article-list">${ch.lessons.map((l,n)=>`<li><a href="${l.url}"><div class="article-copy"><span class="article-title">第${n+1}回：${l.title}</span><p>${l.description}<span class="lesson-code">教材番号 ${l.code}</span></p></div><span class="read-arrow" aria-hidden="true">→</span></a></li>`).join('')}</ol>`);
  html=html.replace(/現在はメニューのみ公開しています。記事が完成した講義からリンクを追加します。/,'この章の全講義の記事・図解・練習問題を公開しました。動画は未収録で、撮影後に追加します。');patch(path,html);
 }
-curriculum.status='in-progress';curriculum.updated='2026-09-16';curriculum.publishedLessons=lectures.length;
+curriculum.status='in-progress';curriculum.updated='2026-09-17';curriculum.publishedLessons=lectures.length;
 patch('assets/data/fp3-curriculum.json',JSON.stringify(curriculum,null,2)+'\n');
 patch('backend/lessons.json',JSON.stringify(registry,null,2)+'\n');
 const published=`第0〜${Math.max(...lectures.map(d=>d.chapter))}章の計${lectures.length}講義`;
 const publishedPattern=/第0(?:章・第1章(?:の)?|〜\d章の)計\d+講義/g;
-let top=fs.readFileSync('fp3/index.html','utf8').replaceAll(publishedPattern,published);patch('fp3/index.html',top);
+let top=fs.readFileSync('fp3/index.html','utf8').replaceAll(publishedPattern,published);
+if(lectures.length===curriculum.totalLessons)top=top.replaceAll('全8章・45講義の制作計画','全8章・45講義の学習講座').replaceAll('を中心に制作する予定です','を中心に構成しています');
+patch('fp3/index.html',top);
 patch('index.html',fs.readFileSync('index.html','utf8').replaceAll(publishedPattern,published));
 process.stdout.write('*** Begin Patch\n'+changes.join('\n')+'\n*** End Patch\n');

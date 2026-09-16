@@ -4,12 +4,18 @@ import {execFileSync} from 'node:child_process';
 import {lectures as foundation} from './fp3-lesson-content.mjs';
 import {riskLectures} from './fp3-risk-content.mjs';
 import {investmentLectures} from './fp3-investment-content.mjs';
-const lectures=[...foundation,...riskLectures,...investmentLectures];
+import {taxLectures} from './fp3-tax-content.mjs';
+import {propertyLectures} from './fp3-property-content.mjs';
+import {inheritanceLectures} from './fp3-inheritance-content.mjs';
+import {reviewLectures} from './fp3-review-content.mjs';
+const additions=[...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
+const lectures=[...foundation,...riskLectures,...investmentLectures,...additions];
 
 const curriculum=JSON.parse(fs.readFileSync('assets/data/fp3-curriculum.json','utf8'));
 const registry=JSON.parse(fs.readFileSync('backend/lessons.json','utf8'));
-assert.equal(foundation.length,9);assert.equal(riskLectures.length,6);assert.equal(investmentLectures.length,7);assert.equal(lectures.length,22);
-assert.equal(curriculum.publishedLessons,22);
+assert.equal(foundation.length,9);assert.equal(riskLectures.length,6);assert.equal(investmentLectures.length,7);assert.equal(lectures.length,45);
+assert.deepEqual([taxLectures.length,propertyLectures.length,inheritanceLectures.length,reviewLectures.length],[7,6,6,4]);
+assert.equal(curriculum.publishedLessons,45);
 assert.equal(curriculum.chapters.reduce((n,ch)=>n+ch.count,0),45);
 let questions=0,figures=0;
 for(const d of lectures){
@@ -35,7 +41,7 @@ for(const d of lectures){
  for(const q of d.questions){assert.ok(q.data.length>20);assert.ok(q.ask.length>5);assert.ok(q.answer.length>20);}
  questions+=d.questions.length;figures+=(html.match(/<figure>/g)||[]).length;
 }
-for(const ch of curriculum.chapters.slice(0,4)){
+for(const ch of curriculum.chapters){
  const html=fs.readFileSync(`fp3/${String(ch.chapter).padStart(2,'0')}/index.html`,'utf8');
  for(const l of ch.lessons)assert.ok(html.includes(`href="${l.url}"`));
  assert.ok(!html.includes('undefined'));
@@ -95,9 +101,44 @@ assert.equal(1800/120,15);assert.equal(1800/1500,1.2);
 assert.equal(54/1800*100,3);assert.equal(54/120*100,45);
 assert.equal(1020*145-151000,-3100);
 assert.equal(rounded2(151000/1020),148.04);
-for(const d of investmentLectures){
+for(const d of [...investmentLectures,...additions]){
  assert.ok(d.sections.length>=5);
  assert.ok(d.sections.reduce((n,s)=>n+(s.html.match(/<figure>/g)||[]).length,0)>=4);
 }
-for(const path of ['index.html','fp3/index.html'])assert.ok(fs.readFileSync(path,'utf8').includes('第0〜3章の計22講義'));
+// Remaining chapters: arithmetic independently checked in the same stated units.
+assert.equal(700-(700*.1+110),520);
+assert.equal((1500-(800+70*5))/2,175);
+assert.equal((300-180-50)/2,35);
+assert.equal(130-74,56);assert.equal(30-8-10,12);
+assert.equal(20-150*.05,12.5);assert.equal(60000/4+20000,35000);
+assert.equal(520-67-90-38-63,262);
+assert.equal(2620000*.1-97500,164500);
+assert.equal(Math.floor(164500*.021),3454);
+assert.equal(Math.floor((167954-150000)/100)*100,17900);
+assert.equal((2000*.03+6)*1.1,72.60000000000001);
+assert.equal((4-3)/2*10,5);assert.equal((105-5)*.6,60);
+assert.equal(100*Math.min(2,4*.4),160);
+assert.equal(2000/2*.03,30);
+assert.equal(18000000/6*.014+18000000/3*.003,60000);
+assert.equal((4000-2500-100)*10000*.20315,2844100);
+assert.equal((4000-2800-150)*10000*.20315,2133075);
+assert.equal(24000000/6*.014+24000000/3*.003,80000);
+assert.equal(6000*.5/2,1500);assert.equal(6000*.5*.25,750);
+assert.equal((500-110)*.15-10,48.5);
+assert.equal((3000-110-2500)*.2,78);
+assert.equal(3000+600*3,4800);assert.equal(8000-4800,3200);
+assert.equal(1600*.15-50+800*.1*2,350);
+assert.equal(350*.25,87.5);assert.equal(2000-500*3,500);
+assert.ok(Math.abs(5000*(1-.6*.3)-4100)<1e-9);
+assert.equal(5000*.2+4000-4800,200);
+assert.equal(600-300-120-24-60,96);
+assert.equal(4000+1000-1600-1200-800,1400);
+assert.equal(3630000*.2-427500,298500);
+assert.equal(450/60,7.5);
+for(const d of additions){
+ const html=fs.readFileSync(`fp3/${String(d.chapter).padStart(2,'0')}/${String(d.number).padStart(2,'0')}/index.html`,'utf8');
+ assert.ok(html.includes('更新・制度確認：2026年9月17日'));
+ assert.ok(d.sections.map(s=>s.html.replace(/<[^>]+>/g,'')).join('').length>=1000,'New lectures must be substantive');
+}
+for(const path of ['index.html','fp3/index.html'])assert.ok(fs.readFileSync(path,'utf8').includes('第0〜7章の計45講義'));
 console.log(`FP3級: ${lectures.length}講義、${questions}問、${figures}図表。リンク・動画枠・コメント・計算・再生成の整合性チェック完了。`);
