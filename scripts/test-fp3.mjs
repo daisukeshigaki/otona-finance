@@ -3,11 +3,13 @@ import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {lectures as foundation} from './fp3-lesson-content.mjs';
 import {riskLectures} from './fp3-risk-content.mjs';
-const lectures=[...foundation,...riskLectures];
+import {investmentLectures} from './fp3-investment-content.mjs';
+const lectures=[...foundation,...riskLectures,...investmentLectures];
 
 const curriculum=JSON.parse(fs.readFileSync('assets/data/fp3-curriculum.json','utf8'));
 const registry=JSON.parse(fs.readFileSync('backend/lessons.json','utf8'));
-assert.equal(foundation.length,9);assert.equal(riskLectures.length,6);assert.equal(lectures.length,15);
+assert.equal(foundation.length,9);assert.equal(riskLectures.length,6);assert.equal(investmentLectures.length,7);assert.equal(lectures.length,22);
+assert.equal(curriculum.publishedLessons,22);
 assert.equal(curriculum.chapters.reduce((n,ch)=>n+ch.count,0),45);
 let questions=0,figures=0;
 for(const d of lectures){
@@ -33,7 +35,7 @@ for(const d of lectures){
  for(const q of d.questions){assert.ok(q.data.length>20);assert.ok(q.ask.length>5);assert.ok(q.answer.length>20);}
  questions+=d.questions.length;figures+=(html.match(/<figure>/g)||[]).length;
 }
-for(const ch of curriculum.chapters.slice(0,3)){
+for(const ch of curriculum.chapters.slice(0,4)){
  const html=fs.readFileSync(`fp3/${String(ch.chapter).padStart(2,'0')}/index.html`,'utf8');
  for(const l of ch.lessons)assert.ok(html.includes(`href="${l.url}"`));
  assert.ok(!html.includes('undefined'));
@@ -65,4 +67,37 @@ assert.equal(4000-1600-1000-600-300,500);
 assert.equal(5000*Math.min(70,60)+100000,400000);
 assert.equal(3000*.3,900);assert.equal(3000*.5,1500);
 assert.equal(90/120*100,75);
+// Finance examples: independently calculate, including units and rounding.
+const rounded2=x=>Math.round(x*100)/100;
+assert.equal(rounded2((103/100-1)*100),3);
+assert.equal(2000*(150-130),40000);
+assert.equal(2000000*.01,20000);
+assert.equal(20000*.20315,4063);
+assert.equal(20000-4063,15937);
+assert.equal(rounded2(100*1.02**2),104.04);
+assert.equal(rounded2(2/98*100),2.04);
+assert.equal(rounded2((2+(100-98)/5)/98*100),2.45);
+assert.equal(rounded2((2+(99-98)/2)/98*100),2.55);
+assert.equal(rounded2(102/1.03),99.03);
+assert.equal(1200000000/8000000,150);
+assert.equal(9600000000/8000000,1200);
+assert.equal(2400/150,16);assert.equal(2400/1200,2);
+assert.equal(72/2400*100,3);assert.equal(72/150*100,48);
+assert.equal(12000*100000/10000,120000);
+assert.equal(10300-500,9800);assert.equal(10000-9800,200);
+assert.equal(500-200,300);
+assert.equal(1020*139-1000*151,-9220);
+assert.equal(.6*4+.4*1,2.8);
+assert.equal(200000*.20315,40630);
+assert.equal(200000-40630,159370);
+assert.equal(rounded2((3+(100-102)/4)/102*100),2.45);
+assert.equal(1800/120,15);assert.equal(1800/1500,1.2);
+assert.equal(54/1800*100,3);assert.equal(54/120*100,45);
+assert.equal(1020*145-151000,-3100);
+assert.equal(rounded2(151000/1020),148.04);
+for(const d of investmentLectures){
+ assert.ok(d.sections.length>=5);
+ assert.ok(d.sections.reduce((n,s)=>n+(s.html.match(/<figure>/g)||[]).length,0)>=4);
+}
+for(const path of ['index.html','fp3/index.html'])assert.ok(fs.readFileSync(path,'utf8').includes('第0〜3章の計22講義'));
 console.log(`FP3級: ${lectures.length}講義、${questions}問、${figures}図表。リンク・動画枠・コメント・計算・再生成の整合性チェック完了。`);

@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import { lectures as foundation } from './fp3-lesson-content.mjs';
 import { riskLectures } from './fp3-risk-content.mjs';
-const lectures=[...foundation,...riskLectures];
+import { investmentLectures } from './fp3-investment-content.mjs';
+const lectures=[...foundation,...riskLectures,...investmentLectures];
 
 lectures.sort((a,b)=>a.chapter-b.chapter||a.number-b.number);
 
@@ -52,6 +53,7 @@ curriculum.status='in-progress';curriculum.updated='2026-09-16';curriculum.publi
 patch('assets/data/fp3-curriculum.json',JSON.stringify(curriculum,null,2)+'\n');
 patch('backend/lessons.json',JSON.stringify(registry,null,2)+'\n');
 const published=`第0〜${Math.max(...lectures.map(d=>d.chapter))}章の計${lectures.length}講義`;
-let top=fs.readFileSync('fp3/index.html','utf8').replaceAll('第0章・第1章の計9講義',published);patch('fp3/index.html',top);
-patch('index.html',fs.readFileSync('index.html','utf8').replace('第0章・第1章 計9講義',published));
+const publishedPattern=/第0(?:章・第1章(?:の)?|〜\d章の)計\d+講義/g;
+let top=fs.readFileSync('fp3/index.html','utf8').replaceAll(publishedPattern,published);patch('fp3/index.html',top);
+patch('index.html',fs.readFileSync('index.html','utf8').replaceAll(publishedPattern,published));
 process.stdout.write('*** Begin Patch\n'+changes.join('\n')+'\n*** End Patch\n');

@@ -161,43 +161,57 @@
           "code": "3-01",
           "title": "経済指標・金利・為替の基本",
           "description": "景気、物価、金融政策と金融商品の価格の関係を学ぶ。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/03/01/",
+          "videoStatus": "planned"
         },
         {
           "code": "3-02",
           "title": "預金と貯蓄型金融商品",
           "description": "普通・定期預金などの特徴と、預金保険制度を整理する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/03/02/",
+          "videoStatus": "planned"
         },
         {
           "code": "3-03",
           "title": "債券の価格と利回り",
           "description": "金利と価格の逆の動き、利回りと信用リスクを学ぶ。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/03/03/",
+          "videoStatus": "planned"
         },
         {
           "code": "3-04",
           "title": "株式と投資指標",
           "description": "株式の売買、配当、PER・PBR・配当利回りを確認する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/03/04/",
+          "videoStatus": "planned"
         },
         {
           "code": "3-05",
           "title": "投資信託・ETFと外貨建て商品",
           "description": "仕組み、費用、分配金、為替リスクを比較する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/03/05/",
+          "videoStatus": "planned"
         },
         {
           "code": "3-06",
           "title": "分散投資・金融商品の税金とNISA",
           "description": "リスクの組合せ、課税、非課税制度の基本を整理する。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/03/06/",
+          "videoStatus": "planned"
         },
         {
           "code": "3-07",
           "title": "金融資産運用の総復習と計算演習",
           "description": "利回り、投資指標、外貨の損益を具体的な数字で解く。",
-          "status": "planned"
+          "status": "published",
+          "url": "/fp3/03/07/",
+          "videoStatus": "planned"
         }
       ]
     },
@@ -372,5 +386,5 @@
       ]
     }
   ],
-  "publishedLessons": 15
+  "publishedLessons": 22
 }
