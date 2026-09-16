@@ -297,119 +297,213 @@
         {
           "id": "2-01",
           "title": "現在価値・将来価値・割引率",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/01/",
+          "videoStatus": "planned",
+          "description": "今日の100万円と一年後の100万円は同じ価値ではない。時間軸を描いて、複利と割引を逆向きに計算します。"
         },
         {
           "id": "2-02",
           "title": "年金現価・永久年金・成長永久年金",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/02/",
+          "videoStatus": "planned",
+          "description": "毎年もらうお金、永遠にもらうお金、少しずつ増えるお金。それぞれの現在価値と使える条件を整理する。"
         },
         {
           "id": "2-03",
           "title": "NPVとIRR",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/03/",
+          "videoStatus": "planned",
+          "description": "案件を選ぶ基準は、率の高さだけではない。NPVとIRRが違う結論を出す理由を数字で見る。"
         },
         {
           "id": "2-04",
           "title": "投資案件のCF：埋没費用・機会費用・運転資本",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/04/",
+          "videoStatus": "planned",
+          "description": "調査費をもう払った、土地は元から持っている。それでも投資判断に入れるCFと入れないCFを分ける。"
         },
         {
           "id": "2-05",
           "title": "リスクと期待リターン",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/05/",
+          "videoStatus": "planned",
+          "description": "期待リターンは約束ではない。二つの景気シナリオから平均・ばらつき・分散投資を読み解く。"
         },
         {
           "id": "2-06",
           "title": "CAPMと株主資本コスト",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/06/",
+          "videoStatus": "planned",
+          "description": "株主が求める収益率を、安全利率・市場リスクプレミアム・ベータに分けて計算する。"
         },
         {
           "id": "2-07",
           "title": "ベータ：レバード／アンレバード",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/07/",
+          "videoStatus": "planned",
+          "description": "借入の多い比較企業のベータを、そのまま自社へ使わない。事業リスクと財務レバレッジを分ける。"
         },
         {
           "id": "2-08",
           "title": "WACCと税引後負債コスト",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/08/",
+          "videoStatus": "planned",
+          "description": "株式と借入のコストを時価の重みでまとめる。税引後負債コストとCFの対応を確認する。"
         },
         {
           "id": "2-09",
           "title": "ROIC > WACCと企業価値",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/09/",
+          "videoStatus": "planned",
+          "description": "成長しても価値を壊すことがある。ROICとWACCの差から、投資の価値創造を考える。"
         },
         {
           "id": "2-10",
           "title": "MM命題：資本構成の基礎",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/10/",
+          "videoStatus": "planned",
+          "description": "借入で資金コストが安くなるなら、なぜ全部借金にしないのか。まずMMの理想世界を理解する。"
         },
         {
           "id": "2-11",
           "title": "税効果・財務危機コスト・最適資本構成",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/11/",
+          "videoStatus": "planned",
+          "description": "借入には税節約があるが、資金難にもコストがある。企業価値を押し上げる効果と下げる効果を並べる。"
         },
         {
           "id": "2-12",
           "title": "エージェンシー問題・情報の非対称性",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/12/",
+          "videoStatus": "planned",
+          "description": "会社の意思決定は誰のためか。過大投資・リスク転嫁・情報格差を、利害関係者の取り分で見る。"
         },
         {
           "id": "2-13",
           "title": "資金調達：株式・社債・借入・転換証券",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/13/",
+          "videoStatus": "planned",
+          "description": "株式・社債・借入・転換証券は、返済義務と支配権が違う。調達額だけでなく条件を比較する。"
         },
         {
           "id": "2-14",
           "title": "配当・自社株買い・内部留保とペイアウト政策",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/14/",
+          "videoStatus": "planned",
+          "description": "配当と自社株買いはお金を返す方法。EPSが上がることと、価値が増えることを切り分ける。"
         },
         {
           "id": "2-15",
           "title": "成長投資・再投資率・サステイナブル成長",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/15/",
+          "videoStatus": "planned",
+          "description": "伸びる売上には設備・在庫・債権が必要。成長率と再投資率を、利益率と資本効率へつなげる。"
         },
         {
           "id": "2-16",
           "title": "M&A：シナジー・買収価格・増分ROIC",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/16/",
+          "videoStatus": "planned",
+          "description": "買収で売上は増える。でも払い過ぎれば価値は減る。シナジー・プレミアム・統合費用を同じ時点で比較する。"
         },
         {
           "id": "2-17",
           "title": "リアルオプションと不確実性",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/02/17/",
+          "videoStatus": "planned",
+          "description": "今すぐ全部投資するだけが選択ではない。待つ・拡張する・撤退する権利が持つ価値を考える。"
         },
         {
           "id": "2-18",
           "title": "実践：経営者なら100億円をどう配分するか",
-          "level": "OPT"
+          "level": "OPT",
+          "status": "published",
+          "url": "/cma/02/18/",
+          "videoStatus": "planned",
+          "description": "経営者として100億円を配分する。成長投資・買収・返済・還元・資金余力を一つの表で比較する。"
         },
         {
           "id": "2-19",
           "title": "プロジェクトファイナンス入門：SPV・ノンリコース・DSCR・ウォーターフォール",
-          "level": "OPT"
+          "level": "OPT",
+          "status": "published",
+          "url": "/cma/02/19/",
+          "videoStatus": "planned",
+          "description": "発電所などのプロジェクトを別会社で運営し、事業CFから返済する仕組み。DSCRと支払順位を学ぶ。"
         },
         {
           "id": "2-20",
           "title": "株式会社制度・会社法・所有と経営・IR",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/20/",
+          "videoStatus": "planned",
+          "description": "株式会社では誰が資金を出し、誰が決め、誰が監督するのか。株主総会・取締役会・IRを整理する。"
         },
         {
           "id": "2-21",
           "title": "事業戦略・コーポレートガバナンス",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/21/",
+          "videoStatus": "planned",
+          "description": "戦略の言葉を利益・資本・CFへつなげる。ガバナンスが資本配分を監督する意味を考える。"
         },
         {
           "id": "2-22",
           "title": "投資評価法の比較：PI・回収期間法・ARR・EVA/MVA",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/22/",
+          "videoStatus": "planned",
+          "description": "NPV・IRR以外の評価法は何を測るのか。回収の速さ・会計利益・経済価値を混ぜずに比較する。"
         },
         {
           "id": "2-23",
           "title": "事業・財務レバレッジ、短期資金繰り、ERM",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/02/23/",
+          "videoStatus": "planned",
+          "description": "売上減少は利益に何倍効くか、さらに利息でどう増幅するか。利益のレバレッジと資金繰りを分ける。"
         }
-      ]
+      ],
+      "status": "published",
+      "publishedLessons": 23
     },
     {
       "number": 3,
@@ -419,144 +513,258 @@
         {
           "id": "3-01",
           "title": "資本市場・株式の種類・株主権",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/01/",
+          "videoStatus": "planned",
+          "description": "株式は会社の所有持分を表す。普通株・優先株の権利と、株主が最後に受け取る仕組みを確認する。"
         },
         {
           "id": "3-02",
           "title": "発行市場・流通市場・市場参加者",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/02/",
+          "videoStatus": "planned",
+          "description": "新株を発行する市場と、既存株を売買する市場はお金の行き先が違う。参加者の役割を整理する。"
         },
         {
           "id": "3-03",
           "title": "株価指数：TOPIX・日経平均・海外主要指数",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/03/",
+          "videoStatus": "planned",
+          "description": "TOPIXと日経平均は、同じ日本株でも重みが違う。指数の上昇を個々の企業の上昇と取り違えない。"
         },
         {
           "id": "3-04",
           "title": "現物・信用取引・清算・受渡",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/04/",
+          "videoStatus": "planned",
+          "description": "約定したら終わりではない。現物・信用取引と、清算・受渡までの資金と証券の流れを確認する。"
         },
         {
           "id": "3-05",
           "title": "成行・指値、オーダードリブン／クォートドリブン",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/05/",
+          "videoStatus": "planned",
+          "description": "成行は価格を保証せず、指値は約定を保証しない。注文板から価格優先・時間優先を考える。"
         },
         {
           "id": "3-06",
           "title": "産業分析：トップダウン／ボトムアップ",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/06/",
+          "videoStatus": "planned",
+          "description": "景気から業種を選ぶか、会社から調べるか。どちらも事業の売上・費用・資本へつなげる。"
         },
         {
           "id": "3-07",
           "title": "産業ライフサイクル・競争優位・戦略分析",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/07/",
+          "videoStatus": "planned",
+          "description": "成長期・成熟期で競争と投資の条件は違う。競争優位が続く理由を、利益率と資本へ落とす。"
         },
         {
           "id": "3-08",
           "title": "ESG・非財務情報・エンゲージメント",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/08/",
+          "videoStatus": "planned",
+          "description": "ESG情報を点数で終わらせない。環境・人材・統治が売上・費用・資本・リスクへどう効くかを見る。"
         },
         {
           "id": "3-09",
           "title": "株価・時価総額・EVの違い",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/09/",
+          "videoStatus": "planned",
+          "description": "一株の値段、株主全体の値段、事業の値段は違う。EVから株式価値への橋を自分で作る。"
         },
         {
           "id": "3-10",
           "title": "PER・PBR・PCFR・PSR・EV/EBITDA",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/10/",
+          "videoStatus": "planned",
+          "description": "PER・PBR・PSRなどを同じ会社で並べる。安い比率が割安の証明にならない理由まで整理する。"
         },
         {
           "id": "3-11",
           "title": "DDMの全体像",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/11/",
+          "videoStatus": "planned",
+          "description": "配当を現在へ割り引いて株式価値を求める。保有期間の最後の売却価格も、未来の配当とつながっている。"
         },
         {
           "id": "3-12",
           "title": "ゴードン成長モデル",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/12/",
+          "videoStatus": "planned",
+          "description": "一定成長の配当を一本の式にまとめる。D0とD1、Keとgの差が価値を大きく変える。"
         },
         {
           "id": "3-13",
           "title": "多段階DDM・インプライド成長率",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/13/",
+          "videoStatus": "planned",
+          "description": "最初は高成長、やがて安定成長へ。詳細配当とターミナル価値をつなぎ、価格が織り込む成長も逆算する。"
         },
         {
           "id": "3-14",
           "title": "サステイナブル成長率・ROE・配当性向",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/14/",
+          "videoStatus": "planned",
+          "description": "ROEと留保率から配当成長を作る。高い留保が価値を生むのは、再投資の収益率が十分なとき。"
         },
         {
           "id": "3-15",
           "title": "PVGOと成長機会",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/15/",
+          "videoStatus": "planned",
+          "description": "株価のうち、既存の稼ぐ力と成長機会はいくらか。成長するだけで価値が増えるわけではない。"
         },
         {
           "id": "3-16",
           "title": "FCFF・FCFEの算出と違い",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/16/",
+          "videoStatus": "planned",
+          "description": "事業が生むFCFFと、株主に残るFCFEは違う。利益から投資と借入まで順に調整する。"
         },
         {
           "id": "3-17",
           "title": "DCF：売上・利益率・運転資本・Capex予測",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/17/",
+          "videoStatus": "planned",
+          "description": "DCFのCFをどこから作るか。売上・利益率・運転資本・設備投資を同じ予測表につなぐ。"
         },
         {
           "id": "3-18",
           "title": "ターミナルバリューと感応度分析",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/18/",
+          "videoStatus": "planned",
+          "description": "DCFの大半を終価が占めることがある。永続成長・割引率・出口倍率の前提を表で確かめる。"
         },
         {
           "id": "3-19",
           "title": "残余利益モデルとPBR",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/19/",
+          "videoStatus": "planned",
+          "description": "簿価に将来の超過利益を足して評価する。PBRとROE、株主資本コストの関係を理解する。"
         },
         {
           "id": "3-20",
           "title": "マルチプル法・類似企業比較",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/20/",
+          "videoStatus": "planned",
+          "description": "似た会社の倍率を使う。でも業種名が同じだけでは足りない。成長・採算・負債・会計差を調整する。"
         },
         {
           "id": "3-21",
           "title": "成長企業・赤字企業・景気敏感株・資産株",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/21/",
+          "videoStatus": "planned",
+          "description": "赤字成長企業、景気敏感企業、資産を多く持つ企業。同じPERを当てず、利益と資産の意味からモデルを選ぶ。"
         },
         {
           "id": "3-22",
           "title": "株式リスクプレミアム・ベータ推計・割引率選択",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/22/",
+          "videoStatus": "planned",
+          "description": "割引率は小さな入力差でも価値を変える。市場プレミアムとベータの推計条件、CFとの対応を確認する。"
         },
         {
           "id": "3-23",
           "title": "市場効率性と株式運用戦略",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/23/",
+          "videoStatus": "planned",
+          "description": "公開情報から簡単に儲かるのか。市場効率性の三形態と、アクティブ・パッシブ運用の条件を考える。"
         },
         {
           "id": "3-24",
           "title": "株式ファクター・スマートベータ・投資スタイル",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/24/",
+          "videoStatus": "planned",
+          "description": "バリュー・サイズ・モメンタムなどの共通特性で株をまとめる。ファクター収益と運用者の能力を分ける。"
         },
         {
           "id": "3-25",
           "title": "トレーディング・HFT・アルゴ取引",
-          "level": "L1+"
+          "level": "L1+",
+          "status": "published",
+          "url": "/cma/03/25/",
+          "videoStatus": "planned",
+          "description": "注文を分けるアルゴリズムと、高速に売買するHFTは同じ意味ではない。目的・費用・障害リスクを整理する。"
         },
         {
           "id": "3-26",
           "title": "執行コスト：IS・VWAP・スプレッド",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/26/",
+          "videoStatus": "planned",
+          "description": "予測が当たっても、売買コストで利益は減る。IS・VWAP・スプレッドを同じ注文から計算する。"
         },
         {
           "id": "3-27",
           "title": "実践：1社をゼロからバリュエーション",
-          "level": "OPT"
+          "level": "OPT",
+          "status": "published",
+          "url": "/cma/03/27/",
+          "videoStatus": "planned",
+          "description": "一社を調べ、CFを作り、一株価値まで計算する。実績・予測・価格を分けた独自の評価演習。"
         },
         {
           "id": "3-28",
           "title": "会社法・金融商品取引法・株式市場ルール",
-          "level": "CORE"
+          "level": "CORE",
+          "status": "published",
+          "url": "/cma/03/28/",
+          "videoStatus": "planned",
+          "description": "株主権・情報開示・禁止取引は別のルール。会社法・金融商品取引法・取引所制度を分けて確認する。"
         }
-      ]
+      ],
+      "status": "published",
+      "publishedLessons": 28
     },
     {
       "number": 4,
