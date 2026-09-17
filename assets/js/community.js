@@ -125,6 +125,7 @@
   if (!matched) return;
   const lessons = {
     1: {
+      lead: '第1章は、保険や投資の商品を選ぶ前に、人生でいつお金が必要になるか、毎年の家計は黒字か、今の資産と借入はいくらかを3枚のシートで見える化するところから始めます。',
       points: ['ライフイベント表・キャッシュフロー表・個人のバランスシートの役割を区別する', 'お金の計画は、商品選びより先に「いつ・何に・いくら必要か」を決める', 'FPができる一般的な説明と、専門資格・登録が必要な業務を分ける'],
       intro: '<p>第1章では、保険や投資の商品から始めません。まずは、人生でいつお金が必要になるか、毎年の家計は黒字か、今の資産と借入はいくらかを、3枚のシートで見える化します。</p><figure class="fp-learning-visual"><img src="/assets/images/fp3/01/planning-sheets-overview.png" alt="ライフイベント表、キャッシュフロー表、個人のバランスシートを並べた学習用イメージ"><figcaption><strong>左：ライフイベント表</strong>は「いつ・何にお金が必要か」。<strong>中央：キャッシュフロー表</strong>は「毎年の収入・支出・貯蓄の変化」。<strong>右：個人のバランスシート</strong>は「今ある資産・負債・純資産」を見る資料です。</figcaption></figure><p>たとえば「10年後に子どもの進学費用を用意したい」と決めたら、イベント表で時期と目標額を置きます。次にキャッシュフロー表で、毎年いくら貯められるかを確認します。最後に個人のバランスシートで、預貯金や住宅ローンを含めた今の立ち位置を確かめます。<strong>この順番が分かってから、FPの役割と関連法規へ進みます。</strong></p>'
     },
@@ -159,10 +160,12 @@
   };
   const lesson = lessons[Number(matched[1])];
   const heroNote = document.querySelector('.fp-hero .fp-note');
+  const lead = document.querySelector('.fp-hero .lead');
   const video = document.querySelector('.fp-video');
   const toc = document.querySelector('.fp-toc ol');
   if (!lesson || !heroNote || !video || document.querySelector('.fp-chapter-intro')) return;
   heroNote.innerHTML = '<strong>この講義で学ぶこと</strong><ul class="fp-learning-points">' + lesson.points.map(point => '<li>' + point + '</li>').join('') + '</ul>';
+  if (lesson.lead && lead) lead.textContent = lesson.lead;
   video.insertAdjacentHTML('afterend', '<section class="fp-section fp-chapter-intro" id="introduction"><h2>はじめに：この回で扱う場面</h2>' + lesson.intro + '</section>');
   if (toc) toc.insertAdjacentHTML('afterbegin', '<li><a href="#introduction">はじめに</a></li>');
 })();
