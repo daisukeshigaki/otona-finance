@@ -158,6 +158,16 @@
       intro: '<p>総復習では、新しい制度を増やしません。ここまでに使った「家計の資料」「制度の対象者と条件」「将来のお金の計算」を、一つのケースでつなげます。</p><p>問題文を見たら、いきなり式に入れず、誰の話か、いつの制度か、年・月や円・万円がそろっているかを確認します。その順番を練習問題でもそのまま使います。</p>'
     }
   };
+  const diagrams = {
+    1: '<figure class="fp-learning-map"><div class="fp-map-grid"><div class="fp-map-box"><strong>① いつ必要？</strong><span>進学・住宅・老後を時系列に置く</span></div><div class="fp-map-box"><strong>② 毎年足りる？</strong><span>収入−支出で黒字・赤字を見る</span></div><div class="fp-map-box"><strong>③ 今どれだけある？</strong><span>資産−負債で純資産を見る</span></div></div><figcaption>3枚のシートは、順番に埋めることで「目標・毎年の余力・現在地」をつなげます。</figcaption></figure>',
+    2: '<figure class="fp-learning-map"><div class="fp-map-grid"><div class="fp-map-box"><strong>今の100万円を増やす</strong><span>5年後にいくら？ → 終価係数</span></div><div class="fp-map-box"><strong>5年後に100万円を作る</strong><span>毎年いくら積み立てる？ → 減債基金係数</span></div><div class="fp-map-box"><strong>今の100万円を使い切る</strong><span>毎年いくら受け取る？ → 資本回収係数</span></div></div><figcaption><strong>6つの係数は、利率と年数が決まったときに「お金の出発点」と「お金の到着点」をつなぐ早見表です。</strong>最初に、今あるお金か・毎年積むお金か・将来必要なお金かを決めてから係数を選びます。</figcaption></figure>',
+    3: '<figure class="fp-learning-map"><div class="fp-map-grid"><div class="fp-map-box"><strong>病院で払うお金</strong><span>医療保険・高額療養費を確認</span></div><div class="fp-map-box"><strong>働けない間の生活費</strong><span>傷病手当金の条件を確認</span></div><div class="fp-map-box"><strong>介護が必要になったら</strong><span>介護保険の年齢・原因を確認</span></div></div><figcaption>同じ病気やけがでも、「何の費用を支えるのか」で見る制度が変わります。</figcaption></figure>',
+    4: '<figure class="fp-learning-map"><div class="fp-map-grid"><div class="fp-map-box"><strong>退職して仕事を探す</strong><span>雇用保険：働く意思・能力と求職が入口</span></div><div class="fp-map-box"><strong>業務外の病気で休む</strong><span>健康保険：傷病手当金を確認</span></div><div class="fp-map-box"><strong>仕事・通勤が原因</strong><span>労災保険：療養と休業の給付を確認</span></div></div><figcaption>制度名からではなく、まず「働けるか」「原因は何か」で分けます。</figcaption></figure>',
+    5: '<figure class="fp-learning-map"><div class="fp-map-grid"><div class="fp-map-box"><strong>1階：基礎年金</strong><span>全員の土台。第1〜3号で加入を確認</span></div><div class="fp-map-box"><strong>2階：厚生年金</strong><span>会社員・公務員などは上乗せ</span></div><div class="fp-map-box"><strong>受取額を考える</strong><span>10年は資格、480月は満額計算の基準</span></div></div><figcaption>年金は「会社員か自営業か」だけでなく、土台と上乗せを分けて見ます。</figcaption></figure>',
+    6: '<figure class="fp-learning-map"><div class="fp-map-grid"><div class="fp-map-box"><strong>老齢</strong><span>老後の生活を支える年金</span></div><div class="fp-map-box"><strong>障害・遺族</strong><span>病気・けが・死亡のときの年金</span></div><div class="fp-map-box"><strong>私的年金</strong><span>DB・DC・iDeCoで老後資金を上乗せ</span></div></div><figcaption>まず起きた出来事から公的年金を考え、その後に私的年金を重ねます。</figcaption></figure>',
+    7: '<figure class="fp-learning-map"><div class="fp-map-grid"><div class="fp-map-box"><strong>教育資金</strong><span>必要時期が近いお金を分けて準備</span></div><div class="fp-map-box"><strong>住宅資金</strong><span>頭金・ローン返済・手元資金を一緒に見る</span></div><div class="fp-map-box"><strong>老後資金</strong><span>年金と長期の積立を組み合わせる</span></div></div><figcaption>3つの目標に、同じ預貯金を重複して割り当てないことが計画の出発点です。</figcaption></figure>',
+    8: '<figure class="fp-learning-map"><div class="fp-map-grid"><div class="fp-map-box"><strong>誰の話？</strong><span>年齢・働き方・家族を確認</span></div><div class="fp-map-box"><strong>いつの制度？</strong><span>法令基準日と適用条件を確認</span></div><div class="fp-map-box"><strong>何を計算？</strong><span>年・月、円・万円、含む金額をそろえる</span></div></div><figcaption>問題文を読む順番を固定すると、知識があっても起きる取り違えを減らせます。</figcaption></figure>'
+  };
   const lesson = lessons[Number(matched[1])];
   const heroNote = document.querySelector('.fp-hero .fp-note');
   const lead = document.querySelector('.fp-hero .lead');
@@ -166,6 +176,6 @@
   if (!lesson || !heroNote || !video || document.querySelector('.fp-chapter-intro')) return;
   heroNote.innerHTML = '<strong>この講義で学ぶこと</strong><ul class="fp-learning-points">' + lesson.points.map(point => '<li>' + point + '</li>').join('') + '</ul>';
   if (lesson.lead && lead) lead.textContent = lesson.lead;
-  video.insertAdjacentHTML('afterend', '<section class="fp-section fp-chapter-intro" id="introduction"><h2>はじめに：この回で扱う場面</h2>' + lesson.intro + '</section>');
+  video.insertAdjacentHTML('afterend', '<section class="fp-section fp-chapter-intro" id="introduction"><h2>はじめに：この回で扱う場面</h2>' + lesson.intro + diagrams[Number(matched[1])] + '</section>');
   if (toc) toc.insertAdjacentHTML('afterbegin', '<li><a href="#introduction">はじめに</a></li>');
 })();
