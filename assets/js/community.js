@@ -176,6 +176,15 @@
   if (!lesson || !heroNote || !video || document.querySelector('.fp-chapter-intro')) return;
   heroNote.innerHTML = '<strong>この講義で学ぶこと</strong><ul class="fp-learning-points">' + lesson.points.map(point => '<li>' + point + '</li>').join('') + '</ul>';
   if (lesson.lead && lead) lead.textContent = lesson.lead;
-  video.insertAdjacentHTML('afterend', '<section class="fp-section fp-chapter-intro" id="introduction"><h2>はじめに：この回で扱う場面</h2>' + lesson.intro + diagrams[Number(matched[1])] + '</section>');
+  video.insertAdjacentHTML('afterend', '<section class="fp-section fp-chapter-intro" id="introduction"><h2>はじめに：この回で扱う場面</h2>' + lesson.intro + '</section>');
+  if (Number(matched[1]) === 1) {
+    const sheetsSection = document.querySelector('#s5');
+    if (sheetsSection) sheetsSection.insertAdjacentHTML('beforeend', '<figure class="fp-learning-visual"><img src="/assets/images/fp3/01/planning-sheets-overview.png" alt="ライフイベント表、キャッシュフロー表、個人のバランスシートを並べた学習用イメージ"><figcaption><strong>左：ライフイベント表</strong>は「いつ・何にお金が必要か」。<strong>中央：キャッシュフロー表</strong>は「毎年の収入・支出・貯蓄の変化」。<strong>右：個人のバランスシート</strong>は「今ある資産・負債・純資産」を見る資料です。</figcaption></figure>');
+  }
+  if (Number(matched[1]) === 2) {
+    const factorSection = document.querySelector('#s3');
+    const firstParagraph = factorSection && factorSection.querySelector('p');
+    if (firstParagraph) firstParagraph.insertAdjacentHTML('afterend', '<figure class="fp-learning-visual"><img src="/assets/images/fp3/01/money-time-directions.png" alt="今の一括資金を将来の目標額へ増やす流れ、毎年の積立を将来の目標額へ集める流れ、今の一括資金を毎年取り崩す流れ"><figcaption><strong>上：今の一括金を将来の一括金へ増やす</strong>（終価・現価）。<strong>中央：毎年同額を積み立てて将来の目標額へ集める</strong>（年金終価・減債基金）。<strong>下：今の一括金を毎年同額で取り崩す</strong>（年金現価・資本回収）。まず「どちら向きにお金を動かしたいか」を決めてから、表で係数名を対応させます。</figcaption></figure>');
+  }
   if (toc) toc.insertAdjacentHTML('afterbegin', '<li><a href="#introduction">はじめに</a></li>');
 })();
