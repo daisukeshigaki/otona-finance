@@ -8,6 +8,8 @@ import { inheritanceLectures } from './fp3-inheritance-content.mjs';
 import { reviewLectures } from './fp3-review-content.mjs';
 import { diagrams, pendingDiagramIds } from './fp3-chapter1-diagrams.mjs';
 import { lessonIntroductions } from './fp3-chapter1-introductions.mjs';
+import { diagrams as chapter2Diagrams } from './fp3-chapter2-diagrams.mjs';
+import { lessonIntroductions as chapter2Introductions } from './fp3-chapter2-introductions.mjs';
 const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
 
 lectures.sort((a,b)=>a.chapter-b.chapter||a.number-b.number);
@@ -29,20 +31,22 @@ for(let i=0;i<lectures.length;i++){
 }
 for(let i=0;i<lectures.length;i++){
  const d=lectures[i],ch=curriculum.chapters[d.chapter],lesson=ch.lessons[d.number-1];
- const confirmed=d.updated||'2026年9月16日';
+ const confirmed=d.chapter===2?'2026年9月18日':d.updated||'2026年9月16日';
  const previous=lectures[i-1],next=lectures[i+1];
  const upcoming=curriculum.chapters[d.chapter+1];
  const nav=`<nav class="fp-next" aria-label="講義ナビゲーション">${previous?`<a href="${previous.route}"><small>← 前の講義</small>${curriculum.chapters[previous.chapter].lessons[previous.number-1].title}</a>`:`<a href="/fp3/"><small>← 講座の全体像</small>FP3級の章一覧</a>`}${next?`<a href="${next.route}"><small>次の講義 →</small>${curriculum.chapters[next.chapter].lessons[next.number-1].title}</a>`:upcoming?`<a href="/fp3/${String(upcoming.chapter).padStart(2,'0')}/"><small>次の章のメニュー →</small>第${upcoming.chapter}章 ${upcoming.title}（講義準備中）</a>`:`<a href="/fp3/">FP3級の章一覧へ</a>`}</nav>`;
- const pedagogy=d.chapter===1?lessonIntroductions[d.number]:null;
+ const pedagogy=d.chapter===1?lessonIntroductions[d.number]:d.chapter===2?chapter2Introductions[d.number]:null;
+ const visualSpecs=d.chapter===1?diagrams.filter(x=>!pendingDiagramIds.has(x.id)):d.chapter===2?chapter2Diagrams:[];
+ const imageDirectory=String(d.chapter).padStart(2,'0');
  const intro=pedagogy?`<section class="fp-section fp-chapter-intro" id="introduction"><h2>はじめに：この回で扱う場面</h2>${pedagogy.intro}</section>`:'';
  const sections=d.sections.map((s,n)=>{
-  const figures=d.chapter===1?diagrams.filter(x=>x.lesson===d.number&&x.section===n+1&&!pendingDiagramIds.has(x.id)).map(x=>`<figure class="fp-learning-visual"><a href="/assets/images/fp3/01/${x.id}.png" target="_blank" rel="noopener" aria-label="図を拡大して見る"><img src="/assets/images/fp3/01/${x.id}.png" alt="${esc(x.caption)}" loading="lazy" width="1672" height="941"></a><figcaption>${x.caption} <a href="/assets/images/fp3/01/${x.id}.png" target="_blank" rel="noopener">図を拡大</a></figcaption></figure>`).join(''):'';
+  const figures=visualSpecs.filter(x=>x.lesson===d.number&&x.section===n+1).map(x=>`<figure class="fp-learning-visual"><a href="/assets/images/fp3/${imageDirectory}/${x.id}.png" target="_blank" rel="noopener" aria-label="図を拡大して見る"><img src="/assets/images/fp3/${imageDirectory}/${x.id}.png" alt="${esc(x.caption)}" loading="lazy" width="1672" height="941"></a><figcaption>${x.caption} <a href="/assets/images/fp3/${imageDirectory}/${x.id}.png" target="_blank" rel="noopener">図を拡大</a></figcaption></figure>`).join('');
   const anchor=d.chapter===1&&d.number===2&&n===2?s.html.indexOf('<figure>'):-1;
   const body=anchor>=0?s.html.slice(0,anchor)+figures+s.html.slice(anchor):s.html+figures;
   return `<section class="fp-section" id="s${n+1}"><h2>${n+1}. ${s.title}</h2>${body}</section>`;
  }).join('\n');
  const existing=fs.existsSync(d.route.slice(1)+'index.html')?fs.readFileSync(d.route.slice(1)+'index.html','utf8'):'';
- const cssVersion=d.chapter===1?'20260918-learning-maps':existing.match(/fp3-lesson\.css\?v=([^" ]+)/)?.[1]||'20260916';
+ const cssVersion=d.chapter===1||d.chapter===2?'20260918-learning-maps':existing.match(/fp3-lesson\.css\?v=([^" ]+)/)?.[1]||'20260916';
  const jsVersion=d.chapter===1?'20260918-labelled-figures':existing.match(/community\.js\?v=([^" ]+)/)?.[1]||'20260916';
  const html=`<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(lesson.title)}｜FP3級 ${lesson.code}｜おとなのファイナンス</title><meta name="description" content="${esc(d.lead)}"><link rel="canonical" href="https://otona-finance.net${d.route}"><link rel="icon" href="/assets/images/brand/logo-mark.png"><link rel="stylesheet" href="/assets/css/site.css"><link rel="stylesheet" href="/assets/css/brand.css"><link rel="stylesheet" href="/assets/css/free-banner.css?v=20260916"><link rel="stylesheet" href="/assets/css/fp3-lesson.css?v=${cssVersion}"><link rel="stylesheet" href="/assets/css/community.css?v=20260916"><script defer src="/assets/js/community.js?v=${jsVersion}"></script></head><body>
