@@ -1,4 +1,5 @@
 import {p,list,table,flow,note,formula,example,cite} from './fp3-lesson-content.mjs';
+import {opening,figureNotes} from './fp3-chapter3-explanations.mjs';
 
 const policy=['日本銀行：金融政策の概要','https://www.boj.or.jp/mopo/outline/'];
 const cpi=['総務省統計局：消費者物価指数のQ&A','https://www.stat.go.jp/data/cpi/4-1.htm'];
@@ -130,3 +131,8 @@ investmentLectures.push({
  {title:'ドルが増えたら円も増える？',data:p('1,000ドルを購入時TTS151円で買います。税引後残高1,020ドルを換金時TTB139円で円に戻します。その他費用なし。支払＝1,000×151、受取＝1,020×139です。'),ask:'円の受取額と、支払額との差額を求めてください。',answer:p('受取141,780円、支払151,000円との差額−9,220円。ドルの残高が増えても、円換算で元本割れすることがあります。')}
  ],recap:['販売・運用・保管を区別。分別管理は値下がりの保証ではない。','基準価額が1万口当たりなら、評価額も口数の単位を合わせる。','分配金を出すと、その分だけ基準価額が下がる。','元本払戻金は元本の一部で、利益ではない。','信託報酬は基準価額に反映。二重に引かない。','外貨の残高と、円に戻した損益を分けて見る。'],sources:[fund,reit,['資産運用業協会：基準価額と分配金','https://www.imaj.or.jp/study/investmenttrust/about/navdividends.html'],['資産運用業協会：元本払戻金','https://www.imaj.or.jp/glossary/detail/58.html'],['資産運用業協会：投資信託のコスト','https://www.imaj.or.jp/study/investmenttrust/costtax/cost.html'],glossary]
 });
+
+for(const lecture of investmentLectures){
+ lecture.sections=lecture.sections.map((section,i)=>({...section,html:p(opening[lecture.number][i])+section.html+(figureNotes[`${lecture.number}-${i+1}`]?p(figureNotes[`${lecture.number}-${i+1}`]):'')}));
+ lecture.updated='2026年9月18日';
+}

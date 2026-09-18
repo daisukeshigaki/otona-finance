@@ -1,0 +1,234 @@
+{
+  "edits": [
+    [
+      "real-purchasing",
+      "計算結果の符号だけ修正。『1.02÷1.03−1≒−0.97％』と必ず負の値を表示。現在の画像ではマイナスが抜けている。他の文章、金額、構図は維持。"
+    ],
+    [
+      "business-index",
+      "DI例の表の固有名称を『指標A』『指標B』『指標C』『指標D』に変更。A〜Cは増加・改善、Dは減少・悪化。すべて正方向の指標である架空例と明示。実際の在庫指数の減少を悪化と断定しない。3/4×100＝75％と表示。DIのカタカナを『ディフュージョン・インデックス』に修正。ほかの構成維持。"
+    ],
+    [
+      "interest-path",
+      "100万円の例の吹き出し『金利が1％上がると』を『年利が1％から2％になると』へ変更。相対変化と％ポイントの混同を避ける。他を維持。"
+    ],
+    [
+      "deposit-timing",
+      "下の具体例の時間軸だけ正確に修正。左から『0か月：1回目1万円入金』『1か月：2回目1万円入金』『2か月：3回目1万円入金』『3か月：評価日』の4点。1回目から評価日まで3か月、2回目から評価日まで2か月、3回目から評価日まで1か月を共通の右端評価日に向かう3本の長さが違う矢印で表示。入金は各月初、評価日は最初の入金から3か月後。現在の逐次矢印ではなく共通終点。他維持。"
+    ],
+    [
+      "personal-government-bond",
+      "右端の3か所『満期時に元本と利子を受け取る』を『満期に元本を受取／利子は半年ごと』に変更。満期でしか利子を受け取れない誤解を避ける。変動10年の細かな途中目盛りは『途中省略』と明記し、半年の目盛りが10年まで均等に描かれたと誤解させない。他維持。"
+    ],
+    [
+      "bond-price-rate",
+      "式の『102÷1.03÷99.03』を『102÷1.03≒99.03』に変更。等号近似記号と割り算を区別。ほかはそのまま。"
+    ],
+    [
+      "bond-yields",
+      "3区画と図を維持し、文字・式を正確に修正。①名称は『直接利回り』、式『2÷98×100≒2.04％』。②『所有期間利回り：2年で売却』、説明『2年分の利子4万円＋売却差益1万円＝総収益5万円』、式『｛2＋（99−98）÷2｝÷98×100≒2.55％』。③『最終利回り：満期まで』、説明『利子＋償還差益』、式『｛2＋（100−98）÷5｝÷98×100≒2.45％』。結果の前の÷をすべて≒へ修正。時間軸5年に利子2万円も追加。単利近似、税費用再投資なし、利払日に売買の条件。"
+    ],
+    [
+      "bond-redemption-method",
+      "右『いつでも市場で売却できる』を『買い手・市場状況によって売却』へ変更し、流動性と営業日等による制約を無視しない。左『1年未満は換金不可』は『原則1年未満は換金不可』、災害特例は『所定の災害条件を満たす場合』と限定する。他維持。"
+    ],
+    [
+      "deposit-timing",
+      "下の具体例だけ修正。括弧の前提を『0・1・2か月に入金、3か月時点で評価』にする。3か月運用の青矢印は0か月の点から3か月評価日の点まで。2か月運用の橙矢印は1か月点から3か月評価日まで。1か月運用の緑矢印は2か月点から3か月評価日まで。入金時点と矢印の始点を正確に一致させる。その他維持。"
+    ],
+    [
+      "bond-yields",
+      "現在の結果の前の記号が割り算になっているので、①②③の結果の前を全て『約』という日本語に変更。①約2.04％、②約2.55％、③約2.45％。各式は維持。5年満期の点に『利子2万円＋元本100万円』を明示。その他維持。"
+    ],
+    [
+      "stock-total-return",
+      "下の計算の箱同士の記号を修正。『売却益2万円＋配当7,200円＝総収益27,200円』。総収益の次の箱は等式でつながず、間に縦線を置き『保有期間の収益率＝27,200÷240,000×100＝約11.33％』と示す。÷11.33％ではなく日本語『約11.33％』。その他維持。"
+    ],
+    [
+      "fund-roles",
+      "資金の流れを正確に変更。販売会社から運用会社への購入資金矢印は削除。販売会社から信託銀行へ『資金の流れ』青矢印を運用会社を経由せず迂回させる。運用会社→信託銀行の『運用の指図』橙矢印は維持。換金資金は信託銀行→販売会社→投資家、運用会社を経由しない。販売会社→運用会社は『申込み情報』の細い別色矢印。運用会社の固有財産と混ざった資金の見え方を排除。"
+    ],
+    [
+      "fund-nav-distribution",
+      "左下の省略された式を修正。『保有口数10万口×基準価額12,000円÷1万口→評価額12万円』と割る単位を必ず入れる。右棒の分配後11.5万円は分配前12万円の95.83％の高さ、上に5,000円4.17％の小区分を追加。合計の高さは分配前と同じ。5000円を大きな割合で描かない。"
+    ],
+    [
+      "fund-distribution-types",
+      "金額の図を正確に再設計。左軸10,300円、10,000円、9,800円の順。普通分配金300円の橙区分は上10300から10000の範囲、元本払戻金200円の緑区分は10000から9800の範囲。両区分の境界は個別元本10000の横線に正確に一致。500円全体は10300から9800の範囲を括弧で示す。現在の画像では緑区分が10000より上にあり500円が300円の範囲なので誤り。ほかの数値・式を維持。"
+    ],
+    [
+      "bond-redemption-method",
+      "右『いつでも市場で売却できる』を『買い手・市場状況によって売却』へ変更。左『1年未満は換金不可』は『原則1年未満は換金不可』、災害特例は『所定の災害条件を満たす場合』と限定する。他維持。"
+    ],
+    [
+      "risk-correlation",
+      "右端の相関−1の図だけ修正。緑の組合せ50%ずつの水平線を、青とオレンジの各時点のちょうど平均の高さ（交点の高さ）へ移動する。両線より下に置かない。他の文章を維持。"
+    ],
+    [
+      "bond-loss-yield",
+      "右側の2つの収益率の数式だけ修正。『3万円 ÷ 102万円 × 100 → 約2.94%』『2.5万円 ÷ 102万円 × 100 → 約2.45%』とする。結果の直前に÷を置かない。他を維持。"
+    ],
+    [
+      "stock-review-ratios",
+      "③配当利回りの中央図を『年間配当54円 ÷ 株価1,800円』、④配当性向を『年間配当54円 ÷ EPS120円』の順に修正。下の数式は今の正しい順のまま維持。他を維持。"
+    ],
+    [
+      "fx-break-even",
+      "下のTTBの求め方の式に重大誤字。『TTB = 151,000円 ÷ 1,020ドル → 約148.04円／ドル』に変更。11,000円は誤り。148.04は丸めた値なので下段円換算は『約151,000円』損益も『約0円』にする。他を維持。"
+    ],
+    [
+      "deposit-timing",
+      "下部の具体例の時間軸が誤っているため下部具体例パネルだけ全面描き直す。上部3行は維持。下部は3本の独立した細い水平時間軸を並べる。全て横座標0・1・2・3か月をそろえる。1段目『0か月に1万円入金』0→3の矢印『3か月運用』、2段目『1か月に1万円入金』1→3の矢印『2か月運用』、3段目『2か月に1万円入金』2→3の矢印『1か月運用』。3つの矢印は全て同じ3か月評価日で終わる。『毎月末から』の文は削除。これが収まるよう上部を少し縮小してよい。"
+    ],
+    [
+      "fund-nav-distribution",
+      "右の棒グラフの形だけ変更。分配前と分配後の合計12万円の頂点高さを厳密にそろえる。分配後は青11.5万円を総高さの95.83%、上のオレンジ5000円を総高さの4.17%とする。オレンジ部分を現在より薄くする。数値文章と左の式維持。"
+    ],
+    [
+      "fx-break-even",
+      "損益分岐TTBの下帯を購入時の円資金÷運用後のドル残高に変更"
+    ]
+  ],
+  "outputs": [
+    {
+      "id": "gdp-cpi",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-fd0df377-ed59-4600-becf-40535d92ebf4.png"
+    },
+    {
+      "id": "business-index",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-fe8648b2-2369-4e7f-bd3f-f6379874fa27.png"
+    },
+    {
+      "id": "interest-path",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-f7fd1552-37b0-4c84-a988-c2883cad9f4c.png"
+    },
+    {
+      "id": "yen-rate",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-1401ab82-daca-4157-a0fd-8cfb17cdddd9.png"
+    },
+    {
+      "id": "real-purchasing",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-d5fa8216-3577-4a60-a0b8-963763c1310f.png"
+    },
+    {
+      "id": "money-purpose",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-7d93fb48-1b23-4767-bd2a-d343b127b0a4.png"
+    },
+    {
+      "id": "deposit-timing",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-cb4f1e8b-0d41-4df2-abb7-aebe42e12373.png"
+    },
+    {
+      "id": "deposit-protection",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-5e04c6dd-7d6a-4b84-9913-1996f3d0ce66.png"
+    },
+    {
+      "id": "interest-tax-compound",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-8fbcd00c-2c1e-4a01-837b-0d4801b3f4d6.png"
+    },
+    {
+      "id": "personal-government-bond",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-d9e1e2d5-1cfe-481c-adab-0ea8393ea953.png"
+    },
+    {
+      "id": "bond-cashflow",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-6982d44e-c39d-4512-b821-2b97ca477aa2.png"
+    },
+    {
+      "id": "bond-price-rate",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-d7531538-32a5-4991-b84e-2aac8a288aa3.png"
+    },
+    {
+      "id": "bond-yields",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-56050948-bc65-4c9d-b123-0b8a024f0604.png"
+    },
+    {
+      "id": "bond-credit",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-2a4ba663-48c5-4472-80be-033b1b40b8aa.png"
+    },
+    {
+      "id": "bond-redemption-method",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-f39083ff-598f-4481-a563-e93c310b01cc.png"
+    },
+    {
+      "id": "stock-bond-roles",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-18ea202b-7823-4142-94dc-92a3a7458574.png"
+    },
+    {
+      "id": "stock-orders",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-640b28e5-71b0-45ba-b695-dacb14bd4eb4.png"
+    },
+    {
+      "id": "eps-bps",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-6380434e-9a04-47d8-b09b-01b7026873cd.png"
+    },
+    {
+      "id": "stock-ratios",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-c998a499-4ef9-417a-ada4-1abfa8e40b21.png"
+    },
+    {
+      "id": "stock-total-return",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-a0db3a68-b876-4682-bc58-4fc1a996c8e2.png"
+    },
+    {
+      "id": "fund-roles",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-aed9b738-76c4-4136-ad17-fe14c3e012a1.png"
+    },
+    {
+      "id": "fund-nav-distribution",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-bded91ee-2c2e-4c98-94d8-ad7ab003cb6b.png"
+    },
+    {
+      "id": "fund-distribution-types",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-1d90dbd8-120d-427d-8b88-45fd89e6eca5.png"
+    },
+    {
+      "id": "fund-fees-etf-reit",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-dd73be44-5fe5-404c-ab7a-0d3045235d47.png"
+    },
+    {
+      "id": "fx-yen-return",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-d75ad228-5eea-4a08-982a-529adb5acc9f.png"
+    },
+    {
+      "id": "risk-correlation",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-93e9bb84-2e41-42d5-a2d1-e58e3e6a9e41.png"
+    },
+    {
+      "id": "allocation-return",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-47a37cfe-5d14-4d5f-b2b5-c1b334609708.png"
+    },
+    {
+      "id": "capital-gains-tax",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-3f9ee623-42e2-45fe-a175-c0a69b8ce2b9.png"
+    },
+    {
+      "id": "nisa-limits",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-dbd5d433-876a-40ac-a2b5-e4b21ca2f7a7.png"
+    },
+    {
+      "id": "nisa-loss-dividend",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-8c9560cc-d8f8-44dd-b4f2-235048816bb3.png"
+    },
+    {
+      "id": "household-money-map",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-6717680b-d449-49e2-84ae-9b7ff05a1b05.png"
+    },
+    {
+      "id": "products-income-map",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-03a99e47-e107-4e79-a96e-9a0881a78a70.png"
+    },
+    {
+      "id": "bond-loss-yield",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-85f7b4d3-4a56-467d-b112-f8695ecf6c36.png"
+    },
+    {
+      "id": "stock-review-ratios",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-ba5d5616-c7a1-42e3-bcc4-741bdb7196d5.png"
+    },
+    {
+      "id": "fx-break-even",
+      "path": "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-979c3e27-a969-40bd-9e79-2491cb9704a9.png"
+    }
+  ]
+}
