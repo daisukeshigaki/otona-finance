@@ -1,0 +1,38 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import { lectures as foundation } from './fp3-lesson-content.mjs';
+import { riskLectures } from './fp3-risk-content.mjs';
+import { investmentLectures } from './fp3-investment-content.mjs';
+import { taxLectures } from './fp3-tax-content.mjs';
+import { propertyLectures } from './fp3-property-content.mjs';
+import { inheritanceLectures } from './fp3-inheritance-content.mjs';
+import { reviewLectures } from './fp3-review-content.mjs';
+import { reviseOrientation } from './fp3-orientation.mjs';
+import { addExamQuestions } from './fp3-exam-level-questions.mjs';
+const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
+reviseOrientation(lectures);addExamQuestions(lectures);
+assert.equal(lectures.length,45);
+for(const d of lectures){
+ const ch=String(d.chapter).padStart(2,'0'),num=String(d.number).padStart(2,'0');
+ const html=fs.readFileSync(`fp3/${ch}/${num}/index.html`,'utf8');
+ const image=`assets/images/fp3/goals/goal-${ch}-${num}.png`;
+ assert.ok(fs.existsSync(image),image);
+ assert.ok(fs.statSync(image).size>10000,image);
+ assert.ok(html.includes('/'+image),image);
+ assert.ok(html.indexOf('fp-goal-visual')<html.indexOf('<section class="fp-video"'));
+ assert.equal(d.questions.length,3);
+ assert.equal(d.questions.filter(q=>q.level==='exam'&&q.original).length,1);
+ assert.ok(html.includes('本試験レベル：'));
+ assert.ok(!html.includes('正しい選択肢は修正した'));
+ assert.ok(d.questions[2].data.includes('選択肢'));
+ assert.ok(d.questions[2].answer.includes('正解：'));
+}
+const intro=lectures.find(d=>d.chapter===0);
+assert.equal(intro.sections.length,7);
+assert.ok(intro.sections.some(s=>s.title.includes('おすすめ')));
+assert.ok(intro.sections.some(s=>s.title.includes('2つの団体')));
+assert.equal(Math.round(6000000*.20604),1236240);
+assert.equal(Math.round((4000000-1500000*1.1041)*.19216),450394);
+assert.equal(Math.round((286000-97500)*1021/1000),192459);
+assert.equal(Math.round(3000000+600000+5000*(1-.20315)),3603984);
+console.log('PASS: FP3級45講義の冒頭図・本試験レベル問題・導入・主要計算');
