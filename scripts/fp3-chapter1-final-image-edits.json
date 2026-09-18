@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cashflow-and-balance-v2",
+    "args": {
+      "referenced_image_paths": [
+        "/Users/daisuke/Documents/おとなのファイナンス/assets/images/fp3/01/cashflow-and-balance.png"
+      ],
+      "prompt": "Edit target: supplied Japanese textbook diagram. Preserve the entire left cash-flow illustration, title, colors, typography and footer. Redraw ONLY the BS panel on the right as a correct balance sheet. TWO equal-width columns with exactly equal overall height, aligned top and bottom. Left column heading 資産: internal entries 預貯金400万円, 投資100万円, 住宅3,000万円. Right heading 負債・純資産: upper group 負債2,600万円 contains two entries 住宅ローン2,500万円 and その他借入100万円; lower distinct group 純資産900万円. CRITICAL: totals are NOT additional segments to stack on top of components. Separate TOTAL ROW below both columns, same baseline and same height: left 資産合計3,500万円; right 負債・純資産合計3,500万円. Under it exact equation 資産3,500万円＝負債2,600万円＋純資産900万円. Balance these totals visually. Do not include any duplicate total as a component. No invented values. Keep large readable correct Japanese. The outer asset diagram and liabilities-plus-equity diagram must be same height. Preserve footer 純資産＝3,500−2,600＝900万円 and 現金として持つ預貯金は400万円."
+    }
+  },
+  {
+    "id": "db-dc-money-flow",
+    "args": {
+      "referenced_image_paths": [
+        "/Users/daisuke/.codex/generated_images/019fcc21-62ee-78b0-87f7-f910ef3bd829/exec-39928ab8-cb3e-4c1a-8762-8e518e95b77c.png"
+      ],
+      "prompt": "Edit target supplied Japanese DB/DC explanatory textbook image. Change ONLY the label on the small document in the top DB row from 就業規則（規約） to exactly 年金規約. It must read 年金規約, no parentheses. Preserve all other explanatory text, figures, title, arrows, iDeCo row, colors, layout and monetary semantics unchanged. Large readable Japanese, no watermark."
+    }
+  },
+  {
+    "id": "household-stress-test",
+    "args": {
+      "prompt": "Use case: scientific-educational. Japanese beginner textbook explanatory image, landscape 16:9, white background, navy headings, blue and gold arrows, large extremely readable Japanese text. Meaningful labelled diagrams, not decorative art and not merely a table. All exact text below must appear correctly. No watermark or logo. Do not invent extra amounts or eligibility rules. Use generous spacing, correct arrow direction, no overlaps. Values are learning examples, not promises.\nTitle「家計の計画：収入が減っても続けられる？」. Three parallel flow rows with bars relative amounts:「当初：収入540万円−支出480万円＝黒字60万円」「収入減：480万円−480万円＝黒字0円」「収入減＋支出削減：480万円−450万円＝黒字30万円」. Side common goal arrow「教育積立の目標：年40万円」 comparisons「当初：黒字から可能」「収入減：40万円不足」「支出削減後も：10万円不足」. Bottom labelled choices「予算・時期・支出・追加収入・配分を再検討」. Footer「高利回りなら必ず解決、とは考えない。架空例。」"
+    }
+  }
+]
