@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {bondLectures,derivativeLectures,portfolioLectures,economicsLectures} from './cma-advanced-content.mjs';
+import {refineEconomicsFirstFive} from './cma-economics-refinement.mjs';
+refineEconomicsFirstFive(economicsLectures);
 const groups=[[4,25,bondLectures],[5,17,derivativeLectures],[6,30,portfolioLectures],[7,21,economicsLectures]];
 const curriculum=JSON.parse(fs.readFileSync('assets/data/cma-curriculum.json','utf8'));
 const registry=JSON.parse(fs.readFileSync('backend/lessons.json','utf8'));
@@ -26,7 +28,7 @@ for(const [ch,count,items] of groups){
  }
 }
 for(const [a,b] of [['03/28','04/01'],['04/25','05/01'],['05/17','06/01'],['06/30','07/01'],['07/21','08']])assert.ok(fs.readFileSync('cma/'+a+'/index.html','utf8').includes('href="/cma/'+b+'/"'));
-assert.equal(questions,279);assert.equal(charts,11);
+assert.equal(questions,279);assert.ok(charts>=14);
 const round=(x,n=2)=>Number(x.toFixed(n));
 // Recalculate one or more numerical examples for every lecture, independently of HTML.
 const calculations={

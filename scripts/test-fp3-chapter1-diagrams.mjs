@@ -1,8 +1,9 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { diagrams, pendingDiagramIds } from './fp3-chapter1-diagrams.mjs';
-const ready=diagrams.filter(d=>!pendingDiagramIds.has(d.id));
-assert.equal(ready.length,22);
+import { pensionDiagrams,replacedPensionDiagramIds } from './fp3-pension-diagram-overrides.mjs';
+const ready=[...diagrams.filter(d=>!pendingDiagramIds.has(d.id)&&!replacedPensionDiagramIds.has(d.id)),...pensionDiagrams];
+assert.equal(ready.length,23);
 for(let n=1;n<=8;n++){
  const html=fs.readFileSync(`fp3/01/0${n}/index.html`,'utf8');
  assert.equal((html.match(/id="introduction"/g)||[]).length,1);

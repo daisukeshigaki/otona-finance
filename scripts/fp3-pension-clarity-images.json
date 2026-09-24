@@ -1,0 +1,22 @@
+[
+  {
+    "id": "employee-pension-formula",
+    "prompt": "Landscape 16:9 Japanese beginner finance textbook infographic, white background, navy headings, blue and gold accents, exact readable Japanese, no logo, no watermark. Title「厚生年金の報酬比例部分：式の数字を言葉にする」. Top structure shows two-story pension building: bottom「1階 老齢基礎年金」 plus top「2階 老齢厚生年金」; highlight only part of second floor「今回計算する：報酬比例部分」 and label「年金総額ではない」. Center formula with three large labeled cards: ①「平均標準報酬額 30万円」 explanation「標準報酬月額＋標準賞与額を再評価し、加入月数で平均」; ②「5.481／1,000＝0.005481」 explanation「報酬1,000円当たり、1か月加入したときの給付乗率」「5.481％ではない」; ③「被保険者月数 240月」 explanation「厚生年金の対象加入期間」. Multiplication arrows into exact result「300,000円×0.005481×240月＝394,632円／年」. Bottom warning「394,632円は2003年4月以降の対象期間の報酬比例部分。基礎年金・加算等は別計算」 and memory priority「式の構造を先に理解。係数は基準日・加入時期を確認」. Educational diagram, generous spacing, all text large."
+  },
+  {
+    "id": "pension-start-age",
+    "prompt": "Landscape 16:9 Japanese beginner finance textbook infographic, white background, navy headings, blue and gold, exact readable Japanese, no logo, no watermark. Title「老齢年金は原則65歳。早める・遅らせると年額が生涯変わる」. Central age timeline 60→63→65→70→75 with 65 emphasized「原則の受取開始」. Three vertical amount cards based on comparison-only annual amount: at63「24か月繰上げ」「月0.4％×24＝9.6％減」「年100万円→年90.4万円」; at65「基準」「年100万円」; at70「60か月繰下げ」「月0.7％×60＝42％増」「年100万円→年142万円」. Arrow label from 65 to63「早く受け取る代わりに、対象年金の年額が減る」 and from65 to70「待って受け取る代わりに、対象年金の年額が増える」. Large callout「月0.4％・0.7％は一度だけの控除ではない。決まった増減率が原則、生涯続く」. Bottom cautions「繰上げは取消不可」「繰下げ待機中は受け取らない」「加給年金等、増額対象外の部分あり」「全員に繰下げが有利とは限らない」. Footer「100万円は比較用の架空年額。適用条件・生年月日等を確認」."
+  },
+  {
+    "id": "survivor-pension-current-2026",
+    "prompt": "Landscape 16:9 Japanese beginner finance textbook decision diagram, white background, navy, blue, orange, exact readable Japanese, no logo, no watermark. Title「子のない配偶者の遺族厚生年金：2026年時点の現行ルール」. Start box「子のない配偶者」 branches to left「妻」 and right「夫」. Wife branch: decision「死亡時30歳未満？」 yes→「5年間の有期給付」 no→「年齢だけを理由とする5年制限なし」. Husband branch: decision「死亡時55歳以上？」 no→「子のない夫としては対象外」 yes→「受給資格を確認」→「原則60歳から支給」 small exception「遺族基礎年金を併給できる場合等は例外」. Shared top/bottom checks「亡くなった人の要件」「生計維持」「優先順位」「再婚等の失権」 with note「性別・年齢だけで必ず支給とは言えない」. Separate bottom band「2028年4月施行予定：子のない60歳未満の配偶者を原則5年の有期給付へ。女性は段階施行」 and bright label「2026年10月試験の法令基準日が2026年4月1日なら、上の現行ルール」. Generous spacing and large legible text."
+  },
+  {
+    "id": "db-dc-money-flow",
+    "prompt": "Landscape 16:9 Japanese beginner finance textbook explanatory diagram, white background, navy headings, blue and gold, exact readable Japanese, no logo, no watermark. Title「DB・企業型DC・iDeCo：何が決まり、誰が運用する？」. Three horizontal lanes. Lane1「DB 確定給付企業年金」 flow「原則 企業が掛金」→「企業・基金等が運用」→「規約の算定方法で個人の給付を決定」→「年金または一時金等」, note「全員が同じ定額ではない」「規約の支給開始は60〜70歳の範囲」. Lane2「企業型DC」 flow「原則 企業が掛金」→「本人が商品を選び運用」→split「運用結果が良い」「運用結果が悪い」→「受取額が変わる」, note「老齢給付は原則60歳以降。通算期間が短いと開始が61〜65歳へ」. Lane3「iDeCo＝個人型DC」 flow「本人が掛金」→「本人が商品を選び運用」→「受取額が変わる」→「原則60〜75歳で受取開始」, notes「原則中途引出し不可」「税制・手数料も確認」. Bottom key「DB＝給付の算定方法側を定める」「DC＝拠出側を定める。受取額は確定しない」."
+  },
+  {
+    "id": "ideco-limits-2026",
+    "prompt": "Landscape 16:9 Japanese beginner finance textbook infographic, white background, navy headings, four color-coded people cards, exact readable Japanese, no logo, no watermark. Title「iDeCo：2026年9月時点は、働き方で月額上限が違う」. Four clearly separated cards: ①「自営業者・フリーランス等／第1号」 large「月68,000円」 note「国民年金基金・付加保険料との合算枠」; ②「会社員／企業年金なし」 large「月23,000円」; ③「会社員・公務員／企業年金あり」 large「月20,000円まで」 note「企業型DC事業主掛金＋他制度掛金相当額＋iDeCoが月55,000円の範囲」「実際は20,000円未満の場合あり」; ④「扶養される配偶者等／第3号」 large「月23,000円」 note「本人に課税所得がなければ、掛金の所得控除による当年の節税効果なし」「配偶者の所得控除にはできない」. Bottom common flow「本人が拠出 → 本人が運用 → 原則60歳まで引出不可 → 老後に受取」. Separate future band「2026年12月1日施行予定：第1号の共通枠75,000円／第2号の企業年金等との共通枠62,000円」 warning「現行・試験基準日・施行後を混ぜない」. All text large and well spaced."
+  }
+]

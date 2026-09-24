@@ -5,12 +5,36 @@ import { dirname, resolve } from 'node:path';
 const output = resolve('dist');
 const analyticsId = 'G-Q6BM1HHV68';
 const analyticsTag = `  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=${analyticsId}"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${analyticsId}');
+    (function () {
+      var id = '${analyticsId}';
+      var storageKey = 'otona_finance_analytics_opt_out';
+      var params = new URLSearchParams(window.location.search);
+      try {
+        if (params.get('analytics') === 'off') localStorage.setItem(storageKey, '1');
+        if (params.get('analytics') === 'on') localStorage.removeItem(storageKey);
+      } catch (_) {}
+      var optedOut = false;
+      try { optedOut = localStorage.getItem(storageKey) === '1'; } catch (_) {}
+      var isLocal = /^(localhost|127\\.0\\.0\\.1)$/.test(window.location.hostname);
+      var isAutomated = navigator.webdriver === true;
+      var disabled = optedOut || isLocal || isAutomated;
+      window['ga-disable-' + id] = disabled;
+      if (params.has('analytics')) {
+        params.delete('analytics');
+        var cleanQuery = params.toString();
+        history.replaceState(null, '', window.location.pathname + (cleanQuery ? '?' + cleanQuery : '') + window.location.hash);
+      }
+      if (disabled) return;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', id);
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+      document.head.appendChild(script);
+    })();
   </script>`;
 // Only this generated output is replaced; private backend/source files are never published as assets.
 rmSync(output, { recursive: true, force: true });

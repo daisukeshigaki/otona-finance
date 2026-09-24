@@ -7,6 +7,7 @@ import { propertyLectures } from './fp3-property-content.mjs';
 import { inheritanceLectures } from './fp3-inheritance-content.mjs';
 import { reviewLectures } from './fp3-review-content.mjs';
 import { diagrams, pendingDiagramIds } from './fp3-chapter1-diagrams.mjs';
+import { pensionDiagrams,replacedPensionDiagramIds } from './fp3-pension-diagram-overrides.mjs';
 import { lessonIntroductions } from './fp3-chapter1-introductions.mjs';
 import { diagrams as chapter2Diagrams } from './fp3-chapter2-diagrams.mjs';
 import { lessonIntroductions as chapter2Introductions } from './fp3-chapter2-introductions.mjs';
@@ -14,8 +15,10 @@ import { diagrams as chapter3Diagrams } from './fp3-chapter3-diagrams.mjs';
 import { lessonIntroductions as chapter3Introductions } from './fp3-chapter3-introductions.mjs';
 import { reviseOrientation } from './fp3-orientation.mjs';
 import { addExamQuestions } from './fp3-exam-level-questions.mjs';
+import { refinePensionLectures } from './fp3-pension-refinement.mjs';
 const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
 reviseOrientation(lectures);
+refinePensionLectures(lectures);
 addExamQuestions(lectures);
 
 lectures.sort((a,b)=>a.chapter-b.chapter||a.number-b.number);
@@ -37,7 +40,7 @@ for(let i=0;i<lectures.length;i++){
 }
 for(let i=0;i<lectures.length;i++){
  const d=lectures[i],ch=curriculum.chapters[d.chapter],lesson=ch.lessons[d.number-1];
- const confirmed=d.chapter===2||d.chapter===3?'2026年9月18日':d.updated||'2026年9月16日';
+ const confirmed=d.chapter>=1&&d.chapter<=3?'2026年9月25日':d.updated||'2026年9月16日';
  const previous=lectures[i-1],next=lectures[i+1];
  const upcoming=curriculum.chapters[d.chapter+1];
  const nav=`<nav class="fp-next" aria-label="講義ナビゲーション">${previous?`<a href="${previous.route}"><small>← 前の講義</small>${curriculum.chapters[previous.chapter].lessons[previous.number-1].title}</a>`:`<a href="/fp3/"><small>← 講座の全体像</small>FP3級の章一覧</a>`}${next?`<a href="${next.route}"><small>次の講義 →</small>${curriculum.chapters[next.chapter].lessons[next.number-1].title}</a>`:upcoming?`<a href="/fp3/${String(upcoming.chapter).padStart(2,'0')}/"><small>次の章のメニュー →</small>第${upcoming.chapter}章 ${upcoming.title}（講義準備中）</a>`:`<a href="/fp3/">FP3級の章一覧へ</a>`}</nav>`;
@@ -45,7 +48,7 @@ for(let i=0;i<lectures.length;i++){
  const goalId='goal-'+String(d.chapter).padStart(2,'0')+'-'+String(d.number).padStart(2,'0');
  const goalImage='/assets/images/fp3/goals/'+goalId+'.png';
  const goalFigure=`<figure class="fp-learning-visual fp-goal-visual"><a href="${goalImage}" target="_blank" rel="noopener" aria-label="この講義で身につくことの図を拡大"><img src="${goalImage}" alt="この講義で身につくこと：${esc(d.goal)}" width="1672" height="941" fetchpriority="high"></a><figcaption>この講義で身につくこと <a href="${goalImage}" target="_blank" rel="noopener">図を拡大</a></figcaption></figure>`;
- const visualSpecs=d.chapter===1?diagrams.filter(x=>!pendingDiagramIds.has(x.id)):d.chapter===2?chapter2Diagrams:d.chapter===3?chapter3Diagrams:[];
+ const visualSpecs=d.chapter===1?[...diagrams.filter(x=>!pendingDiagramIds.has(x.id)&&!replacedPensionDiagramIds.has(x.id)),...pensionDiagrams]:d.chapter===2?chapter2Diagrams:d.chapter===3?chapter3Diagrams:[];
  const imageDirectory=String(d.chapter).padStart(2,'0');
  const intro=pedagogy?`<section class="fp-section fp-chapter-intro" id="introduction"><h2>はじめに：この回で扱う場面</h2>${pedagogy.intro}</section>`:'';
  const sections=d.sections.map((s,n)=>{

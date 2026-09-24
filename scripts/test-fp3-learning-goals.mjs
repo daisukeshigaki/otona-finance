@@ -9,8 +9,9 @@ import { inheritanceLectures } from './fp3-inheritance-content.mjs';
 import { reviewLectures } from './fp3-review-content.mjs';
 import { reviseOrientation } from './fp3-orientation.mjs';
 import { addExamQuestions } from './fp3-exam-level-questions.mjs';
+import { refinePensionLectures } from './fp3-pension-refinement.mjs';
 const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
-reviseOrientation(lectures);addExamQuestions(lectures);
+reviseOrientation(lectures);refinePensionLectures(lectures);addExamQuestions(lectures);
 assert.equal(lectures.length,45);
 for(const d of lectures){
  const ch=String(d.chapter).padStart(2,'0'),num=String(d.number).padStart(2,'0');

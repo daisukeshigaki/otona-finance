@@ -64,7 +64,7 @@
         {
           "code": "1-05",
           "title": "公的年金① 老齢年金",
-          "description": "国民年金と厚生年金、受給の条件と繰上げ・繰下げを学ぶ。",
+          "description": "基礎年金と厚生年金を分け、平均標準報酬額・5.481／1,000・加入月数の意味と、65歳からの繰上げ・繰下げを学ぶ。",
           "status": "published",
           "url": "/fp3/01/05/",
           "videoStatus": "planned"
@@ -72,7 +72,7 @@
         {
           "code": "1-06",
           "title": "公的年金② 障害・遺族年金と私的年金",
-          "description": "もしもの年金と、企業年金・確定拠出年金の基本を整理する。",
+          "description": "障害・遺族年金の条件と、2026年時点の男女差、DB・企業型DC・iDeCoの給付・運用・拠出上限を整理する。",
           "status": "published",
           "url": "/fp3/01/06/",
           "videoStatus": "planned"
