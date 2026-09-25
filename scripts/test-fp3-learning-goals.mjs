@@ -29,7 +29,7 @@ for(const d of lectures){
  assert.ok(d.questions[2].data.includes('選択肢'));
  assert.ok(d.questions[2].answer.includes('正解：'));
 }
-for(const d of lectures.filter(d=>d.chapter===1||d.chapter===2)){
+for(const d of lectures.filter(d=>d.chapter>=1&&d.chapter<=7)){
  d.sections.forEach((section,index)=>{
   assert.ok(section.html.startsWith('<p>'),`FP3 ${d.chapter}-${d.number} s${index+1} must begin with context`);
   const key=`${d.chapter}-${d.number}-${index+1}`;
