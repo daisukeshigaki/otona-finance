@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">契約後に迷いやすい三つの判断</title>
+  <desc id="desc">契約者貸付、収入保障保険の一時金、確定年金の死亡後の支払いを説明する図</desc>
+  <defs>
+    <style>
+      text{font-family:"Noto Sans JP","Hiragino Sans",sans-serif;fill:#173b5f}.title{font-size:54px;font-weight:800}.sub{font-size:25px;fill:#586c7d}.head{font-size:31px;font-weight:800}.body{font-size:24px}.small{font-size:21px;fill:#536a7b}.key{font-size:27px;font-weight:800}.white{fill:#fff}.arrow{stroke:#1d6fa5;stroke-width:7;fill:none;marker-end:url(#a)}
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#1d6fa5"/></marker>
+    <linearGradient id="g" x1="0" x2="1"><stop stop-color="#edf7fc"/><stop offset="1" stop-color="#f8fbfd"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#f7fafc"/>
+  <text x="800" y="75" text-anchor="middle" class="title">契約後に迷いやすい3つの判断</text>
+  <text x="800" y="115" text-anchor="middle" class="sub">「何を基準にするか」「いつまで支払われるか」を先に確認</text>
+
+  <g transform="translate(55 155)">
+    <rect width="470" height="650" rx="26" fill="url(#g)" stroke="#93b8cf" stroke-width="3"/>
+    <rect width="470" height="82" rx="26" fill="#17689b"/><path d="M0 56h470v26H0z" fill="#17689b"/>
+    <text x="235" y="53" text-anchor="middle" class="head white">① 契約者貸付</text>
+    <text x="34" y="130" class="key">一時的にお金が必要</text>
+    <rect x="42" y="165" width="386" height="105" rx="16" fill="#fff" stroke="#aac8da" stroke-width="2"/>
+    <text x="235" y="207" text-anchor="middle" class="body">契約の解約返戻金</text>
+    <text x="235" y="244" text-anchor="middle" class="small">積み立っている価値</text>
+    <path d="M235 280v82" class="arrow"/>
+    <rect x="65" y="375" width="340" height="115" rx="16" fill="#dceefa" stroke="#4f91b9" stroke-width="3"/>
+    <text x="235" y="420" text-anchor="middle" class="body">その一定範囲内で貸付</text>
+    <text x="235" y="458" text-anchor="middle" class="key">利息あり・返済が必要</text>
+    <rect x="35" y="535" width="400" height="75" rx="12" fill="#fff2d8"/>
+    <text x="235" y="566" text-anchor="middle" class="small">死亡保険金額を基準にしない</text>
+    <text x="235" y="596" text-anchor="middle" class="small">未返済なら保険金等から控除</text>
+  </g>
+
+  <g transform="translate(565 155)">
+    <rect width="470" height="650" rx="26" fill="url(#g)" stroke="#93b8cf" stroke-width="3"/>
+    <rect width="470" height="82" rx="26" fill="#0c8277"/><path d="M0 56h470v26H0z" fill="#0c8277"/>
+    <text x="235" y="53" text-anchor="middle" class="head white">② 収入保障保険</text>
+    <text x="34" y="130" class="key">死亡後の受取方法を選ぶ</text>
+    <text x="45" y="185" class="body">年金形式</text>
+    <g transform="translate(42 210)">
+      <rect x="0" y="0" width="64" height="70" rx="8" fill="#b8e3dc"/><rect x="76" y="0" width="64" height="70" rx="8" fill="#b8e3dc"/><rect x="152" y="0" width="64" height="70" rx="8" fill="#b8e3dc"/><rect x="228" y="0" width="64" height="70" rx="8" fill="#b8e3dc"/><rect x="304" y="0" width="64" height="70" rx="8" fill="#b8e3dc"/>
+      <text x="184" y="44" text-anchor="middle" class="body">毎年受取 …</text>
+    </g>
+    <text x="235" y="325" text-anchor="middle" class="small">将来の各年分を合計</text>
+    <path d="M235 345v65" class="arrow"/>
+    <rect x="50" y="425" width="370" height="95" rx="16" fill="#d9f1ed" stroke="#4aa397" stroke-width="3"/>
+    <text x="235" y="465" text-anchor="middle" class="body">一時金で受取</text>
+    <text x="235" y="500" text-anchor="middle" class="small">将来分を現在価値へ換算</text>
+    <rect x="35" y="545" width="400" height="65" rx="12" fill="#fff2d8"/>
+    <text x="235" y="586" text-anchor="middle" class="key">一時金 ＜ 年金受取総額（一般に）</text>
+  </g>
+
+  <g transform="translate(1075 155)">
+    <rect width="470" height="650" rx="26" fill="url(#g)" stroke="#93b8cf" stroke-width="3"/>
+    <rect width="470" height="82" rx="26" fill="#b27918"/><path d="M0 56h470v26H0z" fill="#b27918"/>
+    <text x="235" y="53" text-anchor="middle" class="head white">③ 個人年金（確定年金）</text>
+    <text x="34" y="130" class="key">10年確定年金の例</text>
+    <line x1="55" y1="225" x2="415" y2="225" stroke="#b27918" stroke-width="7"/>
+    <g fill="#b27918"><circle cx="55" cy="225" r="13"/><circle cx="145" cy="225" r="13"/><circle cx="235" cy="225" r="13"/><circle cx="325" cy="225" r="13"/><circle cx="415" cy="225" r="13"/></g>
+    <text x="55" y="195" text-anchor="middle" class="small">開始</text><text x="415" y="195" text-anchor="middle" class="small">10年後</text>
+    <text x="235" y="275" text-anchor="middle" class="body">契約した期間は支払う</text>
+    <rect x="45" y="315" width="380" height="115" rx="16" fill="#fff" stroke="#d3b06b" stroke-width="2"/>
+    <text x="235" y="355" text-anchor="middle" class="body">4年目に本人が死亡したら</text>
+    <text x="235" y="397" text-anchor="middle" class="key">残り6年分 → 遺族へ</text>
+    <rect x="45" y="465" width="380" height="115" rx="16" fill="#f8ead0"/>
+    <text x="235" y="505" text-anchor="middle" class="body">有期年金・終身年金は</text>
+    <text x="235" y="545" text-anchor="middle" class="small">原則、生存中だけ支払う</text>
+    <text x="235" y="585" text-anchor="middle" class="small">保証期間付きなら保証分は遺族へ</text>
+  </g>
+  <text x="800" y="860" text-anchor="middle" class="sub">契約ごとの約款・貸付利率・受取条件を確認する。図は制度の基本形。</text>
+</svg>

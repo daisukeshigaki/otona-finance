@@ -11,8 +11,9 @@ import { reviseOrientation } from './fp3-orientation.mjs';
 import { addExamQuestions } from './fp3-exam-level-questions.mjs';
 import { refinePensionLectures } from './fp3-pension-refinement.mjs';
 import { addSectionIntroductions, sectionIntroductions } from './fp3-section-introductions.mjs';
+import { refineOfficialQuestionCoverage,assertOfficialCoverage } from './fp3-official-question-coverage.mjs';
 const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
-reviseOrientation(lectures);refinePensionLectures(lectures);addSectionIntroductions(lectures);addExamQuestions(lectures);
+reviseOrientation(lectures);refinePensionLectures(lectures);refineOfficialQuestionCoverage(lectures);addSectionIntroductions(lectures);addExamQuestions(lectures);assertOfficialCoverage(lectures);
 assert.equal(lectures.length,45);
 for(const d of lectures){
  const ch=String(d.chapter).padStart(2,'0'),num=String(d.number).padStart(2,'0');
