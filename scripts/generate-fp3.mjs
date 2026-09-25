@@ -16,9 +16,11 @@ import { lessonIntroductions as chapter3Introductions } from './fp3-chapter3-int
 import { reviseOrientation } from './fp3-orientation.mjs';
 import { addExamQuestions } from './fp3-exam-level-questions.mjs';
 import { refinePensionLectures } from './fp3-pension-refinement.mjs';
+import { addSectionIntroductions } from './fp3-section-introductions.mjs';
 const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
 reviseOrientation(lectures);
 refinePensionLectures(lectures);
+addSectionIntroductions(lectures);
 addExamQuestions(lectures);
 
 lectures.sort((a,b)=>a.chapter-b.chapter||a.number-b.number);

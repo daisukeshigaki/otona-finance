@@ -10,8 +10,9 @@ import { reviewLectures } from './fp3-review-content.mjs';
 import { reviseOrientation } from './fp3-orientation.mjs';
 import { addExamQuestions } from './fp3-exam-level-questions.mjs';
 import { refinePensionLectures } from './fp3-pension-refinement.mjs';
+import { addSectionIntroductions, sectionIntroductions } from './fp3-section-introductions.mjs';
 const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
-reviseOrientation(lectures);refinePensionLectures(lectures);addExamQuestions(lectures);
+reviseOrientation(lectures);refinePensionLectures(lectures);addSectionIntroductions(lectures);addExamQuestions(lectures);
 assert.equal(lectures.length,45);
 for(const d of lectures){
  const ch=String(d.chapter).padStart(2,'0'),num=String(d.number).padStart(2,'0');
@@ -27,6 +28,14 @@ for(const d of lectures){
  assert.ok(!html.includes('正しい選択肢は修正した'));
  assert.ok(d.questions[2].data.includes('選択肢'));
  assert.ok(d.questions[2].answer.includes('正解：'));
+}
+for(const d of lectures.filter(d=>d.chapter===1||d.chapter===2)){
+ d.sections.forEach((section,index)=>{
+  assert.ok(section.html.startsWith('<p>'),`FP3 ${d.chapter}-${d.number} s${index+1} must begin with context`);
+  const key=`${d.chapter}-${d.number}-${index+1}`;
+  if(sectionIntroductions[key]) assert.ok(section.html.includes(sectionIntroductions[key]),key);
+  assert.ok(!/ユーザーが示した|ユーザーの指摘|ご指摘/.test(section.html),`${key}: production conversation leaked`);
+ });
 }
 const intro=lectures.find(d=>d.chapter===0);
 assert.equal(intro.sections.length,7);
