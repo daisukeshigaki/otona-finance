@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">2026年度 障害年金の組み立て</title>
+  <desc id="desc">初診日に国民年金なら障害基礎年金、厚生年金なら障害厚生年金も確認し、等級ごとの本人額と子・配偶者の加算を分けて計算する図</desc>
+  <rect width="1600" height="900" fill="#f6f8fb"/>
+  <rect x="60" y="48" width="1480" height="110" rx="24" fill="#123b63"/>
+  <text x="800" y="118" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="48" font-weight="700">2026年度　障害年金は「初診日 → 等級 → 家族」で組み立てる</text>
+  <rect x="80" y="210" width="430" height="570" rx="28" fill="#e7f2ff" stroke="#397db8" stroke-width="4"/>
+  <text x="295" y="270" text-anchor="middle" fill="#123b63" font-family="sans-serif" font-size="34" font-weight="700">① 初診日の加入制度</text>
+  <rect x="120" y="318" width="350" height="130" rx="20" fill="#fff"/>
+  <text x="295" y="365" text-anchor="middle" fill="#123b63" font-family="sans-serif" font-size="29" font-weight="700">国民年金</text>
+  <text x="295" y="410" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="26">障害基礎年金を確認</text>
+  <rect x="120" y="493" width="350" height="170" rx="20" fill="#fff"/>
+  <text x="295" y="542" text-anchor="middle" fill="#123b63" font-family="sans-serif" font-size="29" font-weight="700">厚生年金</text>
+  <text x="295" y="587" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="25">障害厚生年金を確認</text>
+  <text x="295" y="628" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="24">1・2級なら基礎年金も</text>
+  <path d="M520 495 H575" stroke="#d38b16" stroke-width="12" marker-end="url(#arrow)"/>
+  <rect x="595" y="210" width="925" height="570" rx="28" fill="#fff" stroke="#d6dde6" stroke-width="4"/>
+  <text x="1058" y="270" text-anchor="middle" fill="#123b63" font-family="sans-serif" font-size="34" font-weight="700">② 等級と家族の加算を分ける</text>
+  <rect x="635" y="315" width="410" height="380" rx="22" fill="#eef7ef"/>
+  <text x="840" y="365" text-anchor="middle" fill="#17633a" font-family="sans-serif" font-size="30" font-weight="700">障害基礎年金</text>
+  <text x="675" y="430" fill="#223" font-family="sans-serif" font-size="27" font-weight="700">1級　1,059,125円</text>
+  <text x="675" y="482" fill="#223" font-family="sans-serif" font-size="27" font-weight="700">2級　　847,300円</text>
+  <line x1="675" y1="520" x2="1005" y2="520" stroke="#9ab9a5" stroke-width="2"/>
+  <text x="675" y="568" fill="#17633a" font-family="sans-serif" font-size="25" font-weight="700">＋ 子の加算</text>
+  <text x="675" y="610" fill="#345" font-family="sans-serif" font-size="22">第1・2子 各243,800円</text>
+  <text x="675" y="646" fill="#345" font-family="sans-serif" font-size="22">第3子以降 各81,300円</text>
+  <rect x="1080" y="315" width="400" height="380" rx="22" fill="#fff4df"/>
+  <text x="1280" y="365" text-anchor="middle" fill="#8a5600" font-family="sans-serif" font-size="30" font-weight="700">障害厚生年金</text>
+  <text x="1120" y="425" fill="#223" font-family="sans-serif" font-size="24" font-weight="700">1級　報酬比例×1.25</text>
+  <text x="1120" y="472" fill="#223" font-family="sans-serif" font-size="24" font-weight="700">2級　報酬比例</text>
+  <text x="1120" y="519" fill="#223" font-family="sans-serif" font-size="24" font-weight="700">3級　報酬比例</text>
+  <text x="1120" y="557" fill="#765" font-family="sans-serif" font-size="21">最低保障 635,500円</text>
+  <line x1="1120" y1="584" x2="1440" y2="584" stroke="#dabd88" stroke-width="2"/>
+  <text x="1120" y="625" fill="#8a5600" font-family="sans-serif" font-size="23" font-weight="700">1・2級 ＋ 配偶者加給</text>
+  <text x="1120" y="660" fill="#345" font-family="sans-serif" font-size="22">条件を満たせば243,800円</text>
+  <rect x="155" y="722" width="1285" height="108" rx="22" fill="#fff0ee" stroke="#d25d4a" stroke-width="3"/>
+  <text x="798" y="770" text-anchor="middle" fill="#a53728" font-family="sans-serif" font-size="28" font-weight="700">混同注意：子の加算は「基礎」、配偶者の加給は「厚生」</text>
+  <text x="798" y="808" text-anchor="middle" fill="#5b3630" font-family="sans-serif" font-size="23">障害厚生年金3級には、障害基礎年金を足さない</text>
+  <defs><marker id="arrow" markerWidth="16" markerHeight="16" refX="12" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#d38b16"/></marker></defs>
+</svg>

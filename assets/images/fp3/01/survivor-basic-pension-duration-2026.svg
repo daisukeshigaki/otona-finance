@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">遺族基礎年金 子が2人いる場合の金額と終了時期</title>
+  <desc id="desc">16歳と12歳の子がいる家庭で、上の子が18歳到達年度末を迎えると加算が1人分減り、最後の子が対象外になると遺族基礎年金が終了する時間軸</desc>
+  <rect width="1600" height="900" fill="#f7f9fc"/>
+  <rect x="60" y="45" width="1480" height="105" rx="24" fill="#123b63"/>
+  <text x="800" y="112" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="45" font-weight="700">遺族基礎年金は「対象となる子」がいる間に支給</text>
+  <text x="100" y="205" fill="#345" font-family="sans-serif" font-size="28">例：配偶者と16歳・12歳の子／2026年度額／障害による20歳未満の例外なし</text>
+  <line x1="185" y1="435" x2="1420" y2="435" stroke="#8aa1b6" stroke-width="12"/>
+  <circle cx="300" cy="435" r="26" fill="#2f7fb9"/>
+  <circle cx="800" cy="435" r="26" fill="#d58a13"/>
+  <circle cx="1300" cy="435" r="26" fill="#c04b3e"/>
+  <rect x="105" y="260" width="390" height="130" rx="22" fill="#e6f3ff" stroke="#2f7fb9" stroke-width="3"/>
+  <text x="300" y="307" text-anchor="middle" fill="#123b63" font-family="sans-serif" font-size="27" font-weight="700">子2人が対象</text>
+  <text x="300" y="351" text-anchor="middle" fill="#123b63" font-family="sans-serif" font-size="28">年 1,334,900円</text>
+  <rect x="605" y="260" width="390" height="130" rx="22" fill="#fff3df" stroke="#d58a13" stroke-width="3"/>
+  <text x="800" y="307" text-anchor="middle" fill="#7a4c05" font-family="sans-serif" font-size="27" font-weight="700">上の子が対象外</text>
+  <text x="800" y="351" text-anchor="middle" fill="#7a4c05" font-family="sans-serif" font-size="28">年 1,091,100円へ</text>
+  <rect x="1105" y="260" width="390" height="130" rx="22" fill="#fff0ee" stroke="#c04b3e" stroke-width="3"/>
+  <text x="1300" y="307" text-anchor="middle" fill="#8f3025" font-family="sans-serif" font-size="27" font-weight="700">最後の子が対象外</text>
+  <text x="1300" y="351" text-anchor="middle" fill="#8f3025" font-family="sans-serif" font-size="28">原則終了</text>
+  <text x="300" y="500" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="24">基本額847,300円</text>
+  <text x="300" y="537" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="24">＋243,800円×2人</text>
+  <text x="800" y="500" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="24">基本額847,300円</text>
+  <text x="800" y="537" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="24">＋243,800円×1人</text>
+  <text x="1300" y="500" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="24">子のある配偶者では</text>
+  <text x="1300" y="537" text-anchor="middle" fill="#345" font-family="sans-serif" font-size="24">なくなるため</text>
+  <path d="M300 600 C420 655 680 655 800 600" fill="none" stroke="#d58a13" stroke-width="6" marker-end="url(#arrowOrange)"/>
+  <path d="M800 600 C920 655 1180 655 1300 600" fill="none" stroke="#c04b3e" stroke-width="6" marker-end="url(#arrowRed)"/>
+  <rect x="150" y="690" width="1300" height="120" rx="22" fill="#edf2f7"/>
+  <text x="800" y="742" text-anchor="middle" fill="#123b63" font-family="sans-serif" font-size="29" font-weight="700">正確な期限：18歳になった年度の3月31日まで</text>
+  <text x="800" y="785" text-anchor="middle" fill="#46596c" font-family="sans-serif" font-size="24">一定の障害等級1級・2級の状態にある未婚の子は、20歳未満まで対象</text>
+  <defs>
+    <marker id="arrowOrange" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#d58a13"/></marker>
+    <marker id="arrowRed" markerWidth="14" markerHeight="14" refX="11" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#c04b3e"/></marker>
+  </defs>
+</svg>
