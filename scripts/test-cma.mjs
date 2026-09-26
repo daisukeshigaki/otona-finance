@@ -2,6 +2,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {accountingLectures as lectures} from './cma-accounting-content.mjs';
+import {refineCmaChapter1,assertCmaChapter1Coverage} from './cma-chapter1-quality.mjs';
+refineCmaChapter1(lectures);
+assertCmaChapter1Coverage(lectures);
 const curriculum=JSON.parse(fs.readFileSync('assets/data/cma-curriculum.json','utf8'));
 const ch=curriculum.chapters.find(c=>c.number===1);
 const registry=JSON.parse(fs.readFileSync('backend/lessons.json','utf8'));
@@ -20,17 +23,23 @@ for(const d of lectures){
  const route=`/cma/01/${String(d.number).padStart(2,'0')}/`,l=ch.lessons[d.number-1],path=route.slice(1)+'index.html',html=fs.readFileSync(path,'utf8');
  assert.equal(l.url,route);assert.equal(l.status,'published');assert.equal(l.videoStatus,'planned');assert.equal(l.title,registry[route]);
  assert.ok(catalog.includes(`href="${route}"`));assert.ok(catalog.includes(d.lead));assert.ok(html.includes(`https://otona-finance.net${route}`));
- assert.ok(html.includes('教材番号 '+l.id));assert.ok(html.includes('2026年9月17日'));assert.ok(html.includes('全編無料'));assert.ok(html.includes('id="comments"'));
+ assert.ok(html.includes('教材番号 '+l.id));assert.ok(html.includes('2026年9月26日'));assert.ok(html.includes('全編無料'));assert.ok(html.includes('id="comments"'));
  assert.ok(html.indexOf('class="fp-video"')<html.indexOf('id="s1"'));assert.ok(!html.includes('WordPress'));
- assert.ok(d.sections.length>=4);assert.equal(d.questions.length,3);
+ assert.ok(d.sections.length>=4);assert.equal(d.questions.length,3);assert.ok(d.goalImage);assert.ok(html.includes(d.goalImage));assert.ok(fs.existsSync('.'+d.goalImage));
+ assert.ok(d.visuals?.length>=1);for(const v of d.visuals){assert.ok(html.includes(v.src));assert.ok(fs.existsSync('.'+v.src));}
  const body=d.sections.map(s=>s.html).join('');assert.ok(body.replace(/<[^>]+>/g,'').length>=1000,path+' substantive content');
  const count=(body.match(/<figure /g)||[]).length;assert.ok(count>=4);figures+=count;
  for(const q of d.questions){assert.ok(q.title&&q.ask&&q.answer);assert.ok(q.data.replace(/<[^>]+>/g,'').length>=25);assert.ok(!/上の表|前の表|本文を参照|上に戻/.test(q.data+q.ask));assert.ok(html.includes(q.data));questions++;}
+ assert.ok(d.questions.some(q=>q.examLevel&&q.original));assert.ok(html.includes('本試験相当・オリジナル問題'));assert.ok(html.includes('正解：A'));
  assert.ok(d.sources.length>=1);for(const [,url] of d.sources)assert.ok(/^https:\/\//.test(url));
  checkLinks(html,path);
 }
 checkLinks(catalog,'cma catalog');assert.equal(questions,84);
-const generated=execFileSync(process.execPath,['scripts/generate-cma.mjs'],{encoding:'utf8'});assert.equal(generated,'*** Begin Patch\n\n*** End Patch\n','generation must be idempotent');
+for(let i=1;i<=28;i++){
+ const target=`cma/01/${String(i).padStart(2,'0')}/index.html`;
+ const generated=execFileSync(process.execPath,['scripts/generate-cma.mjs',target],{encoding:'utf8'});
+ assert.equal(generated,'*** Begin Patch\n\n*** End Patch\n',target+' generation must be idempotent');
+}
 // Independent arithmetic checks cover every lecture with quantitative examples.
 const round=(x,n=2)=>Number(x.toFixed(n));
 const checks=[
