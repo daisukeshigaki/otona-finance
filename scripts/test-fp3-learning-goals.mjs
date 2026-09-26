@@ -12,8 +12,9 @@ import { addExamQuestions } from './fp3-exam-level-questions.mjs';
 import { refinePensionLectures } from './fp3-pension-refinement.mjs';
 import { addSectionIntroductions, sectionIntroductions } from './fp3-section-introductions.mjs';
 import { refineOfficialQuestionCoverage,assertOfficialCoverage } from './fp3-official-question-coverage.mjs';
+import { refineChapter2Audit,assertChapter2Audit } from './fp3-chapter2-audit-refinement.mjs';
 const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
-reviseOrientation(lectures);refinePensionLectures(lectures);refineOfficialQuestionCoverage(lectures);addSectionIntroductions(lectures);addExamQuestions(lectures);assertOfficialCoverage(lectures);
+reviseOrientation(lectures);refinePensionLectures(lectures);refineOfficialQuestionCoverage(lectures);addSectionIntroductions(lectures);refineChapter2Audit(lectures);addExamQuestions(lectures);assertOfficialCoverage(lectures);assertChapter2Audit(lectures);
 assert.equal(lectures.length,45);
 for(const d of lectures){
  const ch=String(d.chapter).padStart(2,'0'),num=String(d.number).padStart(2,'0');
@@ -34,7 +35,7 @@ for(const d of lectures.filter(d=>d.chapter>=1&&d.chapter<=7)){
  d.sections.forEach((section,index)=>{
   assert.ok(section.html.startsWith('<p>'),`FP3 ${d.chapter}-${d.number} s${index+1} must begin with context`);
   const key=`${d.chapter}-${d.number}-${index+1}`;
-  if(sectionIntroductions[key]) assert.ok(section.html.includes(sectionIntroductions[key]),key);
+  if(sectionIntroductions[key]&&d.chapter!==2) assert.ok(section.html.includes(sectionIntroductions[key]),key);
   assert.ok(!/ユーザーが示した|ユーザーの指摘|ご指摘/.test(section.html),`${key}: production conversation leaked`);
  });
 }
@@ -46,4 +47,6 @@ assert.equal(Math.round(6000000*.20604),1236240);
 assert.equal(Math.round((4000000-1500000*1.1041)*.19216),450394);
 assert.equal(Math.round((286000-97500)*1021/1000),192459);
 assert.equal(Math.round(3000000+600000+5000*(1-.20315)),3603984);
+assert.equal(5000000*3,15000000);
+assert.equal(30000000-15000000,15000000);
 console.log('PASS: FP3級45講義の冒頭図・本試験レベル問題・導入・主要計算');

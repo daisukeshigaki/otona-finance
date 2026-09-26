@@ -18,13 +18,16 @@ import { addExamQuestions } from './fp3-exam-level-questions.mjs';
 import { refinePensionLectures } from './fp3-pension-refinement.mjs';
 import { addSectionIntroductions } from './fp3-section-introductions.mjs';
 import { refineOfficialQuestionCoverage,assertOfficialCoverage } from './fp3-official-question-coverage.mjs';
+import { refineChapter2Audit,assertChapter2Audit } from './fp3-chapter2-audit-refinement.mjs';
 const lectures=[...foundation,...riskLectures,...investmentLectures,...taxLectures,...propertyLectures,...inheritanceLectures,...reviewLectures];
 reviseOrientation(lectures);
 refinePensionLectures(lectures);
 refineOfficialQuestionCoverage(lectures);
 addSectionIntroductions(lectures);
+refineChapter2Audit(lectures);
 addExamQuestions(lectures);
 assertOfficialCoverage(lectures);
+assertChapter2Audit(lectures);
 
 lectures.sort((a,b)=>a.chapter-b.chapter||a.number-b.number);
 
