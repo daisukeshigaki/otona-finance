@@ -5,6 +5,7 @@ const proportional='https://www.nenkin.go.jp/service/yougo/hagyo/hoshuhirei.html
 const early='https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/kuriage-kurisage/20140421-01.html';
 const late='https://www.nenkin.go.jp/service/jukyu/seido/roureinenkin/kuriage-kurisage/20140421-02.html';
 const survivor='https://www.nenkin.go.jp/service/jukyu/seido/izokunenkin/jukyu-yoken/20150424.html';
+const survivorBasic='https://www.nenkin.go.jp/service/jukyu/seido/izokunenkin/jukyu-yoken/20150401-04.html';
 const survivorReform='https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000147284_00020.html';
 const privatePension='https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kigyounenkin.html';
 const dc='https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/nenkin/kyoshutsu/gaiyou.html';
@@ -59,8 +60,21 @@ export function refinePensionLectures(lectures){
  l6.lead='前半では障害・死亡に備える公的年金、後半では公的年金に上乗せする私的年金を学びます。私的年金の全体像をつかんでから、DB・企業型DC・iDeCoの違いへ進みます。';
  l6.goal='障害・遺族年金の対象者を判定し、私的年金の全体像からDB・企業型DC・iDeCoを区別して、iDeCoの基本的な節税額・受取年齢・掛金上限を計算できる。';
  l6.sections[2]={
-  title:'遺族年金は「基礎か厚生か」「子・年齢・性別」を順に見る',
-  html:p('遺族基礎年金と遺族厚生年金では、受け取れる遺族が違います。遺族基礎年金は<strong>対象となる子がいるか</strong>、遺族厚生年金は<strong>亡くなった人との関係・年齢・性別</strong>を確認します。')
+ title:'遺族年金は「基礎か厚生か」「子・年齢・性別」を順に見る',
+  html:p('遺族年金には、国民年金から出る<strong>遺族基礎年金</strong>と、厚生年金から出る<strong>遺族厚生年金</strong>があります。名前は似ていますが、対象となる遺族が違います。まず遺族基礎年金を判定し、その後に遺族厚生年金を判定します。厚生年金加入者等が亡くなり両方の要件を満たす場合は、子のある配偶者などが両方を受け取れることがあります。')
+   +flow('遺族年金を判定する順序',[
+    ['1｜遺族基礎年金','対象となる子がいるか。子のある配偶者または子が対象'],
+    ['2｜遺族厚生年金','亡くなった人の厚生年金の要件と、遺族の続柄・年齢・性別・優先順位を確認'],
+    ['3｜両方の要件','両方を満たす場合は、遺族基礎年金と遺族厚生年金をあわせて受け取れる場合がある']
+   ])
+   +table('遺族基礎年金は「対象となる子」が入口',['残された遺族','遺族基礎年金の基本的な扱い','理由'],[
+    ['配偶者と未婚の12歳の子','配偶者が対象となる','対象となる子のある配偶者だから'],
+    ['35歳の配偶者だけ・子なし','対象外','配偶者の年齢ではなく、対象となる子がいないため'],
+    ['両親がおらず未婚の15歳の子','子が対象となり得る','子自身も受給対象者だから']
+   ],'この表は遺族基礎年金の判定。亡くなった人の加入・納付、生計維持などの要件も別に必要')
+   +p('ここでいう「子」は、原則として<strong>18歳になった年度の3月31日まで</strong>の未婚の子です。一定の障害等級1級・2級の状態にある場合は20歳未満まで対象になります。単に成人した子がいる、というだけでは「子のある配偶者」の条件を満たしません。')
+   +example('基礎と厚生を別々に判定する',p('厚生年金に加入していた夫が亡くなり、35歳の妻と12歳の子が残された場合、妻は「対象となる子のある配偶者」として遺族基礎年金を確認し、さらに遺族厚生年金も確認します。35歳の妻だけが残され、対象となる子がいない場合、妻は遺族基礎年金の対象外ですが、それだけで遺族厚生年金まで対象外になるわけではありません。'))
+   +p('次に、遺族厚生年金を確認します。子のいない配偶者については、現行制度では妻と夫で年齢条件が異なります。')
    +table('2026年9月時点：子のいない配偶者の遺族厚生年金',['遺族','基本的な扱い'],[
     ['30歳未満の妻','5年間の有期給付'],
     ['30歳以上の妻','年齢による5年制限なし'],
@@ -70,6 +84,7 @@ export function refinePensionLectures(lectures){
    +p('子のいない配偶者では、妻と夫で年齢条件が異なります。ただし、年齢だけで支給が決まるわけではなく、亡くなった人の加入・納付や生計維持などの共通要件も確認します。')
    +example('遺族厚生年金の金額',formula('報酬比例部分80万円×3／4＝60万円／年')+p('計算の基礎は、亡くなった人の老齢厚生年金の<strong>報酬比例部分</strong>です。老齢基礎年金を足してから3／4を掛けるわけではありません。'))
    +note('試験では問題文の法令基準日を確認し、将来施行される改正と現在の制度を混ぜないようにします。')
+   +nenkin('日本年金機構：遺族基礎年金の現行要件',survivorBasic)
    +nenkin('日本年金機構：遺族厚生年金の現行要件',survivor)
  };
  l6.sections[3]={
@@ -134,5 +149,5 @@ export function refinePensionLectures(lectures){
   {title:'本試験レベル：iDeCoの節税・共通枠・受取年齢',data:p('2026年9月時点。Aさんは国民年金基金へ月4万円を拠出する第1号被保険者。iDeCoへ月2万円を拠出し、所得税率10％・住民税率10％とします。60歳時点の通算加入者等期間は7年です。ほかの条件・税額調整は考えません。'),ask:'①iDeCo月2万円は共通枠内ですか。②年間の掛金控除による税負担軽減の概算はいくらですか。③最短何歳から受け取れますか。10年未満なら積立資産は消えますか。',answer:p('①4万円＋2万円＝6万円で6.8万円以内。②年間掛金24万円×20％＝約4.8万円。③7年は6年以上8年未満なので最短62歳。資産は消えず、受取可能年齢まで口座内で保有・運用します。')}
  ];
  l6.recap=['遺族基礎年金と遺族厚生年金は対象者を分けて読む。','私的年金は公的年金へ老後資金を上乗せする仕組みで、企業年金と個人型がある。','DBで先に固定するのは給付額の計算式。DCで先に固定するのは掛金。','iDeCoの掛金控除による軽減額は本人の掛金と税率で変わり、課税所得0なら当年の効果も0。','iDeCoは10年未満でも資産が消えず、通算期間に応じて受取可能年齢が遅くなる。','共通枠は他制度とiDeCoを足した合計上限。受取時は控除を超える部分に課税が生じ得る。'];
- l6.sources=[['日本年金機構：遺族厚生年金',survivor],['厚生労働省：遺族厚生年金の見直し',survivorReform],['厚生労働省：DBの仕組み',dbMechanism],['厚生労働省：確定拠出年金',dc],['iDeCo公式：受給開始年齢',idecoBenefits],['iDeCo公式：所得控除FAQ',idecoFaq],['国税庁：退職所得となるもの',ntaRetirement],['国税庁：公的年金等の課税',ntaPension],['厚生労働省：拠出限度額',dcLimits]];
+ l6.sources=[['日本年金機構：遺族基礎年金',survivorBasic],['日本年金機構：遺族厚生年金',survivor],['厚生労働省：遺族厚生年金の見直し',survivorReform],['厚生労働省：DBの仕組み',dbMechanism],['厚生労働省：確定拠出年金',dc],['iDeCo公式：受給開始年齢',idecoBenefits],['iDeCo公式：所得控除FAQ',idecoFaq],['国税庁：退職所得となるもの',ntaRetirement],['国税庁：公的年金等の課税',ntaPension],['厚生労働省：拠出限度額',dcLimits]];
 }
